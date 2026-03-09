@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soni Vision Institute | Premier Cataract & Refractive Surgery | Cypress, TX</title>
+  <meta name="description" content="Houston's highest-rated eye surgery practice. Fellowship-trained cataract & refractive specialists Dr. Ruhi Soni and Dr. Nikitha Reddy. 4.9 stars, 703+ reviews. Cypress, TX.">
+  <meta name="keywords" content="cataract surgery Cypress TX, premium lens implant Houston, LASIK Houston, Light Adjustable Lens, refractive surgery NW Houston, eye surgeon Cypress TX">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Soni Vision Institute | Premier Eye Surgery | Cypress, TX">
+  <meta property="og:description" content="Fellowship-trained cataract & refractive specialists. 4.9 stars, 703+ reviews. Houston's most trusted eye surgeons.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#32384e',
+            'navy-deep': '#252a3a',
+            'navy-light': '#3d4460',
+            teal: '#499188',
+            'teal-dark': '#357069',
+            'teal-light': '#5aa89e',
+            cream: '#f8f7f4',
+            'warm-gray': '#efefef',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            'tight-display': '-0.03em',
+            'wide-label': '0.2em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* --- Base --- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #222; overflow-x: hidden; }
+
+    /* --- Typography --- */
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .heading-em em { font-style: italic; color: #499188; }
+
+    /* --- Subtle grain texture overlay --- */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 256px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* --- Animated underline --- */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #499188;
+      transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .nav-link:hover::after, .nav-link:focus-visible::after { width: 100%; }
+
+    /* --- Button hover states --- */
+    .btn-teal {
+      background: #499188;
+      color: #fff;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    }
+    .btn-teal:hover {
+      background: #357069;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(73, 145, 136, 0.3);
+    }
+    .btn-teal:focus-visible {
+      outline: 2px solid #499188;
+      outline-offset: 3px;
+    }
+    .btn-teal:active { transform: translateY(0); }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.5);
+      color: #fff;
+      background: transparent;
+      transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+    }
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+    .btn-outline:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+    .btn-outline:active { transform: translateY(0); }
+
+    .btn-outline-dark {
+      border: 1.5px solid #32384e;
+      color: #32384e;
+      background: transparent;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    }
+    .btn-outline-dark:hover {
+      background: #32384e;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-outline-dark:focus-visible {
+      outline: 2px solid #32384e;
+      outline-offset: 3px;
+    }
+    .btn-outline-dark:active { transform: translateY(0); }
+
+    /* --- Card hover --- */
+    .card-lift {
+      transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.35s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(50, 56, 78, 0.1), 0 8px 24px rgba(50, 56, 78, 0.06);
+    }
+
+    /* --- Reviews carousel --- */
+    .reviews-track {
+      display: flex;
+      gap: 24px;
+      animation: scroll-reviews 40s linear infinite;
+    }
+    .reviews-track:hover { animation-play-state: paused; }
+    @keyframes scroll-reviews {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* --- Star rating --- */
+    .star { color: #499188; }
+
+    /* --- Section reveal animations --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Dropdown --- */
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* --- Mobile menu --- */
+    .mobile-nav {
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .mobile-nav.open { transform: translateX(0); }
+
+    /* --- Image treatment --- */
+    .img-overlay { position: relative; overflow: hidden; }
+    .img-overlay::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(50,56,78,0.15), transparent 50%);
+      pointer-events: none;
+    }
+
+    /* --- Layered shadows --- */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 3px rgba(50,56,78,0.04),
+        0 6px 16px rgba(50,56,78,0.06),
+        0 20px 48px rgba(50,56,78,0.05);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 6px rgba(50,56,78,0.05),
+        0 12px 32px rgba(50,56,78,0.08),
+        0 32px 72px rgba(50,56,78,0.06);
+    }
+
+    /* --- Focus visible for accessibility --- */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #499188;
+      outline-offset: 2px;
+    }
+
+    /* Smooth image loading */
+    img { transition: opacity 0.3s ease; }
+  </style>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Soni Vision Institute",
+    "description": "Premier cataract and refractive surgery practice in Cypress, TX. Fellowship-trained ophthalmologists specializing in premium lens implants, LASIK, and advanced eye surgery.",
+    "url": "https://sonivisioninstitute.com",
+    "telephone": "(346) 818-6780",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27700 Northwest Freeway, Suite 390",
+      "addressLocality": "Cypress",
+      "addressRegion": "TX",
+      "postalCode": "77433",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.9417,
+      "longitude": -95.6675
+    },
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "703",
+      "bestRating": "5"
+    },
+    "medicalSpecialty": ["Ophthalmology"],
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "Cataract Surgery" },
+      { "@type": "MedicalProcedure", "name": "Premium IOL Implantation" },
+      { "@type": "MedicalProcedure", "name": "LASIK" },
+      { "@type": "MedicalProcedure", "name": "Light Adjustable Lens" },
+      { "@type": "MedicalProcedure", "name": "Glaucoma Surgery" }
+    ],
+    "employee": [
+      {
+        "@type": "Physician",
+        "name": "Dr. Ruhi Soni",
+        "jobTitle": "Founder, Board-Certified Ophthalmologist",
+        "medicalSpecialty": "Ophthalmology"
+      },
+      {
+        "@type": "Physician",
+        "name": "Dr. Nikitha Reddy",
+        "jobTitle": "Fellowship-Trained Ophthalmologist",
+        "medicalSpecialty": "Ophthalmology"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white">
+
+  <!-- ============================================ -->
+  <!-- HEADER                                       -->
+  <!-- ============================================ -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100" style="height: 80px;">
+    <!-- Language bar -->
+    <div class="bg-navy text-white text-center py-1.5">
+      <p class="text-xs font-body tracking-wide opacity-80">
+        Se habla Español&ensp;·&ensp;हिंदी&ensp;·&ensp;తెలుగు&ensp;·&ensp;ਪੰਜਾਬੀ
+      </p>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between" style="height: 56px;">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0" aria-label="Soni Vision Institute Home">
+        <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-10 md:h-11 w-auto">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+        <div class="dropdown relative">
+          <a href="/about.html" class="nav-link font-body text-[11px] font-medium uppercase tracking-[0.2em] text-navy hover:text-teal">About</a>
+          <div class="dropdown-menu absolute top-full left-0 pt-3">
+            <div class="bg-white shadow-floating rounded-sm py-3 px-1 min-w-[200px]">
+              <a href="/about.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">About the Practice</a>
+              <a href="/physicians.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Our Physicians</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown relative">
+          <button class="nav-link font-body text-[11px] font-medium uppercase tracking-[0.2em] text-navy hover:text-teal bg-transparent border-none cursor-pointer">Services</button>
+          <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 pt-3">
+            <div class="bg-white shadow-floating rounded-sm py-3 px-1 min-w-[240px]">
+              <p class="px-4 py-1 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-gray-400">Cataract Surgery</p>
+              <a href="/services/cataracts.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Cataract Surgery</a>
+              <a href="/services/laser-cataract-surgery.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Laser Cataract Surgery</a>
+              <a href="/services/light-adjustable-lens.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Light Adjustable Lens</a>
+              <a href="/services/multifocal-lens.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Multifocal Lens</a>
+              <a href="/services/edof-lens.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Extended Depth of Focus</a>
+              <a href="/services/toric-iol.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Toric IOL</a>
+              <div class="my-2 mx-4 border-t border-gray-100"></div>
+              <p class="px-4 py-1 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-gray-400">Vision Correction</p>
+              <a href="/services/lasik.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">LASIK</a>
+              <a href="/services/prk.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">PRK</a>
+              <a href="/services/icl.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">EVO ICL</a>
+              <a href="/services/refractive-lens-exchange.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Refractive Lens Exchange</a>
+              <div class="my-2 mx-4 border-t border-gray-100"></div>
+              <p class="px-4 py-1 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-gray-400">Glaucoma</p>
+              <a href="/services/glaucoma.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Glaucoma Surgery</a>
+              <a href="/services/migs.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">MIGS</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown relative">
+          <button class="nav-link font-body text-[11px] font-medium uppercase tracking-[0.2em] text-navy hover:text-teal bg-transparent border-none cursor-pointer">Conditions</button>
+          <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 pt-3">
+            <div class="bg-white shadow-floating rounded-sm py-3 px-1 min-w-[220px]">
+              <a href="/conditions/cataracts.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Cataracts</a>
+              <a href="/conditions/astigmatism.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Astigmatism</a>
+              <a href="/conditions/myopia.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Myopia</a>
+              <a href="/conditions/hyperopia.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Hyperopia</a>
+              <a href="/conditions/presbyopia.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Presbyopia</a>
+              <a href="/conditions/glaucoma.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Glaucoma</a>
+              <a href="/conditions/macular-degeneration.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Macular Degeneration</a>
+              <a href="/conditions/dry-eye.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Dry Eye</a>
+              <a href="/conditions/eyelid-conditions.html" class="block px-4 py-2 text-sm font-body text-navy hover:bg-cream hover:text-teal rounded-sm">Eyelid Conditions</a>
+            </div>
+          </div>
+        </div>
+        <a href="/reviews.html" class="nav-link font-body text-[11px] font-medium uppercase tracking-[0.2em] text-navy hover:text-teal">Reviews</a>
+        <a href="/blog/" class="nav-link font-body text-[11px] font-medium uppercase tracking-[0.2em] text-navy hover:text-teal">Blog</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:3468186780" class="font-body text-sm font-semibold text-navy hover:text-teal transition-colors duration-200">(346) 818-6780</a>
+        <a href="/book.html" class="btn-teal font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-sm">Book a Consultation</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="mobile-toggle" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-6 h-[1.5px] bg-navy transition-transform duration-300 origin-center" id="bar1"></span>
+        <span class="block w-6 h-[1.5px] bg-navy transition-opacity duration-300" id="bar2"></span>
+        <span class="block w-6 h-[1.5px] bg-navy transition-transform duration-300 origin-center" id="bar3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-40 bg-navy pt-24" aria-hidden="true">
+    <nav class="flex flex-col px-8 py-6 gap-1" aria-label="Mobile navigation">
+      <a href="/about.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">About</a>
+      <a href="/physicians.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Physicians</a>
+      <a href="/services/cataracts.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Cataract Surgery</a>
+      <a href="/services/lasik.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">LASIK</a>
+      <a href="/services/light-adjustable-lens.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Light Adjustable Lens</a>
+      <a href="/reviews.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Reviews</a>
+      <a href="/referrals.html" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Referring Doctors</a>
+      <a href="/blog/" class="font-display text-2xl text-white py-3 border-b border-white/10 hover:text-teal-light">Blog</a>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="/book.html" class="btn-teal font-body text-[13px] font-semibold uppercase tracking-[0.12em] px-6 py-4 rounded-sm text-center">Book a Consultation</a>
+        <a href="tel:3468186780" class="btn-outline font-body text-[13px] font-semibold uppercase tracking-[0.12em] px-6 py-4 rounded-sm text-center">(346) 818-6780</a>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- HERO                                         -->
+  <!-- ============================================ -->
+  <section class="relative bg-navy grain overflow-hidden" style="padding-top: 104px;">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-10">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[600px] lg:min-h-[680px]">
+        <!-- Text -->
+        <div class="relative z-10 py-16 lg:py-24 lg:pr-12">
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-6">Cypress, TX&ensp;·&ensp;NW Houston</p>
+          <h1 class="font-display text-white heading-em leading-[1.05] tracking-tight-display mb-6" style="font-size: clamp(48px, 5.5vw, 80px); font-weight: 600;">
+            Houston's Most Trusted <em>Eye Surgeons</em>
+          </h1>
+          <p class="font-body text-white/70 text-lg md:text-xl leading-relaxed max-w-[520px] mb-10" style="font-weight: 300; line-height: 1.7;">
+            Fellowship-trained cataract &amp; refractive specialists delivering personalized surgical care with Houston's highest patient satisfaction.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 mb-12">
+            <a href="/book.html" class="btn-teal font-body text-[13px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-sm inline-block">Schedule a Consultation</a>
+            <a href="/referrals.html" class="btn-outline font-body text-[13px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-sm inline-block">I'm a Referring Doctor</a>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="flex flex-wrap gap-8 lg:gap-12">
+            <div>
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="star text-lg">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="font-body text-white font-semibold text-sm">4.9</span>
+              </div>
+              <p class="font-body text-white/50 text-xs uppercase tracking-wider">703+ Google Reviews</p>
+            </div>
+            <div class="w-px bg-white/15 hidden sm:block"></div>
+            <div>
+              <p class="font-body text-white font-semibold text-xl">Thousands</p>
+              <p class="font-body text-white/50 text-xs uppercase tracking-wider">Surgeries Performed</p>
+            </div>
+            <div class="w-px bg-white/15 hidden sm:block"></div>
+            <div>
+              <p class="font-body text-white font-semibold text-xl">15+</p>
+              <p class="font-body text-white/50 text-xs uppercase tracking-wider">Years of Excellence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo -->
+        <div class="relative hidden lg:block self-end">
+          <div class="relative">
+            <!-- Teal accent shape behind photo -->
+            <div class="absolute -top-8 -right-8 w-48 h-48 rounded-full opacity-10" style="background: radial-gradient(circle, #499188, transparent 70%);"></div>
+            <img
+              src="/brand_assets/both-main.webp"
+              alt="Dr. Ruhi Soni and Dr. Nikitha Reddy, fellowship-trained ophthalmologists at Soni Vision Institute"
+              class="relative z-10 w-full max-w-[560px] ml-auto object-cover object-top"
+              style="height: 600px; border-radius: 2px 2px 0 0;"
+              loading="eager"
+            >
+            <!-- Subtle gradient overlay at bottom -->
+            <div class="absolute bottom-0 left-0 right-0 h-32 z-20" style="background: linear-gradient(to top, #32384e, transparent);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative line -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent"></div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- TRUST BAR                                    -->
+  <!-- ============================================ -->
+  <section class="bg-cream py-8 border-b border-gray-200/50">
+    <div class="max-w-[1080px] mx-auto px-6 md:px-10">
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-50">
+        <!-- Using text placeholders for credential logos — replace with actual badge images -->
+        <div class="flex items-center gap-2">
+          <span class="font-body text-[11px] font-semibold uppercase tracking-wider text-navy">AAO</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-body text-[11px] font-semibold uppercase tracking-wider text-navy">ASCRS</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-body text-[11px] font-semibold uppercase tracking-wider text-navy">Baylor College of Medicine</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-body text-[11px] font-semibold uppercase tracking-wider text-navy">UT Southwestern</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-body text-[11px] font-semibold uppercase tracking-wider text-navy">Texas A&amp;M</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- SERVICES OVERVIEW                            -->
+  <!-- ============================================ -->
+  <section class="py-24 md:py-28 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 reveal">
+      <!-- Section header -->
+      <div class="text-center mb-16 md:mb-20">
+        <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">What We Do</p>
+        <h2 class="font-display text-navy heading-em leading-[1.1] tracking-tight-display" style="font-size: clamp(36px, 4vw, 54px); font-weight: 600;">
+          Surgical Expertise for <em>Clearer Vision</em>
+        </h2>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Cataract Surgery -->
+        <a href="/services/cataracts.html" class="group card-lift bg-white rounded-sm overflow-hidden shadow-elevated">
+          <div class="img-overlay aspect-[4/3]">
+            <img src="/brand_assets/dr-reddy-slit-lamp.png" alt="Dr. Reddy performing cataract evaluation at slit lamp" class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-7 pb-8">
+            <h3 class="font-display text-navy text-2xl font-semibold mb-3">Cataract Surgery</h3>
+            <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-4" style="font-weight: 300;">Laser-assisted cataract removal with premium intraocular lens options tailored to your lifestyle and visual goals.</p>
+            <span class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] group-hover:tracking-[0.2em] transition-all duration-300">Explore Options &rarr;</span>
+          </div>
+        </a>
+
+        <!-- Premium IOLs -->
+        <a href="/services/light-adjustable-lens.html" class="group card-lift bg-white rounded-sm overflow-hidden shadow-elevated">
+          <div class="img-overlay aspect-[4/3]">
+            <img src="/brand_assets/dr-reddy-exam.png" alt="Dr. Reddy consulting with patient about premium lens implants" class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-7 pb-8">
+            <h3 class="font-display text-navy text-2xl font-semibold mb-3">Premium Lens Implants</h3>
+            <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-4" style="font-weight: 300;">Light Adjustable, multifocal, EDOF, and toric lenses — personalized to reduce or eliminate your dependence on glasses.</p>
+            <span class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] group-hover:tracking-[0.2em] transition-all duration-300">Learn More &rarr;</span>
+          </div>
+        </a>
+
+        <!-- LASIK & Vision Correction -->
+        <a href="/services/lasik.html" class="group card-lift bg-white rounded-sm overflow-hidden shadow-elevated">
+          <div class="img-overlay aspect-[4/3]">
+            <img src="/brand_assets/surgery-scrub.jpg" alt="Surgeon preparing for refractive surgery procedure" class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-7 pb-8">
+            <h3 class="font-display text-navy text-2xl font-semibold mb-3">LASIK &amp; Vision Correction</h3>
+            <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-4" style="font-weight: 300;">LASIK, PRK, and EVO ICL — advanced refractive procedures customized to your prescription and eye anatomy.</p>
+            <span class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] group-hover:tracking-[0.2em] transition-all duration-300">See If You Qualify &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- PHYSICIAN SPOTLIGHT                          -->
+  <!-- ============================================ -->
+  <section class="py-24 md:py-28 bg-cream relative grain">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 reveal">
+      <div class="text-center mb-16 md:mb-20">
+        <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Your Surgeons</p>
+        <h2 class="font-display text-navy heading-em leading-[1.1] tracking-tight-display" style="font-size: clamp(36px, 4vw, 54px); font-weight: 600;">
+          Two Fellowship-Trained <em>Specialists</em>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Dr. Soni -->
+        <div class="group card-lift bg-white rounded-sm overflow-hidden shadow-elevated">
+          <div class="img-overlay aspect-[4/5]">
+            <img src="/brand_assets/soni.webp" alt="Dr. Ruhi Soni, founder of Soni Vision Institute" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-navy text-3xl font-semibold mb-1">Dr. Ruhi Soni</h3>
+            <p class="font-body text-teal text-sm font-medium mb-4">Founder · Board-Certified Ophthalmologist</p>
+            <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-4" style="font-weight: 300;">
+              With over 15 years of experience, Dr. Soni founded Soni Vision Institute to bring world-class refractive cataract surgery to NW Houston. A Baylor College of Medicine graduate, she specializes in advanced technology lens implantation and personalized surgical care.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">Baylor COM</span>
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">Texas A&amp;M</span>
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">TX Monthly Rising Star</span>
+            </div>
+            <a href="/physicians.html" class="btn-outline-dark font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-sm inline-block">Meet Dr. Soni</a>
+          </div>
+        </div>
+
+        <!-- Dr. Reddy -->
+        <div class="group card-lift bg-white rounded-sm overflow-hidden shadow-elevated">
+          <div class="img-overlay aspect-[4/5]">
+            <img src="/brand_assets/reddy 3.webp" alt="Dr. Nikitha Reddy, fellowship-trained ophthalmologist" class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-navy text-3xl font-semibold mb-1">Dr. Nikitha Reddy</h3>
+            <p class="font-body text-teal text-sm font-medium mb-4">Fellowship-Trained Ophthalmologist</p>
+            <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-4" style="font-weight: 300;">
+              Dr. Reddy completed her fellowship in Glaucoma and Advanced Anterior Segment Surgery under world-renowned Dr. Ike Ahmed. A UT Southwestern graduate (<em>summa cum laude</em> from UT Austin), she specializes in complex cataract surgery, premium IOLs, and MIGS.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">UT Southwestern</span>
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">UT Austin</span>
+              <span class="font-body text-[10px] font-semibold uppercase tracking-wider text-navy/60 bg-cream px-3 py-1 rounded-sm">ASCRS · AAO · AGS</span>
+            </div>
+            <a href="/physicians.html" class="btn-outline-dark font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-sm inline-block">Meet Dr. Reddy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- WHY SONI VISION                              -->
+  <!-- ============================================ -->
+  <section class="py-24 md:py-28 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 reveal">
+      <div class="text-center mb-16 md:mb-20">
+        <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Why Choose Us</p>
+        <h2 class="font-display text-navy heading-em leading-[1.1] tracking-tight-display" style="font-size: clamp(36px, 4vw, 54px); font-weight: 600;">
+          A Practice Built for <em>Precision</em>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-14">
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">Surgical-Only Practice</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed" style="font-weight: 300;">We don't sell glasses or contacts. Every resource, every minute, every investment is focused on one thing: delivering the best possible surgical outcomes.</p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">Fellowship-Trained Surgeons</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed" style="font-weight: 300;">Both surgeons completed advanced specialty training at the nation's top programs — Baylor College of Medicine and UT Southwestern — bringing subspecialty expertise to every case.</p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">Personalized Lens Selection</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed" style="font-weight: 300;">We offer every major premium IOL platform — Light Adjustable, multifocal, EDOF, and toric — so your lens choice is based on your eyes and your life, not our inventory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- GOOGLE REVIEWS CAROUSEL                      -->
+  <!-- ============================================ -->
+  <section class="py-24 md:py-28 bg-navy relative grain overflow-hidden">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 mb-12 reveal">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Patient Reviews</p>
+          <h2 class="font-display text-white heading-em leading-[1.1] tracking-tight-display" style="font-size: clamp(36px, 4vw, 54px); font-weight: 600;">
+            4.9 Stars From <em>703+ Patients</em>
+          </h2>
+        </div>
+        <a href="/reviews.html" class="btn-outline font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-sm inline-block self-start md:self-auto">Read All Reviews</a>
+      </div>
+    </div>
+
+    <!-- Scrolling reviews -->
+    <div class="relative z-10 overflow-hidden">
+      <div class="reviews-track" style="width: max-content;">
+        <!-- Review 1 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"After my cataract surgery, Venus is not anymore just a splash of diffuse light rays. Now, I see a beautiful, crisp and shiny star. I am grateful to Dr. Soni and her team for their care in restoring my capacity to enjoy the heavenly skies."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">B</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">B. Belkhouche</p>
+              <p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"She looked me in the eye and told me her job was to make my eyes outlast me. She did surgery on both eyes and restored my ocular pressure to normal without drops. She also implanted the cutting edge LAL+. I don't even have to wear glasses anymore!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">C</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">Charley G.</p>
+              <p class="font-body text-white/40 text-xs">Glaucoma + Cataract + LAL+ · Dr. Reddy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"I am beyond grateful to Dr. Soni and the entire team for the outstanding care I received during my cataract surgery. The results have been life-changing. My vision has improved dramatically, and I am now able to enjoy everyday activities with clarity."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">T</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">Treyce S.</p>
+              <p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"From the first consultation to my post-surgery follow-ups, the level of professionalism, expertise, and kindness I experienced was beyond my expectations. The staff was always welcoming and took the time to answer every question I had."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">M</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">Maria R.</p>
+              <p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"Dr. Reddy is an amazing eye surgeon and a wonderful and caring human being. I would give her 10 stars if the review allowed it. Her attention to detail and her genuine concern for my well-being made all the difference in my recovery."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">J</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">James P.</p>
+              <p class="font-body text-white/40 text-xs">Glaucoma · Dr. Reddy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3">
+            <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"The whole experience from start to finish was excellent. Dr. Soni explained everything clearly, the surgery was quick and painless, and my vision is now better than it's been in decades. I can't recommend this practice enough."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center">
+              <span class="font-body text-teal text-sm font-semibold">R</span>
+            </div>
+            <div>
+              <p class="font-body text-white text-sm font-medium">Robert K.</p>
+              <p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"After my cataract surgery, Venus is not anymore just a splash of diffuse light rays. Now, I see a beautiful, crisp and shiny star. I am grateful to Dr. Soni and her team for their care in restoring my capacity to enjoy the heavenly skies."</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">B</span></div><div><p class="font-body text-white text-sm font-medium">B. Belkhouche</p><p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"She looked me in the eye and told me her job was to make my eyes outlast me. She did surgery on both eyes and restored my ocular pressure to normal without drops. She also implanted the cutting edge LAL+. I don't even have to wear glasses anymore!"</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">C</span></div><div><p class="font-body text-white text-sm font-medium">Charley G.</p><p class="font-body text-white/40 text-xs">Glaucoma + Cataract + LAL+ · Dr. Reddy</p></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"I am beyond grateful to Dr. Soni and the entire team for the outstanding care I received during my cataract surgery. The results have been life-changing. My vision has improved dramatically, and I am now able to enjoy everyday activities with clarity."</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">T</span></div><div><p class="font-body text-white text-sm font-medium">Treyce S.</p><p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"From the first consultation to my post-surgery follow-ups, the level of professionalism, expertise, and kindness I experienced was beyond my expectations. The staff was always welcoming and took the time to answer every question I had."</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">M</span></div><div><p class="font-body text-white text-sm font-medium">Maria R.</p><p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"Dr. Reddy is an amazing eye surgeon and a wonderful and caring human being. I would give her 10 stars if the review allowed it. Her attention to detail and her genuine concern for my well-being made all the difference in my recovery."</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">J</span></div><div><p class="font-body text-white text-sm font-medium">James P.</p><p class="font-body text-white/40 text-xs">Glaucoma · Dr. Reddy</p></div></div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-7 min-w-[380px] max-w-[420px] flex-shrink-0">
+          <div class="flex gap-0.5 mb-3"><span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <p class="font-body text-white/80 text-[14px] leading-relaxed mb-5" style="font-weight: 300;">"The whole experience from start to finish was excellent. Dr. Soni explained everything clearly, the surgery was quick and painless, and my vision is now better than it's been in decades. I can't recommend this practice enough."</p>
+          <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center"><span class="font-body text-teal text-sm font-semibold">R</span></div><div><p class="font-body text-white text-sm font-medium">Robert K.</p><p class="font-body text-white/40 text-xs">Cataract Surgery · Dr. Soni</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- PATIENT JOURNEY                              -->
+  <!-- ============================================ -->
+  <section class="py-24 md:py-28 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 reveal">
+      <div class="text-center mb-16 md:mb-20">
+        <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Getting Started</p>
+        <h2 class="font-display text-navy heading-em leading-[1.1] tracking-tight-display" style="font-size: clamp(36px, 4vw, 54px); font-weight: 600;">
+          Where Do I <em>Begin?</em>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div class="card-lift bg-cream rounded-sm p-8 lg:p-10 text-center">
+          <div class="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-display text-teal text-2xl font-semibold">1</span>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">Am I a Candidate?</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-5" style="font-weight: 300;">If you're experiencing blurry vision, glare, halos, or difficulty reading — you may be a candidate for cataract surgery or vision correction.</p>
+          <a href="/book.html" class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] hover:text-teal-dark">Find Out &rarr;</a>
+        </div>
+
+        <div class="card-lift bg-cream rounded-sm p-8 lg:p-10 text-center">
+          <div class="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-display text-teal text-2xl font-semibold">2</span>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">What Does It Cost?</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-5" style="font-weight: 300;">Standard cataract surgery is typically covered by insurance. Premium lens upgrades are an out-of-pocket investment — financing through Alphaeon Credit is available.</p>
+          <a href="/services/cataracts.html" class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] hover:text-teal-dark">Learn More &rarr;</a>
+        </div>
+
+        <div class="card-lift bg-cream rounded-sm p-8 lg:p-10 text-center">
+          <div class="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-display text-teal text-2xl font-semibold">3</span>
+          </div>
+          <h3 class="font-display text-navy text-xl font-semibold mb-3">What's Recovery Like?</h3>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-5" style="font-weight: 300;">Most patients notice improved vision within 24–48 hours. We provide detailed pre- and post-operative instructions and monitor your progress at every step.</p>
+          <a href="/patients/pre-post-op.html" class="font-body text-teal text-[12px] font-semibold uppercase tracking-[0.15em] hover:text-teal-dark">See Details &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- REFERRING PROVIDERS CTA                      -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-24 bg-cream relative grain">
+    <div class="max-w-[1000px] mx-auto px-6 md:px-10 reveal">
+      <div class="bg-white rounded-sm shadow-elevated p-10 md:p-14 lg:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-14">
+        <div class="flex-1">
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">For Referring Doctors</p>
+          <h2 class="font-display text-navy leading-[1.1] tracking-tight-display mb-4" style="font-size: clamp(28px, 3vw, 38px); font-weight: 600;">Referring an Ophthalmology Patient?</h2>
+          <p class="font-body text-gray-600 text-[15px] leading-relaxed mb-6" style="font-weight: 300;">We partner with optometrists across NW Houston for seamless co-management. Submit a referral online, and our team will coordinate the patient's surgical consultation within 48 hours.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/referrals.html" class="btn-teal font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-7 py-3.5 rounded-sm inline-block">Submit a Referral</a>
+            <a href="tel:3468186780" class="btn-outline-dark font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-7 py-3.5 rounded-sm inline-block">Call (346) 818-6780</a>
+          </div>
+        </div>
+        <div class="flex-shrink-0 hidden md:block">
+          <img src="/brand_assets/both-docs-studio.png" alt="Dr. Soni and Dr. Reddy" class="w-48 lg:w-56 h-auto rounded-sm shadow-elevated object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-navy-deep text-white relative grain">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 py-16 md:py-20">
+      <div class="grid md:grid-cols-4 gap-10 md:gap-8 mb-14">
+        <!-- Col 1: Logo & Info -->
+        <div class="md:col-span-1">
+          <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-10 w-auto mb-5 brightness-0 invert opacity-80">
+          <p class="font-body text-white/50 text-sm leading-relaxed mb-4">27700 Northwest Freeway<br>Suite 390<br>Cypress, TX 77433</p>
+          <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors duration-200 block mb-1">(346) 818-6780</a>
+          <p class="font-body text-white/40 text-xs">Fax: 332-244-2205</p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40 mb-5">Quick Links</p>
+          <nav class="flex flex-col gap-2.5" aria-label="Footer navigation">
+            <a href="/about.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">About Us</a>
+            <a href="/physicians.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Our Physicians</a>
+            <a href="/services/cataracts.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Cataract Surgery</a>
+            <a href="/services/light-adjustable-lens.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Light Adjustable Lens</a>
+            <a href="/services/lasik.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">LASIK</a>
+            <a href="/services/glaucoma.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Glaucoma</a>
+          </nav>
+        </div>
+
+        <!-- Col 3: Patients -->
+        <div>
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40 mb-5">Patients</p>
+          <nav class="flex flex-col gap-2.5">
+            <a href="/book.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Book a Consultation</a>
+            <a href="/reviews.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Patient Reviews</a>
+            <a href="/patients/pre-post-op.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Pre/Post-Op Instructions</a>
+            <a href="/blog/" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Blog</a>
+            <a href="/referrals.html" class="font-body text-white/70 text-sm hover:text-teal transition-colors duration-200">Referring Doctors</a>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="font-body text-teal text-sm font-medium hover:text-teal-light transition-colors duration-200">Leave a Review &rarr;</a>
+          </nav>
+        </div>
+
+        <!-- Col 4: Hours & Rating -->
+        <div>
+          <p class="font-body text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40 mb-5">Hours</p>
+          <p class="font-body text-white/70 text-sm mb-1">Monday – Friday</p>
+          <p class="font-body text-white text-sm font-medium mb-4">8:00 AM – 5:00 PM</p>
+          <p class="font-body text-white/40 text-sm mb-6">Saturday – Sunday: Closed</p>
+
+          <!-- Rating badge -->
+          <div class="bg-white/5 border border-white/10 rounded-sm p-4 inline-block">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="star text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="font-body text-white font-semibold text-sm">4.9</span>
+            </div>
+            <p class="font-body text-white/50 text-xs">703+ Google Reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body text-white/30 text-xs">&copy; 2026 Soni Vision Institute. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="https://www.facebook.com/100089139506135" target="_blank" rel="noopener" class="font-body text-white/30 text-xs hover:text-white/60 transition-colors duration-200">Facebook</a>
+          <a href="https://www.linkedin.com/company/soni-vision-institute/" target="_blank" rel="noopener" class="font-body text-white/30 text-xs hover:text-white/60 transition-colors duration-200">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================ -->
+  <!-- SCRIPTS                                      -->
+  <!-- ============================================ -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let menuOpen = false;
+
+    toggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileNav.classList.toggle('open', menuOpen);
+      mobileNav.setAttribute('aria-hidden', !menuOpen);
+      toggle.setAttribute('aria-expanded', menuOpen);
+      document.body.style.overflow = menuOpen ? 'hidden' : '';
+
+      if (menuOpen) {
+        bar1.style.transform = 'rotate(45deg) translateY(3.25px)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'rotate(-45deg) translateY(-3.25px)';
+      } else {
+        bar1.style.transform = '';
+        bar2.style.opacity = '1';
+        bar3.style.transform = '';
+      }
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Header shadow on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 1px 3px rgba(50,56,78,0.06), 0 4px 16px rgba(50,56,78,0.04)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
