@@ -89,12 +89,33 @@
       box-shadow: 0 2px 4px rgba(50,56,78,0.04), 0 12px 32px rgba(50,56,78,0.08), 0 24px 56px rgba(50,56,78,0.04);
     }
 
-    .sr { opacity: 0; transform: translateY(24px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
-    .sr.vis { opacity: 1; transform: translateY(0); }
-    .sr-d1 { transition-delay: 0.08s; }
-    .sr-d2 { transition-delay: 0.16s; }
-    .sr-d3 { transition-delay: 0.24s; }
-    .sr-d4 { transition-delay: 0.32s; }
+    /* ---- Scroll reveal (enhanced) ---- */
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+
+    .sr-left { opacity: 0; transform: translateX(-120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-left.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-right { opacity: 0; transform: translateX(120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-right.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+
+    .sr-up { opacity: 0; transform: translateY(80px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-up.vis { opacity: 1; transform: translateY(0); }
+
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+    .sr-d4 { transition-delay: 0.6s; }
+    .sr-d5 { transition-delay: 0.75s; }
+    .sr-d6 { transition-delay: 0.9s; }
+
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
+
+    .hero-img-parallax { transition: transform 0.1s linear; will-change: transform; }
 
     .divider { height: 1px; background: linear-gradient(to right, transparent, #32384e15, transparent); }
 
@@ -255,17 +276,17 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Text -->
         <div class="text-center md:text-left order-2 md:order-1">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Meet Your Surgeon</p>
-          <h1 class="sr sr-d1 font-display text-white text-balance leading-[1.08] mb-4" style="font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.02em;">Dr. Nikitha Reddy</h1>
-          <p class="sr sr-d2 font-display italic text-teal text-[20px] md:text-[24px] mb-6" style="letter-spacing: -0.01em;">Cataract, Refractive &amp; Glaucoma Surgeon</p>
-          <p class="sr sr-d3 font-body text-white/60 leading-relaxed mb-8" style="font-size: clamp(15px, 1.4vw, 17px);">Board-certified, fellowship-trained ophthalmologist with advanced training from two of the world&rsquo;s most prestigious institutions. What matters most to Dr. Reddy is that every patient feels heard, cared for, and confident in their treatment.</p>
-          <div class="sr sr-d4 flex flex-wrap gap-4 justify-center md:justify-start">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Meet Your Surgeon</p>
+          <h1 class="sr-left sr-d1 font-display text-white text-balance leading-[1.08] mb-4" style="font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.02em;">Dr. Nikitha Reddy</h1>
+          <p class="sr-left sr-d2 font-display italic text-teal text-[20px] md:text-[24px] mb-6" style="letter-spacing: -0.01em;">Cataract, Refractive &amp; Glaucoma Surgeon</p>
+          <p class="sr-left sr-d3 font-body text-white/60 leading-relaxed mb-8" style="font-size: clamp(15px, 1.4vw, 17px);">Board-certified, fellowship-trained ophthalmologist with advanced training from two of the world&rsquo;s most prestigious institutions. What matters most to Dr. Reddy is that every patient feels heard, cared for, and confident in their treatment.</p>
+          <div class="sr-left sr-d4 flex flex-wrap gap-4 justify-center md:justify-start">
             <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block">Book with Dr. Reddy</a>
             <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block">Call (346) 818-6780</a>
           </div>
         </div>
         <!-- Portrait -->
-        <div class="sr sr-d2 order-1 md:order-2 flex justify-center">
+        <div class="sr-right sr-d2 order-1 md:order-2 flex justify-center">
           <div class="rounded-xl overflow-hidden border-2 border-white/10 max-w-[420px]" style="box-shadow: 0 24px 64px rgba(0,0,0,0.3);">
             <img src="/brand_assets/dr-reddy-full-body.png" alt="Dr. Nikitha Reddy, MD — Surgeon, Soni Vision Institute" class="w-full object-cover object-top" style="aspect-ratio: 3/4;">
           </div>
@@ -304,9 +325,9 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
         <!-- Bio text -->
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Biography</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Fellowship-Trained. <em class="text-teal italic">Patient-Focused.</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Biography</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Fellowship-Trained. <em class="text-teal italic">Patient-Focused.</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
             <p>Dr. Nikitha Reddy is a board-certified, fellowship-trained ophthalmologist who brings world-class expertise and genuine compassion to every patient she treats at Soni Vision Institute. Her advanced training from two of the country&rsquo;s most prestigious programs gives her a rare combination of surgical precision and clinical depth.</p>
             <p>Dr. Reddy earned her medical degree and completed her ophthalmology residency at UT Southwestern Medical Center in Dallas &mdash; consistently ranked among the top ophthalmology programs in the nation. She then pursued a highly competitive Glaucoma, Anterior Segment, and Advanced Surgery (GAASS) fellowship at the University of Toronto under the mentorship of Dr. Ike Ahmed, one of the most renowned glaucoma and anterior segment surgeons in the world.</p>
             <p>This combination of elite residency and fellowship training allows Dr. Reddy to offer her patients a uniquely comprehensive approach. Whether performing complex cataract surgery with advanced technology lenses, treating glaucoma with the latest minimally invasive techniques, or helping patients achieve visual freedom through refractive procedures, she brings the same meticulous attention to detail and personal care to every case.</p>
@@ -314,7 +335,7 @@
           </div>
         </div>
         <!-- Photo -->
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/nkr-bio-1.jpg" alt="Dr. Nikitha Reddy at Soni Vision Institute" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -328,13 +349,13 @@
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
         <!-- Photo -->
-        <div class="sr order-2 md:order-1">
+        <div class="sr-left order-2 md:order-1">
           <img src="/brand_assets/nkr-bio-2.jpg" alt="Dr. Nikitha Reddy in clinic" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
         <!-- Credentials -->
         <div class="order-1 md:order-2">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Education &amp; Training</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Trained at the <em class="text-teal italic">World&rsquo;s Best</em></h2>
+          <p class="sr-right font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Education &amp; Training</p>
+          <h2 class="sr-right sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Trained at the <em class="text-teal italic">World&rsquo;s Best</em></h2>
 
           <div class="space-y-8">
             <div class="sr sr-d1">
@@ -379,14 +400,14 @@
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Philosophy</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Every Patient Deserves to <em class="text-teal italic">Feel Heard</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Philosophy</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Every Patient Deserves to <em class="text-teal italic">Feel Heard</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
             <p>&ldquo;What matters most to me is that every patient feels heard, cared for, and confident in their treatment. I became a surgeon because I care deeply about people &mdash; and I believe that the best surgical outcomes begin with a relationship built on trust and understanding.&rdquo;</p>
             <p>Dr. Reddy is known for her warm, approachable demeanor and her ability to explain complex medical concepts in a way that puts patients at ease. She takes the time to understand not just each patient&rsquo;s clinical needs, but their lifestyle, concerns, and personal vision goals &mdash; because she believes that great medicine is as much about listening as it is about operating.</p>
           </div>
         </div>
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/nkr-bio-3.jpg" alt="Dr. Nikitha Reddy with a patient" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -399,13 +420,13 @@
   <section class="bg-cream">
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div class="sr order-2 md:order-1">
+        <div class="sr-left order-2 md:order-1">
           <img src="/brand_assets/nkr-bio-4.png" alt="Dr. Nikitha Reddy" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
         <div class="order-1 md:order-2">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Professional Affiliations</p>
-          <h2 class="sr sr-d1 font-display text-navy leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Affiliated <em class="text-teal italic">Organizations</em></h2>
-          <div class="sr sr-d2 space-y-4">
+          <p class="sr-right font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Professional Affiliations</p>
+          <h2 class="sr-right sr-d1 font-display text-navy leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Affiliated <em class="text-teal italic">Organizations</em></h2>
+          <div class="sr-right sr-d2 space-y-4">
             <div class="flex items-center gap-4 font-body text-navy text-[16px]">
               <span class="w-2 h-2 rounded-full bg-teal flex-shrink-0"></span>American Academy of Ophthalmology (AAO)
             </div>
@@ -439,7 +460,7 @@
   <!-- ========== MEET DR. SONI CTA ========== -->
   <section class="bg-sand">
     <div class="max-w-[1100px] mx-auto px-5 py-14 md:py-20">
-      <div class="sr grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
+      <div class="sr-scale grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
         <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-navy flex-shrink-0 mx-auto md:mx-0">
           <img src="/brand_assets/soni-portrait.jpeg" alt="Dr. Ruhi Soni" class="w-full h-full object-cover object-top">
         </div>
@@ -455,9 +476,9 @@
   <!-- ========== FINAL CTA ========== -->
   <section class="relative bg-navy grain">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28 text-center">
-      <h2 class="sr font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to See Dr. Reddy?</h2>
-      <p class="sr sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation and take the first step toward clearer, better vision.</p>
-      <div class="sr sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <h2 class="sr-scale font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to See Dr. Reddy?</h2>
+      <p class="sr-scale sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation and take the first step toward clearer, better vision.</p>
+      <div class="sr-scale sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Schedule a Consultation</a>
         <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Call (346) 818-6780</a>
       </div>
@@ -539,7 +560,7 @@
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up').forEach(el => obs.observe(el));
     const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';

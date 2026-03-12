@@ -137,13 +137,33 @@
     .stats-marquee-track { animation: stats-scroll 30s linear infinite; }
     .stats-marquee-track:hover { animation-play-state: paused; }
 
-    /* ---- Scroll reveal ---- */
-    .sr { opacity: 0; transform: translateY(24px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
-    .sr.vis { opacity: 1; transform: translateY(0); }
-    .sr-d1 { transition-delay: 0.08s; }
-    .sr-d2 { transition-delay: 0.16s; }
-    .sr-d3 { transition-delay: 0.24s; }
-    .sr-d4 { transition-delay: 0.32s; }
+    /* ---- Scroll reveal (enhanced) ---- */
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+
+    .sr-left { opacity: 0; transform: translateX(-120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-left.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-right { opacity: 0; transform: translateX(120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-right.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+
+    .sr-up { opacity: 0; transform: translateY(80px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-up.vis { opacity: 1; transform: translateY(0); }
+
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+    .sr-d4 { transition-delay: 0.6s; }
+    .sr-d5 { transition-delay: 0.75s; }
+    .sr-d6 { transition-delay: 0.9s; }
+
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
+
+    .hero-img-parallax { transition: transform 0.1s linear; will-change: transform; }
 
     /* ---- Hero video treatment ---- */
     .hero-video-wrap {
@@ -361,13 +381,15 @@
   <main>
 
   <!-- ========== HERO — Full-width photo ========== -->
-  <section class="relative pt-[80px]">
-    <div class="relative w-full" style="min-height: clamp(950px, 135vh, 1400px);">
+  <section id="hero-section" class="relative pt-[80px]">
+    <div class="relative w-full overflow-hidden" style="min-height: clamp(950px, 135vh, 1400px);">
       <!-- Full-width photo -->
       <img
+        id="hero-parallax-img"
         src="/brand_assets/both-main.webp"
         alt="Dr. Nikitha Reddy and Dr. Ruhi Soni — Soni Vision Institute"
-        class="absolute inset-0 w-full h-full object-cover object-top"
+        class="absolute inset-0 w-full h-full object-cover object-top hero-img-parallax"
+        style="transform: scale(1.08)"
         fetchpriority="high"
       >
       <!-- Gradient overlay — solid dark band at bottom so text never clashes with photo -->
@@ -470,7 +492,7 @@
   <section class="py-14 md:py-20 bg-cream">
     <div class="max-w-[1320px] mx-auto px-5">
       <!-- Section intro -->
-      <div class="mb-16 md:mb-20 sr">
+      <div class="mb-16 md:mb-20 sr-left">
         <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">What We Do</p>
         <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(44px, 5vw, 68px); letter-spacing: -0.02em;">
           Precision Surgery.<br>
@@ -480,9 +502,9 @@
       </div>
 
       <!-- 4 service cards -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 sr">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
         <!-- Cataract Surgery -->
-        <a href="/services/cataracts.html" class="group card-surface rounded-xl overflow-hidden sr sr-d1 block">
+        <a href="/services/cataracts.html" class="group card-surface card-hover rounded-xl overflow-hidden sr-scale sr-d1 block">
           <div class="img-zoom aspect-[4/3] overflow-hidden">
             <img src="/brand_assets/cataract-surgery.jpeg" alt="Cataract surgery preparation" class="w-full h-full object-cover" loading="lazy">
           </div>
@@ -494,7 +516,7 @@
         </a>
 
         <!-- Premium IOLs -->
-        <a href="/services/light-adjustable-lens.html" class="group card-surface rounded-xl overflow-hidden sr sr-d2 block">
+        <a href="/services/light-adjustable-lens.html" class="group card-surface card-hover rounded-xl overflow-hidden sr-scale sr-d2 block">
           <div class="img-zoom aspect-[4/3] overflow-hidden">
             <img src="/brand_assets/advanced-tech-lenses.png" alt="Advanced technology lens consultation" class="w-full h-full object-cover" loading="lazy">
           </div>
@@ -506,7 +528,7 @@
         </a>
 
         <!-- LASIK & EVO ICL -->
-        <a href="/services/lasik.html" class="group card-surface rounded-xl overflow-hidden sr sr-d3 block">
+        <a href="/services/lasik.html" class="group card-surface card-hover rounded-xl overflow-hidden sr-scale sr-d3 block">
           <div class="img-zoom aspect-[4/3] overflow-hidden">
             <img src="/brand_assets/vision-correction-surgery-2.png" alt="Vision Correction Surgery consultation" class="w-full h-full object-cover" loading="lazy">
           </div>
@@ -518,7 +540,7 @@
         </a>
 
         <!-- Medical Ophthalmology -->
-        <a href="/services/glaucoma.html" class="group card-surface rounded-xl overflow-hidden sr sr-d4 block">
+        <a href="/services/glaucoma.html" class="group card-surface card-hover rounded-xl overflow-hidden sr-scale sr-d4 block">
           <div class="img-zoom aspect-[4/3] overflow-hidden">
             <img src="/brand_assets/dr-reddy-slit-lamp.png" alt="Medical ophthalmology consultation" class="w-full h-full object-cover" loading="lazy">
           </div>
@@ -536,7 +558,7 @@
   <!-- ========== YOUR SURGEONS ========== -->
   <section class="py-14 md:py-20 bg-white relative grain">
     <div class="max-w-[1320px] mx-auto px-5">
-      <div class="text-center mb-16 md:mb-20 sr">
+      <div class="text-center mb-16 md:mb-20 sr-right">
         <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Your Surgeons</p>
         <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(46px, 5vw, 72px); letter-spacing: -0.02em;">
           The physicians behind<br class="hidden sm:block"> Houston's highest rating.
@@ -545,9 +567,9 @@
         <p class="font-body text-navy/50 text-[16px] leading-[1.75] mt-3 max-w-[560px] mx-auto" style="font-weight: 300;">Two fellowship-trained, board-certified specialists dedicated to your best possible vision.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 max-w-[1100px] mx-auto sr">
+      <div class="grid md:grid-cols-2 gap-10 max-w-[1100px] mx-auto">
         <!-- Dr. Soni -->
-        <div class="card-surface rounded-xl overflow-hidden">
+        <div class="card-surface card-hover rounded-xl overflow-hidden sr-left">
           <div class="img-zoom overflow-hidden" style="max-height: 520px;">
             <img src="/brand_assets/soni-portrait.jpeg" alt="Dr. Ruhi Soni, MD — Cataract and refractive eye surgeon in Cypress TX" class="w-full h-full object-cover object-top" loading="lazy">
           </div>
@@ -567,7 +589,7 @@
         </div>
 
         <!-- Dr. Reddy -->
-        <div class="card-surface rounded-xl overflow-hidden">
+        <div class="card-surface card-hover rounded-xl overflow-hidden sr-right">
           <div class="img-zoom overflow-hidden" style="max-height: 520px;">
             <img src="/brand_assets/dr-reddy-full-body.png" alt="Dr. Nikitha Reddy, MD — Cataract and refractive eye surgeon in Cypress TX" class="w-full h-full object-cover object-top" loading="lazy">
           </div>
@@ -597,7 +619,7 @@
       <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
         <!-- Left: Heading + CTA -->
-        <div class="sr md:sticky md:top-32">
+        <div class="sr-left md:sticky md:top-32">
           <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Why Choose Us</p>
           <h2 class="font-display text-white leading-[1.08]" style="font-size: clamp(40px, 4.5vw, 62px); letter-spacing: -0.02em;">
             The Soni Vision<br><em class="text-teal" style="font-style: italic;">Difference</em>
@@ -610,25 +632,25 @@
 
         <!-- Right: Numbered cards -->
         <div class="space-y-10">
-          <div class="sr sr-d1">
+          <div class="sr-right sr-d1">
             <span class="font-display text-teal/40 text-[48px] leading-none" style="letter-spacing: -0.03em;">01</span>
             <h3 class="font-display text-white text-xl mt-2 mb-3" style="letter-spacing: -0.01em;">Surgery Focus</h3>
             <p class="font-body text-white/50 text-[15px] leading-[1.8]" style="font-weight: 300;">We don't sell glasses or contacts. Every aspect of our practice is built around surgical excellence — so you get the undivided expertise of specialists who do this every single day.</p>
           </div>
 
-          <div class="sr sr-d2">
+          <div class="sr-right sr-d2">
             <span class="font-display text-teal/40 text-[48px] leading-none" style="letter-spacing: -0.03em;">02</span>
             <h3 class="font-display text-white text-xl mt-2 mb-3" style="letter-spacing: -0.01em;">Houston's Highest Rating</h3>
             <p class="font-body text-white/50 text-[15px] leading-[1.8]" style="font-weight: 300;">A 4.9-star average across 750+ reviews — the highest of any eye surgery practice in our area. Every star reflects a patient whose life we changed.</p>
           </div>
 
-          <div class="sr sr-d3">
+          <div class="sr-right sr-d3">
             <span class="font-display text-teal/40 text-[48px] leading-none" style="letter-spacing: -0.03em;">03</span>
             <h3 class="font-display text-white text-xl mt-2 mb-3" style="letter-spacing: -0.01em;">Advanced Technology</h3>
             <p class="font-body text-white/50 text-[15px] leading-[1.8]" style="font-weight: 300;">From laser-assisted cataract surgery to the latest IOL platforms, we invest in tools that deliver the best results. You shouldn't have to settle for yesterday's technology.</p>
           </div>
 
-          <div class="sr sr-d4">
+          <div class="sr-right sr-d4">
             <span class="font-display text-teal/40 text-[48px] leading-none" style="letter-spacing: -0.03em;">04</span>
             <h3 class="font-display text-white text-xl mt-2 mb-3" style="letter-spacing: -0.01em;">Boutique Experience</h3>
             <p class="font-body text-white/50 text-[15px] leading-[1.8]" style="font-weight: 300;">You'll see your care team at every visit. No rushed appointments. We take the time to understand your goals and build a personalized plan. All questions answered.</p>
@@ -642,7 +664,7 @@
 
   <!-- ========== REVIEWS MARQUEE (edits #20, #21) ========== -->
   <section class="py-24 md:py-28 bg-navy-deep relative grain overflow-hidden">
-    <div class="max-w-[1320px] mx-auto px-5 mb-8 sr">
+    <div class="max-w-[1320px] mx-auto px-5 mb-8 sr-left">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
         <div>
           <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">What Patients Say</p>
@@ -852,7 +874,7 @@
   <!-- ========== PATIENT TESTIMONIAL VIDEOS (edit #22) ========== -->
   <section class="py-24 md:py-28 bg-cream">
     <div class="max-w-[1320px] mx-auto px-5">
-      <div class="text-center mb-16 sr">
+      <div class="text-center mb-16 sr-right">
         <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Patient Stories</p>
         <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(34px, 3.5vw, 50px); letter-spacing: -0.02em;">
           Hear from our patients.
@@ -860,9 +882,9 @@
         <p class="font-body text-navy/50 text-[16px] leading-[1.75] mt-5 max-w-[500px] mx-auto" style="font-weight: 300;">Real stories from real patients about their experience at Soni Vision Institute.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 sr">
+      <div class="grid md:grid-cols-3 gap-6">
         <!-- Video placeholder 1 -->
-        <div class="rounded-xl overflow-hidden">
+        <div class="sr-scale sr-d1 rounded-xl overflow-hidden">
           <div class="video-placeholder aspect-video rounded-xl">
             <div class="play-btn">
               <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -875,7 +897,7 @@
         </div>
 
         <!-- Video placeholder 2 -->
-        <div class="rounded-xl overflow-hidden">
+        <div class="sr-scale sr-d2 rounded-xl overflow-hidden">
           <div class="video-placeholder aspect-video rounded-xl">
             <div class="play-btn">
               <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -888,7 +910,7 @@
         </div>
 
         <!-- Video placeholder 3 -->
-        <div class="rounded-xl overflow-hidden">
+        <div class="sr-scale sr-d3 rounded-xl overflow-hidden">
           <div class="video-placeholder aspect-video rounded-xl">
             <div class="play-btn">
               <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -907,7 +929,7 @@
   <!-- ========== FROM THE BLOG ========== -->
   <section class="py-14 md:py-20 bg-navy-deep relative grain">
     <div class="max-w-[1200px] mx-auto px-5">
-      <div class="flex items-end justify-between mb-12 sr">
+      <div class="flex items-end justify-between mb-12 sr-left">
         <div>
           <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">From the Blog</p>
           <h2 class="font-display text-white leading-[1.1]" style="font-size: clamp(40px, 4.5vw, 62px); letter-spacing: -0.02em;">
@@ -922,7 +944,7 @@
 
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Blog Card 1 -->
-        <a href="/blog/premium-iol-options-houston" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
+        <a href="/blog/premium-iol-options-houston" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr-scale sr-d1" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
           <div class="h-48 overflow-hidden">
             <div class="w-full h-full" style="background: linear-gradient(135deg, rgba(73,145,136,0.15) 0%, rgba(50,56,78,0.10) 100%);"></div>
           </div>
@@ -938,7 +960,7 @@
         </a>
 
         <!-- Blog Card 2 -->
-        <a href="/blog/evo-icl-vs-lasik" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
+        <a href="/blog/evo-icl-vs-lasik" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr-scale sr-d2" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
           <div class="h-48 overflow-hidden">
             <div class="w-full h-full" style="background: linear-gradient(135deg, rgba(50,56,78,0.10) 0%, rgba(73,145,136,0.15) 100%);"></div>
           </div>
@@ -954,7 +976,7 @@
         </a>
 
         <!-- Blog Card 3 -->
-        <a href="/blog/choose-cataract-surgeon-cypress" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
+        <a href="/blog/choose-cataract-surgeon-cypress" class="group bg-white/[0.04] border border-white/[0.06] rounded-xl overflow-hidden sr-scale sr-d3" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(255,255,255,0.12)';" onmouseleave="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.06)';">
           <div class="h-48 overflow-hidden">
             <div class="w-full h-full" style="background: linear-gradient(135deg, rgba(73,145,136,0.10) 0%, rgba(50,56,78,0.12) 100%);"></div>
           </div>
@@ -983,7 +1005,7 @@
   <!-- ========== PATIENT JOURNEY (edits #24, #25) ========== -->
   <section class="py-14 md:py-20 bg-cream">
     <div class="max-w-[1000px] mx-auto px-5">
-      <div class="text-center mb-16 sr">
+      <div class="text-center mb-16 sr-right">
         <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Getting Started</p>
         <!-- Edit #24: bigger font -->
         <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(40px, 4.5vw, 62px); letter-spacing: -0.02em;">
@@ -993,7 +1015,7 @@
 
       <!-- Edit #25: new cards -->
       <div class="grid md:grid-cols-3 gap-5 lg:gap-8">
-        <a href="/about.html" class="card-surface rounded-xl p-7 text-center sr sr-d1 block group">
+        <a href="/about.html" class="card-surface card-hover rounded-xl p-7 text-center sr-scale sr-d1 block group">
           <div class="w-11 h-11 rounded-full bg-teal-pale flex items-center justify-center mx-auto mb-5">
             <span class="font-display text-teal text-lg">1</span>
           </div>
@@ -1001,7 +1023,7 @@
           <p class="font-body text-navy/50 text-[13.5px] leading-[1.7] mb-4" style="font-weight: 300;">Get to know our fellowship-trained, board-certified ophthalmologists and learn about their specialized training and approach to care.</p>
           <span class="font-body text-teal text-[11px] font-semibold uppercase tracking-[0.15em] group-hover:tracking-[0.22em] transition-all duration-300">Meet the Doctors &rarr;</span>
         </a>
-        <a href="/book.html" class="card-surface rounded-xl p-7 text-center sr sr-d2 block group">
+        <a href="/book.html" class="card-surface card-hover rounded-xl p-7 text-center sr-scale sr-d2 block group">
           <div class="w-11 h-11 rounded-full bg-teal-pale flex items-center justify-center mx-auto mb-5">
             <span class="font-display text-teal text-lg">2</span>
           </div>
@@ -1009,7 +1031,7 @@
           <p class="font-body text-navy/50 text-[13.5px] leading-[1.7] mb-4" style="font-weight: 300;">Blurry vision, glare, halos, or difficulty reading? A consultation will determine which procedure — and which lens — is right for your eyes.</p>
           <span class="font-body text-teal text-[11px] font-semibold uppercase tracking-[0.15em] group-hover:tracking-[0.22em] transition-all duration-300">Book Now &rarr;</span>
         </a>
-        <a href="/services/cataracts.html" class="card-surface rounded-xl p-7 text-center sr sr-d3 block group">
+        <a href="/services/cataracts.html" class="card-surface card-hover rounded-xl p-7 text-center sr-scale sr-d3 block group">
           <div class="w-11 h-11 rounded-full bg-teal-pale flex items-center justify-center mx-auto mb-5">
             <span class="font-display text-teal text-lg">3</span>
           </div>
@@ -1027,7 +1049,7 @@
 
   <!-- ========== FINAL CTA ========== -->
   <section class="py-20 md:py-28 bg-navy relative grain text-center">
-    <div class="max-w-[640px] mx-auto px-5 relative z-10 sr">
+    <div class="max-w-[640px] mx-auto px-5 relative z-10 sr-scale">
       <h2 class="font-display text-white leading-[1.1] mb-5" style="font-size: clamp(34px, 3.5vw, 50px); letter-spacing: -0.02em;">
         Ready to see clearly?
       </h2>
@@ -1124,11 +1146,32 @@
     });
 
     // Scroll reveals
-    const srs = document.querySelectorAll('.sr');
+    const srs = document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up');
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     srs.forEach(el => obs.observe(el));
+
+    // Hero parallax
+    const heroImg = document.getElementById('hero-parallax-img');
+    const heroSection = document.getElementById('hero-section');
+    if (heroImg && heroSection) {
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const rect = heroSection.getBoundingClientRect();
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+              const progress = -rect.top / heroSection.offsetHeight;
+              const yShift = progress * 40;
+              heroImg.style.transform = 'scale(1.08) translateY(' + yShift + 'px)';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    }
 
     // Header shadow
     const hdr = document.getElementById('header');

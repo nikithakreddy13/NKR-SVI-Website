@@ -79,11 +79,31 @@
     .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-1px); }
     .btn-ghost-light:active { transform: translateY(0); }
     .btn-ghost-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-    .sr { opacity: 0; transform: translateY(24px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
-    .sr.vis { opacity: 1; transform: translateY(0); }
-    .sr-d1 { transition-delay: 0.08s; }
-    .sr-d2 { transition-delay: 0.16s; }
-    .sr-d3 { transition-delay: 0.24s; }
+    /* ---- Scroll reveal (enhanced) ---- */
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+
+    .sr-left { opacity: 0; transform: translateX(-120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-left.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-right { opacity: 0; transform: translateX(120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-right.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+
+    .sr-up { opacity: 0; transform: translateY(80px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-up.vis { opacity: 1; transform: translateY(0); }
+
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+    .sr-d4 { transition-delay: 0.6s; }
+    .sr-d5 { transition-delay: 0.75s; }
+    .sr-d6 { transition-delay: 0.9s; }
+
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
     .mob-nav { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
     .mob-nav.is-open { transform: translateX(0); }
     a:focus-visible, button:focus-visible { outline: 2px solid #499188; outline-offset: 2px; }
@@ -258,21 +278,21 @@
   <!-- ========== BOTH SURGEONS PHOTO ========== -->
   <section class="bg-cream">
     <div class="max-w-[900px] mx-auto px-5 -mt-8 md:-mt-16 relative z-10">
-      <div class="sr rounded-2xl overflow-hidden border-2 border-navy" style="box-shadow: 0 4px 16px rgba(50,56,78,0.08), 0 24px 48px rgba(50,56,78,0.10);">
+      <div class="sr-scale rounded-2xl overflow-hidden border-2 border-navy" style="box-shadow: 0 4px 16px rgba(50,56,78,0.08), 0 24px 48px rgba(50,56,78,0.10);">
         <img src="/brand_assets/both-docs-studio.png" alt="Dr. Ruhi Soni and Dr. Nikitha Reddy — Soni Vision Institute surgeons" class="w-full object-cover object-top" style="aspect-ratio: 16/9; max-height: 480px;">
       </div>
     </div>
 
     <!-- Stat callout + CTAs -->
     <div class="max-w-[900px] mx-auto px-5 mt-10 md:mt-14">
-      <div class="sr bg-white border border-navy/[0.06] rounded-xl px-8 py-7 mb-6" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+      <div class="sr-left bg-white border border-navy/[0.06] rounded-xl px-8 py-7 mb-6" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
         <div class="flex items-center gap-2 mb-2">
           <span class="text-teal text-[14px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <span class="font-display text-[22px] font-semibold text-navy">4.9-Star Rating</span>
         </div>
         <p class="font-body text-navy/60 text-[15px] leading-relaxed">A 4.9-star rating across 750+ Google reviews &mdash; the highest of any eye surgery practice in Greater Houston. The result of treating every patient like family.</p>
       </div>
-      <div class="sr sr-d1 flex flex-wrap gap-4 justify-center">
+      <div class="sr-right sr-d1 flex flex-wrap gap-4 justify-center">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block">Schedule a Consultation</a>
         <a href="/physicians/dr-ruhi-soni.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block text-navy">Meet Our Surgeons</a>
       </div>
@@ -285,16 +305,16 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Text -->
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Story</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Built for <em class="text-teal italic">Patients First</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[17px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Story</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Built for <em class="text-teal italic">Patients First</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[17px]">
             <p>Soni Vision Institute was founded on a deeply personal conviction: that every patient who walks through our doors deserves the same quality of care we would want for our own families. We are two surgeons &mdash; Dr. Ruhi Soni and Dr. Nikitha Reddy &mdash; who share an unwavering commitment to compassion, clinical excellence, and putting patients above all else.</p>
             <p>From the very beginning, our mission has been to build something different in Houston&rsquo;s ophthalmology landscape. Not a practice that rushes patients through an assembly line. We envisioned a highly advanced, technologically sophisticated eye care center where every resource, every investment, and every decision revolves around one thing: delivering the best possible outcome for the person sitting in front of us.</p>
             <p>We take the time to listen, to educate, and to develop personalized treatment plans that reflect each patient&rsquo;s unique anatomy, lifestyle, and vision goals.</p>
           </div>
         </div>
         <!-- Photo -->
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/rss-patient.jpg" alt="Dr. Soni with a patient at Soni Vision Institute" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -306,14 +326,14 @@
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Photo (left on desktop) -->
-        <div class="sr sr-d1 order-2 md:order-1">
+        <div class="sr-left sr-d1 order-2 md:order-1">
           <img src="/brand_assets/nkr-patient.png" alt="Dr. Reddy with a patient at Soni Vision Institute" class="w-full rounded-xl border-2 border-white/10" loading="lazy">
         </div>
         <!-- Text (right on desktop) -->
         <div class="order-1 md:order-2">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Mission</p>
-          <h2 class="sr sr-d1 font-display text-white text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Serving Houston with <em class="text-teal italic">Compassion &amp; Precision</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-white/60 leading-[1.7] text-[17px]">
+          <p class="sr-right font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Mission</p>
+          <h2 class="sr-right sr-d1 font-display text-white text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Serving Houston with <em class="text-teal italic">Compassion &amp; Precision</em></h2>
+          <div class="sr-right sr-d2 space-y-6 font-body text-white/60 leading-[1.7] text-[17px]">
             <p>We believe that world-class eye surgery should be delivered right here in our community. Families in our community and beyond deserve access to the same advanced surgical technology and fellowship-trained expertise found at the nation&rsquo;s top academic medical centers &mdash; right here in their own neighborhood.</p>
             <p>That belief drives everything we do. We are two surgeons trained at top academic institutions around the globe. We have invested in the most advanced diagnostic and surgical technology available, from femtosecond laser cataract systems to the Light Adjustable Lens &mdash; the only implant that can be customized after surgery. We stay at the forefront of our field because our patients deserve nothing less.</p>
             <p>But technology alone isn&rsquo;t everything. What truly sets Soni Vision apart is the genuine care behind every interaction. We are two individuals who became surgeons because we care deeply about people. We see every patient as a whole person, not just a pair of eyes. We celebrate your milestones, we follow up after surgery because we want to &mdash; not because we have to &mdash; and we treat our staff and community with the same warmth and respect we bring to every consultation.</p>
@@ -329,15 +349,15 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Text -->
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Community</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">More Than a Practice. <em class="text-teal italic">A Partner.</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[17px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Our Community</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">More Than a Practice. <em class="text-teal italic">A Partner.</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[17px]">
             <p>Soni Vision Institute is proud to call Northwest Houston our home. We are deeply rooted in this community, and we see our role as extending far beyond the operating room. Whether it&rsquo;s partnering with local optometrists to ensure seamless co-management, supporting charitable organizations in Houston, or simply being a trusted resource for eye health education &mdash; we are here to serve.</p>
             <p>We welcome patients who speak English, Spanish, and beyond, and we are proud to reflect the rich diversity of the Houston area we serve. At Soni Vision, you are not just a patient. You are part of our family, and we hope you are treated as family from the moment you enter our front doors.</p>
           </div>
         </div>
         <!-- Photo -->
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/rss-patient-2.jpg" alt="Patient care at Soni Vision Institute" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -348,8 +368,8 @@
   <!-- ========== MEET THE TEAM LINKS ========== -->
   <section class="bg-cream">
     <div class="max-w-[1100px] mx-auto px-5 py-14 md:py-20 text-center">
-      <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-8">Get to Know Us</p>
-      <div class="sr sr-d1 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <p class="sr-scale font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-8">Get to Know Us</p>
+      <div class="sr-scale sr-d1 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/physicians/dr-ruhi-soni.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Meet Dr. Soni</a>
         <a href="/physicians/dr-nikitha-reddy.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Meet Dr. Reddy</a>
         <a href="/team.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Meet Our Team</a>
@@ -360,9 +380,9 @@
   <!-- ========== FINAL CTA ========== -->
   <section class="relative bg-navy grain">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28 text-center">
-      <h2 class="sr font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to Meet Your Surgeon?</h2>
-      <p class="sr sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation with Houston&rsquo;s top-rated eye surgery team.</p>
-      <div class="sr sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <h2 class="sr-scale font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to Meet Your Surgeon?</h2>
+      <p class="sr-scale sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation with Houston&rsquo;s top-rated eye surgery team.</p>
+      <div class="sr-scale sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Schedule a Consultation</a>
         <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Call (346) 818-6780</a>
       </div>
@@ -458,7 +478,7 @@
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up').forEach(el => obs.observe(el));
 
     // Header shadow
     const hdr = document.getElementById('header');

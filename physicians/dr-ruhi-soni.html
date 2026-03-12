@@ -89,12 +89,33 @@
       box-shadow: 0 2px 4px rgba(50,56,78,0.04), 0 12px 32px rgba(50,56,78,0.08), 0 24px 56px rgba(50,56,78,0.04);
     }
 
-    .sr { opacity: 0; transform: translateY(24px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
-    .sr.vis { opacity: 1; transform: translateY(0); }
-    .sr-d1 { transition-delay: 0.08s; }
-    .sr-d2 { transition-delay: 0.16s; }
-    .sr-d3 { transition-delay: 0.24s; }
-    .sr-d4 { transition-delay: 0.32s; }
+    /* ---- Scroll reveal (enhanced) ---- */
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+
+    .sr-left { opacity: 0; transform: translateX(-120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-left.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-right { opacity: 0; transform: translateX(120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-right.vis { opacity: 1; transform: translateX(0); }
+
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+
+    .sr-up { opacity: 0; transform: translateY(80px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-up.vis { opacity: 1; transform: translateY(0); }
+
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+    .sr-d4 { transition-delay: 0.6s; }
+    .sr-d5 { transition-delay: 0.75s; }
+    .sr-d6 { transition-delay: 0.9s; }
+
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
+
+    .hero-img-parallax { transition: transform 0.1s linear; will-change: transform; }
 
     .divider { height: 1px; background: linear-gradient(to right, transparent, #32384e15, transparent); }
 
@@ -254,17 +275,17 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Text -->
         <div class="text-center md:text-left order-2 md:order-1">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Meet Your Surgeon</p>
-          <h1 class="sr sr-d1 font-display text-white text-balance leading-[1.08] mb-4" style="font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.02em;">Dr. Ruhi Soni</h1>
-          <p class="sr sr-d2 font-display italic text-teal text-[20px] md:text-[24px] mb-6" style="letter-spacing: -0.01em;">Founder &amp; Cataract, Refractive &amp; Corneal Surgeon</p>
-          <p class="sr sr-d3 font-body text-white/60 leading-relaxed mb-8" style="font-size: clamp(15px, 1.4vw, 17px);">Board-certified ophthalmologist with one core belief: the patient always comes first. Dr. Soni founded Soni Vision Institute to bring elite, compassionate surgical care to the Houston community.</p>
-          <div class="sr sr-d4 flex flex-wrap gap-4 justify-center md:justify-start">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Meet Your Surgeon</p>
+          <h1 class="sr-left sr-d1 font-display text-white text-balance leading-[1.08] mb-4" style="font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.02em;">Dr. Ruhi Soni</h1>
+          <p class="sr-left sr-d2 font-display italic text-teal text-[20px] md:text-[24px] mb-6" style="letter-spacing: -0.01em;">Founder &amp; Cataract, Refractive &amp; Corneal Surgeon</p>
+          <p class="sr-left sr-d3 font-body text-white/60 leading-relaxed mb-8" style="font-size: clamp(15px, 1.4vw, 17px);">Board-certified ophthalmologist with one core belief: the patient always comes first. Dr. Soni founded Soni Vision Institute to bring elite, compassionate surgical care to the Houston community.</p>
+          <div class="sr-left sr-d4 flex flex-wrap gap-4 justify-center md:justify-start">
             <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block">Book with Dr. Soni</a>
             <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-7 py-3.5 rounded-full inline-block">Call (346) 818-6780</a>
           </div>
         </div>
         <!-- Portrait -->
-        <div class="sr sr-d2 order-1 md:order-2 flex justify-center">
+        <div class="sr-right sr-d2 order-1 md:order-2 flex justify-center">
           <div class="rounded-xl overflow-hidden border-2 border-white/10 max-w-[420px]" style="box-shadow: 0 24px 64px rgba(0,0,0,0.3);">
             <img src="/brand_assets/soni-portrait.jpeg" alt="Dr. Ruhi Soni, MD — Founder, Soni Vision Institute" class="w-full object-cover object-top" style="aspect-ratio: 3/4;">
           </div>
@@ -303,9 +324,9 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
         <!-- Bio text -->
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Biography</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Precision, Patience &amp; <em class="text-teal italic">Personalized Care</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Biography</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Precision, Patience &amp; <em class="text-teal italic">Personalized Care</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
             <p>Dr. Ruhi Soni is a board-certified ophthalmologist and the founder of Soni Vision Institute in Cypress, Texas. With over 15 years of experience across a wide range of ophthalmology settings, she brings a depth of knowledge and surgical expertise that is matched only by her genuine compassion for her patients.</p>
             <p>Dr. Soni earned her medical degree and completed her ophthalmology residency at Baylor College of Medicine, one of the most respected academic medical institutions in the country. Her rigorous training gave her a strong foundation in both the science and the art of eye surgery &mdash; a combination she brings to every procedure and every patient interaction.</p>
             <p>She founded Soni Vision Institute with a clear vision: to create a practice where patients receive the same level of care she would want for her own family. That means never rushing, always listening, and investing in the most advanced surgical technology available so that every patient has access to the best possible outcome.</p>
@@ -313,7 +334,7 @@
           </div>
         </div>
         <!-- Photo -->
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/dr-soni-clinic.webp" alt="Dr. Ruhi Soni in clinic at Soni Vision Institute" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -327,13 +348,13 @@
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
         <!-- Photo -->
-        <div class="sr order-2 md:order-1">
+        <div class="sr-left order-2 md:order-1">
           <img src="/brand_assets/rss-bio-pic.jpg" alt="Dr. Ruhi Soni" class="w-full rounded-xl border-2 border-navy object-cover" loading="lazy">
         </div>
         <!-- Credentials -->
         <div class="order-1 md:order-2">
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Education &amp; Training</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">World-Class <em class="text-teal italic">Training</em></h2>
+          <p class="sr-right font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Education &amp; Training</p>
+          <h2 class="sr-right sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">World-Class <em class="text-teal italic">Training</em></h2>
 
           <div class="space-y-8">
             <div class="sr sr-d1">
@@ -370,14 +391,14 @@
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
-          <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Philosophy</p>
-          <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">The Patient <em class="text-teal italic">Always Comes First</em></h2>
-          <div class="sr sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
+          <p class="sr-left font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Philosophy</p>
+          <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">The Patient <em class="text-teal italic">Always Comes First</em></h2>
+          <div class="sr-left sr-d2 space-y-6 font-body text-navy/70 leading-[1.7] text-[16px]">
             <p>&ldquo;I am a board-certified ophthalmologist with one core belief: the patient always comes first. Every decision I make &mdash; from the technology I invest in to the time I spend in each consultation &mdash; is guided by what is best for the person sitting in front of me.&rdquo;</p>
             <p>Dr. Soni believes that exceptional outcomes begin with genuine human connection. She takes the time to understand each patient&rsquo;s fears, hopes, and goals &mdash; building trust before building a surgical plan. Her patients consistently describe her as warm, thorough, and deeply committed to their wellbeing.</p>
           </div>
         </div>
-        <div class="sr sr-d3">
+        <div class="sr-right sr-d3">
           <img src="/brand_assets/soni.webp" alt="Dr. Ruhi Soni at Soni Vision Institute" class="w-full rounded-xl border-2 border-navy" loading="lazy">
         </div>
       </div>
@@ -388,9 +409,9 @@
   <section class="bg-cream">
     <div class="max-w-[1100px] mx-auto px-5 py-20 md:py-28">
       <div class="max-w-[760px]">
-        <p class="sr font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Professional Affiliations</p>
-        <h2 class="sr sr-d1 font-display text-navy leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Affiliated <em class="text-teal italic">Organizations</em></h2>
-        <div class="sr sr-d2 space-y-4">
+        <p class="sr-right font-body text-[14px] font-semibold uppercase tracking-[0.15em] text-teal mb-5">Professional Affiliations</p>
+        <h2 class="sr-right sr-d1 font-display text-navy leading-[1.12] mb-8" style="font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em;">Affiliated <em class="text-teal italic">Organizations</em></h2>
+        <div class="sr-right sr-d2 space-y-4">
           <div class="flex items-center gap-4 font-body text-navy text-[16px]">
             <span class="w-2 h-2 rounded-full bg-teal flex-shrink-0"></span>American Academy of Ophthalmology (AAO)
           </div>
@@ -411,7 +432,7 @@
   <!-- ========== MEET DR. REDDY CTA ========== -->
   <section class="bg-sand">
     <div class="max-w-[1100px] mx-auto px-5 py-14 md:py-20">
-      <div class="sr grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
+      <div class="sr-scale grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
         <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-navy flex-shrink-0 mx-auto md:mx-0">
           <img src="/brand_assets/dr-reddy-headshot-new.png" alt="Dr. Nikitha Reddy" class="w-full h-full object-cover object-top">
         </div>
@@ -427,9 +448,9 @@
   <!-- ========== FINAL CTA ========== -->
   <section class="relative bg-navy grain">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28 text-center">
-      <h2 class="sr font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to See Dr. Soni?</h2>
-      <p class="sr sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation and take the first step toward clearer, better vision.</p>
-      <div class="sr sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <h2 class="sr-scale font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Ready to See Dr. Soni?</h2>
+      <p class="sr-scale sr-d1 font-body text-white/50 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-10">Schedule a consultation and take the first step toward clearer, better vision.</p>
+      <div class="sr-scale sr-d2 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Schedule a Consultation</a>
         <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Call (346) 818-6780</a>
       </div>
@@ -511,7 +532,7 @@
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up').forEach(el => obs.observe(el));
     const hdr = document.getElementById('header');
     window.addEventListener('scroll', () => {
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
