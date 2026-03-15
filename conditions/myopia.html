@@ -116,10 +116,11 @@
     ::-webkit-scrollbar-thumb:hover { background: #32384e40; }
 
     /* FAQ accordion */
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1); }
-    .faq-answer.is-open { max-height: 300px; }
-    .faq-chevron { transition: transform 0.3s ease; }
-    .faq-chevron.is-open { transform: rotate(180deg); }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .faq-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; }
+    details summary .faq-icon::after { content: '+'; font-size: 22px; color: #499188; transition: transform 0.2s ease; }
+    details[open] summary .faq-icon::after { content: '\2212'; }
 
     /* Glass card for dark sections */
     .glass-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
@@ -195,34 +196,98 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Can myopia be cured permanently?",
+        "name": "What is myopia and how does it affect vision?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "While myopia cannot be reversed naturally, refractive procedures like LASIK, PRK, and EVO ICL can permanently correct the way light enters your eye, effectively eliminating the need for glasses or contacts. The correction is long-lasting, though age-related changes like presbyopia may still occur later in life."
+          "text": "Myopia — commonly called nearsightedness — is a refractive error that causes distant objects to appear blurry while close-up vision remains clear. It occurs when the eyeball grows slightly too long or the cornea is too steeply curved, causing light to focus in front of the retina instead of directly on it. Myopia is extremely common, affecting over 40% of Americans."
         }
       },
       {
         "@type": "Question",
-        "name": "Does myopia keep getting worse?",
+        "name": "What causes myopia to develop?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Myopia typically progresses during childhood and adolescence, often stabilizing in the mid-to-late twenties. However, some adults experience continued progression, particularly those with high myopia. Early intervention and regular eye exams are important for monitoring changes."
+          "text": "Myopia develops from a combination of genetic and environmental factors. If one or both parents are myopic, the risk increases significantly. Environmental factors include prolonged near work (reading, screens), limited time spent outdoors during childhood, and extended close-focus activities."
         }
       },
       {
         "@type": "Question",
-        "name": "Am I a candidate for LASIK if I have myopia?",
+        "name": "Can myopia continue to get worse in adulthood?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "LASIK can correct myopia up to approximately -11.00 diopters, depending on corneal thickness and other factors. A comprehensive consultation with Dr. Reddy will determine whether LASIK, PRK, or EVO ICL is the best option for your specific prescription and eye anatomy."
+          "text": "Myopia typically progresses during childhood and adolescence, often stabilizing in the mid-to-late twenties. However, some adults do experience continued progression, particularly those with high myopia. Regular eye exams are important for monitoring any changes in your prescription."
         }
       },
       {
         "@type": "Question",
-        "name": "What are the options for high myopia (above -6.00D)?",
+        "name": "What is high myopia and why does it matter?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For high myopia, EVO ICL is often the preferred option because it does not remove corneal tissue and can correct prescriptions up to -20.00 diopters. Refractive lens exchange is another excellent option, particularly for patients over 45. Dr. Reddy will recommend the safest and most effective procedure based on your individual evaluation."
+          "text": "High myopia is defined as a prescription greater than -6.00 diopters. It matters because the elongated eye shape associated with high myopia increases the risk of serious conditions including retinal detachment, glaucoma, early cataracts, and macular degeneration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is myopia diagnosed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Myopia is diagnosed through a comprehensive eye exam that includes a refraction test, where your eye doctor determines the precise lens prescription needed to bring distant objects into focus. Additional tests may include corneal topography and an axial length measurement to assess the shape and length of the eye."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can children develop myopia, and what are the warning signs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, myopia commonly begins in school-age children and can progress rapidly during growth years. Warning signs include squinting to see the board at school, sitting too close to the TV, holding books very close, frequent headaches, and rubbing the eyes often."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is myopia hereditary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Genetics play a significant role in myopia. Children with two myopic parents have up to a 50% chance of developing nearsightedness, compared to roughly 10% when neither parent is affected. However, environmental factors also contribute substantially."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can LASIK correct myopia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LASIK is one of the most effective treatments for mild to moderate myopia, reshaping the cornea with an excimer laser to correct how light focuses on the retina. It can treat prescriptions up to approximately -11.00 diopters, depending on corneal thickness and anatomy. Most patients achieve 20/20 vision or better."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is EVO ICL and who is it best suited for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EVO ICL (implantable collamer lens) is a biocompatible lens placed inside the eye, behind the iris and in front of the natural lens. It is ideal for patients with high myopia (up to -20.00 diopters), thin corneas, or astigmatism that may disqualify them from laser procedures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can myopia be corrected during cataract surgery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. During cataract surgery, the clouded natural lens is replaced with an intraocular lens (IOL) that can be precisely calculated to correct your myopia. Advanced technology lens options — including toric, EDOF, and multifocal IOLs — can address myopia along with astigmatism or presbyopia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can myopia be prevented?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While myopia cannot be entirely prevented — especially when genetics are a factor — research shows that certain habits can slow its onset and progression in children. Spending at least two hours outdoors each day, taking regular breaks from close-focus tasks, and maintaining good lighting while reading are all associated with reduced myopia risk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does screen time make myopia worse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Extended screen time is associated with myopia progression, particularly in children and adolescents. The sustained close focus required by phones, tablets, and computers places continuous demand on the eye's focusing system, which research links to faster axial eye growth. Limiting screen time, taking frequent breaks, and balancing near work with outdoor activity can help."
         }
       }
     ]
@@ -356,7 +421,7 @@
           <li class="text-teal">Myopia</li>
         </ol>
       </nav>
-      <p class="sr font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Condition Overview</p>
+      <p class="sr font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Condition Overview</p>
       <h1 class="sr sr-d1 font-display text-white text-balance leading-[1.08] mb-6" style="font-size: clamp(38px, 5vw, 64px); letter-spacing: -0.02em;">Understanding Myopia.</h1>
       <p class="sr sr-d2 font-body text-white/60 text-balance max-w-[720px] mx-auto leading-relaxed mb-10" style="font-size: clamp(16px, 1.6vw, 20px);">Nearsightedness affects over 40% of Americans &mdash; and the number is rising. Learn how myopia impacts your vision and explore the modern treatment options available at Soni Vision Institute in Cypress, Texas.</p>
       <div class="sr sr-d3">
@@ -370,10 +435,10 @@
   <section class="bg-cream">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28">
       <div class="max-w-[760px] mx-auto">
-        <p class="sr-left font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5">What Is Myopia?</p>
+        <p class="sr-left font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">What Is Myopia?</p>
         <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">When Distance Vision Becomes Blurry</h2>
         <p class="sr-left sr-d2 font-body text-navy/70 leading-[1.7] text-[17px] mb-6">Myopia &mdash; commonly called nearsightedness &mdash; is a refractive error that causes distant objects to appear blurry while close-up vision remains clear. It occurs when the eyeball grows slightly too long from front to back, or when the cornea (the clear front surface of the eye) is too steeply curved. In either case, light rays entering the eye focus in front of the retina instead of directly on it, producing a blurred image of distant objects.</p>
-        <p class="sr-left sr-d2 font-body text-navy/70 leading-[1.7] text-[17px] mb-6">Myopia can range from mild (less than &minus;3.00 diopters) to moderate (&minus;3.00 to &minus;6.00 diopters) to high (greater than &minus;6.00 diopters). High myopia carries additional risks, including increased susceptibility to retinal detachment, glaucoma, cataracts, and macular degeneration &mdash; making regular eye examinations essential.</p>
+        <p class="sr-left sr-d2 font-body text-navy/70 leading-[1.7] text-[17px] mb-6">Myopia can range from mild (less than &minus;3.00 diopters) to moderate (&minus;3.00 to &minus;6.00 diopters) to high (greater than &minus;6.00 diopters). High myopia carries additional risks, including increased susceptibility to retinal detachment, <a href="/conditions/glaucoma.html" class="text-teal hover:underline">glaucoma</a>, <a href="/conditions/cataracts.html" class="text-teal hover:underline">cataracts</a>, and <a href="/conditions/macular-degeneration.html" class="text-teal hover:underline">macular degeneration</a> &mdash; making regular eye examinations essential.</p>
         <p class="sr-left sr-d2 font-body text-navy/70 leading-[1.7] text-[17px]">The prevalence of myopia has been increasing dramatically worldwide, particularly among younger populations. Researchers attribute this trend to a combination of increased screen time, more time spent on near-focus tasks, and less time spent outdoors during childhood and adolescence. Today, nearly half of young adults in the United States are myopic &mdash; roughly double the rate from a generation ago.</p>
       </div>
     </div>
@@ -384,7 +449,7 @@
   <section class="bg-cream">
     <div class="max-w-[1320px] mx-auto px-5 pb-20 md:pb-28">
       <div class="text-center max-w-[760px] mx-auto mb-14">
-        <p class="sr-left font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Symptoms</p>
+        <p class="sr-left font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Symptoms</p>
         <h2 class="sr-scale sr-d1 font-display text-navy text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Signs You May Have Myopia</h2>
         <p class="sr-scale sr-d2 font-body text-navy/70 leading-relaxed text-[17px]">If any of these feel familiar, a comprehensive eye exam can determine whether myopia is the cause.</p>
       </div>
@@ -451,7 +516,7 @@
   <section class="relative bg-navy-deep grain">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28">
       <div class="text-center max-w-[760px] mx-auto mb-14">
-        <p class="sr-right font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Risk Factors</p>
+        <p class="sr-right font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Risk Factors</p>
         <h2 class="sr-scale sr-d1 font-display text-white text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">What Increases Your Risk</h2>
         <p class="sr-scale sr-d2 font-body text-white/50 leading-relaxed text-[17px]">Myopia develops from a combination of genetic and environmental factors. Understanding these risk factors can help with early detection and prevention.</p>
       </div>
@@ -490,9 +555,9 @@
   <section class="bg-cream">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28">
       <div class="text-center max-w-[760px] mx-auto mb-14">
-        <p class="sr-left font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Treatment Options</p>
+        <p class="sr-left font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Treatment Options</p>
         <h2 class="sr-scale sr-d1 font-display text-navy text-balance leading-[1.12] mb-5" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">How We Correct Myopia</h2>
-        <p class="sr-scale sr-d2 font-body text-navy/70 leading-relaxed text-[17px]">From traditional correction to advanced surgical procedures, Soni Vision Institute offers a full spectrum of myopia treatments. Dr. Reddy will recommend the best approach based on your prescription, corneal anatomy, and lifestyle goals.</p>
+        <p class="sr-scale sr-d2 font-body text-navy/70 leading-relaxed text-[17px]">From traditional correction to advanced surgical procedures, Soni Vision Institute offers a full spectrum of myopia treatments. Your surgeon will recommend the best approach based on your prescription, corneal anatomy, and lifestyle goals.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -542,7 +607,7 @@
             <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg>
           </div>
           <h3 class="font-display text-navy text-[22px] leading-[1.2] mb-3 group-hover:text-teal transition-colors duration-200">Refractive Lens Exchange</h3>
-          <p class="font-body text-navy/60 text-[15px] leading-relaxed mb-5 max-w-[600px]">The natural lens is replaced with a premium intraocular lens, correcting myopia and eliminating the future need for cataract surgery. An excellent option for patients over 45 or those with very high prescriptions.</p>
+          <p class="font-body text-navy/60 text-[15px] leading-relaxed mb-5 max-w-[600px]">The natural lens is replaced with an advanced technology intraocular lens, correcting myopia and eliminating the future need for <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a>. An excellent option for patients over 45 or those with very high prescriptions.</p>
           <span class="font-body text-teal text-[13px] font-medium uppercase tracking-[0.08em] group-hover:tracking-[0.12em] transition-all duration-200">Learn More &rarr;</span>
         </a>
       </div>
@@ -553,55 +618,149 @@
   <!-- ========== FAQ ========== -->
   <section class="bg-sand">
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28">
-      <div class="max-w-[760px] mx-auto">
-        <p class="sr font-body text-[10px] font-bold uppercase tracking-[0.2em] text-teal mb-5 text-center">Common Questions</p>
-        <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-12 text-center" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Myopia FAQ</h2>
+      <div class="text-center max-w-[760px] mx-auto mb-14">
+        <p class="sr font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Common Questions</p>
+        <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12]" style="font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -0.02em;">Myopia FAQ</h2>
+      </div>
 
-        <div class="sr sr-d2">
-          <!-- Q1 -->
-          <div class="border-b border-navy/[0.06]">
-            <button class="faq-toggle w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none" aria-expanded="false">
-              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can myopia be cured permanently?</span>
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">While myopia cannot be reversed naturally, refractive procedures like LASIK, PRK, and EVO ICL can permanently correct the way light enters your eye &mdash; effectively eliminating the need for glasses or contacts. The correction is long-lasting, though age-related changes like presbyopia may still occur later in life.</p>
-            </div>
-          </div>
+      <div class="sr sr-d2 max-w-[760px] mx-auto">
 
-          <!-- Q2 -->
-          <div class="border-b border-navy/[0.06]">
-            <button class="faq-toggle w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none" aria-expanded="false">
-              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Does myopia keep getting worse?</span>
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Myopia typically progresses during childhood and adolescence, often stabilizing in the mid-to-late twenties. However, some adults experience continued progression, particularly those with high myopia. Early intervention and regular eye exams are important for monitoring changes in your prescription.</p>
-            </div>
-          </div>
+        <!-- Category: Understanding Myopia -->
+        <p class="font-body text-[13px] font-bold uppercase tracking-[0.15em] text-teal mt-2 mb-3">Understanding Myopia</p>
+        <div class="divide-y divide-navy/[0.06]">
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What is myopia and how does it affect vision?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Myopia &mdash; commonly called nearsightedness &mdash; is a refractive error that causes distant objects to appear blurry while close-up vision remains clear. It occurs when the eyeball grows slightly too long or the cornea is too steeply curved, causing light to focus in front of the retina instead of directly on it. Myopia is extremely common, affecting over 40% of Americans.</p>
+          </details>
 
-          <!-- Q3 -->
-          <div class="border-b border-navy/[0.06]">
-            <button class="faq-toggle w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none" aria-expanded="false">
-              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Am I a candidate for LASIK if I have myopia?</span>
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">LASIK can correct myopia up to approximately &minus;11.00 diopters, depending on corneal thickness and other factors. A comprehensive consultation with Dr. Reddy will determine whether LASIK, PRK, or EVO ICL is the best option for your specific prescription and eye anatomy.</p>
-            </div>
-          </div>
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What causes myopia to develop?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Myopia develops from a combination of genetic and environmental factors. If one or both parents are myopic, the risk increases significantly. Environmental factors include prolonged near work (reading, screens), limited time spent outdoors during childhood, and extended close-focus activities. The prevalence of myopia has been increasing dramatically, particularly among younger populations.</p>
+          </details>
 
-          <!-- Q4 -->
-          <div class="border-b border-navy/[0.06]">
-            <button class="faq-toggle w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none" aria-expanded="false">
-              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What are the options for high myopia (above &minus;6.00D)?</span>
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">For high myopia, EVO ICL is often the preferred option because it does not remove corneal tissue and can correct prescriptions up to &minus;20.00 diopters. Refractive lens exchange is another excellent option, particularly for patients over 45. Dr. Reddy will recommend the safest and most effective procedure based on your individual evaluation.</p>
-            </div>
-          </div>
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can myopia continue to get worse in adulthood?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Myopia typically progresses during childhood and adolescence, often stabilizing in the mid-to-late twenties. However, some adults do experience continued progression, particularly those with high myopia. Regular eye exams are important for monitoring any changes in your prescription and catching potential complications early.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What is high myopia and why does it matter?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">High myopia is defined as a prescription greater than &minus;6.00 diopters. It matters because the elongated eye shape associated with high myopia increases the risk of serious conditions including retinal detachment, <a href="/conditions/glaucoma.html" class="text-teal hover:underline">glaucoma</a>, early <a href="/conditions/cataracts.html" class="text-teal hover:underline">cataracts</a>, and <a href="/conditions/macular-degeneration.html" class="text-teal hover:underline">macular degeneration</a>. Patients with high myopia should have comprehensive dilated eye exams regularly to monitor for these risks.</p>
+          </details>
         </div>
+
+        <!-- Category: Diagnosis & Children -->
+        <p class="font-body text-[13px] font-bold uppercase tracking-[0.15em] text-teal mt-10 mb-3">Diagnosis &amp; Children</p>
+        <div class="divide-y divide-navy/[0.06]">
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">How is myopia diagnosed?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Myopia is diagnosed through a comprehensive eye exam that includes a refraction test, where your eye doctor determines the precise lens prescription needed to bring distant objects into focus. Additional tests may include corneal topography and an axial length measurement to assess the shape and length of the eye. At Soni Vision Institute, our evaluations also screen for any complications associated with myopia.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can children develop myopia, and what are the warning signs?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Yes, myopia commonly begins in school-age children and can progress rapidly during growth years. Warning signs include squinting to see the board at school, sitting too close to the TV, holding books very close, frequent headaches, and rubbing the eyes often. Children who develop myopia before age 8 are at the greatest risk for progressing to high myopia, so early detection through regular pediatric eye exams is important.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Is myopia hereditary?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Genetics play a significant role in myopia. Children with two myopic parents have up to a 50% chance of developing nearsightedness, compared to roughly 10% when neither parent is affected. However, environmental factors &mdash; including time spent on near-focus tasks and limited outdoor activity &mdash; also contribute substantially. Even children without a family history can develop myopia.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">At what age does myopia typically stabilize?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">For most people, myopia stabilizes in the early-to-mid twenties once the eye has finished growing. However, the timeline varies &mdash; some patients see stability by age 18, while others continue to experience small changes into their late twenties. A stable prescription for at least one to two years is typically required before surgical correction such as <a href="/services/lasik.html" class="text-teal hover:underline">LASIK</a> or <a href="/services/icl.html" class="text-teal hover:underline">EVO ICL</a> can be considered.</p>
+          </details>
+        </div>
+
+        <!-- Category: Treatment Options -->
+        <p class="font-body text-[13px] font-bold uppercase tracking-[0.15em] text-teal mt-10 mb-3">Treatment Options</p>
+        <div class="divide-y divide-navy/[0.06]">
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can LASIK correct myopia?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6"><a href="/services/lasik.html" class="text-teal hover:underline">LASIK</a> is one of the most effective treatments for mild to moderate myopia, reshaping the cornea with an excimer laser to correct how light focuses on the retina. It can treat prescriptions up to approximately &minus;11.00 diopters, depending on corneal thickness and anatomy. Most patients achieve 20/20 vision or better, with a rapid recovery &mdash; often noticing clearer vision within hours of the procedure.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What is PRK and how does it differ from LASIK for myopia?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6"><a href="/services/prk.html" class="text-teal hover:underline">PRK</a> (photorefractive keratectomy) reshapes the corneal surface without creating a flap, making it an excellent alternative for patients with thinner corneas, active lifestyles involving contact sports, or those who are not ideal LASIK candidates. The visual outcome is equivalent to LASIK, though recovery takes slightly longer &mdash; typically one to two weeks for clear vision to emerge.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">What is EVO ICL and who is it best suited for?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6"><a href="/services/icl.html" class="text-teal hover:underline">EVO ICL</a> (implantable collamer lens) is a biocompatible lens placed inside the eye, behind the iris and in front of the natural lens. It is ideal for patients with high myopia (up to &minus;20.00 diopters), thin corneas, or <a href="/conditions/astigmatism.html" class="text-teal hover:underline">astigmatism</a> that may disqualify them from laser procedures. The procedure is reversible, preserves corneal tissue, and offers excellent visual quality with built-in UV protection.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can myopia be corrected during cataract surgery?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Yes. During <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a>, the clouded natural lens is replaced with an intraocular lens (IOL) that can be precisely calculated to correct your myopia. Patients with both <a href="/conditions/cataracts.html" class="text-teal hover:underline">cataracts</a> and myopia can often achieve greatly reduced dependence on glasses after surgery. Advanced technology lens options &mdash; including toric, EDOF, and multifocal IOLs &mdash; can address myopia along with <a href="/conditions/astigmatism.html" class="text-teal hover:underline">astigmatism</a> or <a href="/conditions/presbyopia.html" class="text-teal hover:underline">presbyopia</a>.</p>
+          </details>
+        </div>
+
+        <!-- Category: Prevention & Lifestyle -->
+        <p class="font-body text-[13px] font-bold uppercase tracking-[0.15em] text-teal mt-10 mb-3">Prevention &amp; Lifestyle</p>
+        <div class="divide-y divide-navy/[0.06]">
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Can myopia be prevented?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">While myopia cannot be entirely prevented &mdash; especially when genetics are a factor &mdash; research shows that certain habits can slow its onset and progression in children. Spending at least two hours outdoors each day, taking regular breaks from close-focus tasks (the 20-20-20 rule), and maintaining good lighting while reading are all associated with reduced myopia risk. Early and regular eye exams allow for timely intervention if myopia does develop.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Does screen time make myopia worse?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Extended screen time is associated with myopia progression, particularly in children and adolescents. The sustained close focus required by phones, tablets, and computers places continuous demand on the eye&rsquo;s focusing system, which research links to faster axial eye growth. Limiting screen time, taking frequent breaks, and balancing near work with outdoor activity can help reduce the impact on developing eyes.</p>
+          </details>
+
+          <details class="border-b border-navy/[0.06]">
+            <summary class="flex items-center justify-between py-6">
+              <span class="font-display text-navy text-[20px] leading-[1.3] pr-4">Does insurance cover myopia correction surgery?</span>
+              <span class="faq-icon flex-shrink-0"></span>
+            </summary>
+            <p class="font-body text-navy/60 text-[16px] leading-[1.7] pb-6">Most vision insurance plans consider refractive procedures like <a href="/services/lasik.html" class="text-teal hover:underline">LASIK</a>, <a href="/services/prk.html" class="text-teal hover:underline">PRK</a>, and <a href="/services/icl.html" class="text-teal hover:underline">EVO ICL</a> to be elective, so they are typically not covered. However, if myopia correction occurs as part of medically necessary <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a>, the procedure itself may be covered by medical insurance. Soni Vision Institute offers flexible financing options, and our team can help you understand your benefits and payment plans during your consultation.</p>
+          </details>
+        </div>
+
       </div>
     </div>
   </section>
@@ -663,8 +822,8 @@
         <div class="md:col-span-2">
           <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
           <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
-            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">4.9</span></div>
-            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni &middot; 750+ Reviews</p>
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[14px]">Dr. Reddy &amp; Dr. Soni</p>
           </div>
         </div>
       </div>
@@ -737,16 +896,6 @@
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
     }, { passive: true });
 
-    // FAQ accordion
-    document.querySelectorAll('.faq-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        const chevron = btn.querySelector('.faq-chevron');
-        const isOpen = answer.classList.toggle('is-open');
-        chevron.classList.toggle('is-open', isOpen);
-        btn.setAttribute('aria-expanded', isOpen);
-      });
-    });
   </script>
 </body>
 </html>

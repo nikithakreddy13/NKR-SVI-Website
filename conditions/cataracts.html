@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cataracts: Symptoms, Causes & Treatment | Soni Vision Institute | Cypress TX</title>
-  <meta name="description" content="Learn about cataracts — causes, symptoms, risk factors, and when surgery is needed. Board-certified cataract surgeons in Cypress, TX serving Houston & the 290 corridor.">
-  <meta name="keywords" content="what are cataracts, cataract symptoms, cataract causes, cataract treatment Houston, cataract surgeon Cypress TX, when to get cataract surgery">
+  <title>Cataracts: Symptoms, Causes & Surgery Options | Top-Rated Cataract Surgeons Houston | Soni Vision Institute</title>
+  <meta name="description" content="Houston's top-rated cataract surgeons at Soni Vision Institute in Cypress, TX. Learn about cataract symptoms, causes, advanced technology lenses, and laser cataract surgery. Top-rated. Serving Cypress, Katy, Tomball & NW Houston.">
+  <meta name="keywords" content="cataract surgeon Houston, cataract surgery Cypress TX, cataract symptoms, cataract causes, cataract treatment Houston, best cataract surgeon near me, cataract surgery Katy TX, cataract surgery Tomball, cataract lens options Houston, laser cataract surgery Houston, advanced technology lenses Houston, light adjustable lens Houston, cataract evaluation NW Houston, 290 corridor eye surgeon">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://sonivisioninstitute.com/conditions/cataracts.html">
-  <meta property="og:title" content="Cataracts: Symptoms, Causes & Treatment | Soni Vision Institute">
-  <meta property="og:description" content="Learn about cataracts — causes, symptoms, risk factors, and when surgery is needed. Board-certified cataract surgeons in Cypress, TX.">
+  <meta property="og:title" content="Cataracts: Symptoms, Causes & Surgery Options | Top-Rated Houston Cataract Surgeons">
+  <meta property="og:description" content="Houston's top-rated cataract surgeons. Learn about symptoms, causes, and advanced surgery options at Soni Vision Institute in Cypress, TX. Top-rated.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sonivisioninstitute.com/conditions/cataracts.html">
   <meta property="og:site_name" content="Soni Vision Institute">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cataracts: Symptoms, Causes & Treatment | Soni Vision Institute">
-  <meta name="twitter:description" content="Learn about cataracts — causes, symptoms, risk factors, and when surgery is needed. Board-certified cataract surgeons in Cypress, TX.">
+  <meta name="twitter:title" content="Cataracts: Symptoms, Causes & Surgery Options | Top-Rated Houston Cataract Surgeons">
+  <meta name="twitter:description" content="Houston's top-rated cataract surgeons. Learn about symptoms, causes, and advanced surgery options at Soni Vision Institute in Cypress, TX.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -175,6 +175,13 @@
 
     /* ---- Divider ---- */
     .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(50,56,78,0.08), transparent); }
+
+    /* ---- Video overlay play button ---- */
+    .video-wrap { position: relative; cursor: pointer; }
+    .video-wrap .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 10; pointer-events: none; transition: opacity 0.3s ease; }
+    .video-wrap .play-overlay .play-btn { width: 64px; height: 64px; border-radius: 50%; background: rgba(73,145,136,0.9); display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.3s ease; pointer-events: auto; }
+    .video-wrap:hover .play-overlay .play-btn { transform: scale(1.08); box-shadow: 0 8px 24px rgba(73,145,136,0.35); }
+    .video-wrap.playing .play-overlay { opacity: 0; pointer-events: none; }
   </style>
 
   <!-- Schema: MedicalCondition -->
@@ -239,41 +246,17 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "At what age do cataracts usually develop?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most cataracts begin developing after age 40, though they may not noticeably affect vision until the 60s or 70s. By age 75, approximately half of Americans have cataracts or have had cataract surgery. However, cataracts can occasionally occur earlier due to injury, medications, or medical conditions like diabetes." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can cataracts come back after surgery?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No — once a cataract is removed, it cannot grow back. The clouded natural lens is permanently replaced with an artificial intraocular lens (IOL). However, some patients develop posterior capsule opacification (sometimes called a 'secondary cataract') months or years later, which is easily treated with a quick, painless YAG laser procedure in the office." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does cataract surgery take?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The surgery itself typically takes about 10 to 15 minutes per eye. You should plan to be at the surgical center for approximately two hours total, which includes pre-operative preparation, the procedure, and a brief recovery period. Most patients are home resting comfortably within a few hours." }
-      },
-      {
-        "@type": "Question",
-        "name": "Will I need glasses after cataract surgery?",
-        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the type of intraocular lens (IOL) implanted. A standard monofocal lens corrects distance vision, and most patients will still need reading glasses. Advanced technology lenses — such as multifocal, extended depth-of-focus (EDOF), or Light Adjustable Lenses — can significantly reduce or eliminate dependence on glasses for most activities. Your surgeon will discuss the best option for your lifestyle during your evaluation." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you prevent cataracts?",
-        "acceptedAnswer": { "@type": "Answer", "text": "There is no guaranteed way to prevent cataracts, but you can slow their progression. Wearing UV-blocking sunglasses, not smoking, managing diabetes, eating a diet rich in vitamins C and E, and getting regular eye exams can all help. Most people will eventually develop some degree of cataract with age." }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the different types of cataracts?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The three main types are nuclear sclerotic (forms in the center of the lens, most common age-related type), cortical (develops as wedge-shaped opacities in the outer lens), and posterior subcapsular (forms on the back surface of the lens, progresses faster, associated with steroid use and diabetes). Your ophthalmologist can determine which type you have during a comprehensive eye exam." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is cataract surgery covered by insurance?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — Medicare and most private insurance plans cover standard cataract surgery with a monofocal IOL when it is deemed medically necessary. Premium or advanced technology lens upgrades (multifocal, toric, EDOF, Light Adjustable Lens) typically involve an out-of-pocket cost. Our team at Soni Vision Institute will verify your benefits and provide transparent pricing before your procedure." }
-      }
+      { "@type": "Question", "name": "At what age do cataracts usually develop?", "acceptedAnswer": { "@type": "Answer", "text": "Most cataracts begin developing after age 40, though they may not noticeably affect vision until the 60s or 70s. By age 75, approximately 70% of Americans have cataracts or have had cataract surgery. Cataracts can occur earlier due to injury, medications, or medical conditions like diabetes." } },
+      { "@type": "Question", "name": "Can cataracts come back after surgery?", "acceptedAnswer": { "@type": "Answer", "text": "No — once a cataract is removed, it cannot grow back. The clouded natural lens is permanently replaced with an artificial intraocular lens (IOL). Some patients develop posterior capsule opacification (sometimes called a 'secondary cataract'), which is easily treated with a quick, painless YAG laser procedure in the office." } },
+      { "@type": "Question", "name": "How long does cataract surgery take?", "acceptedAnswer": { "@type": "Answer", "text": "The surgery itself typically takes about 10 to 15 minutes per eye. You should plan to be at the surgical center for approximately two hours total. Most patients are home resting comfortably within a few hours and notice improved vision within 24 to 48 hours." } },
+      { "@type": "Question", "name": "Will I need glasses after cataract surgery?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the type of intraocular lens (IOL) implanted. A standard monofocal lens corrects distance vision, and most patients will still need reading glasses. Advanced technology lenses — such as multifocal, EDOF, or Light Adjustable Lenses — can significantly reduce or eliminate dependence on glasses." } },
+      { "@type": "Question", "name": "What are the different types of cataracts?", "acceptedAnswer": { "@type": "Answer", "text": "The three main types are nuclear sclerotic (forms in the center of the lens), cortical (develops as wedge-shaped opacities in the outer lens), and posterior subcapsular (forms on the back surface, progresses faster, associated with steroid use and diabetes)." } },
+      { "@type": "Question", "name": "Is cataract surgery covered by insurance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Medicare and most private insurance plans cover standard cataract surgery with a monofocal IOL when medically necessary. Advanced technology lens upgrades typically involve an out-of-pocket cost. Our team will verify your benefits and provide transparent pricing before your procedure." } },
+      { "@type": "Question", "name": "Does diabetes increase my risk of cataracts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Diabetes is one of the strongest risk factors for early cataract development. High blood sugar causes biochemical changes in the lens that accelerate clouding. People with diabetes may develop cataracts 10 to 15 years earlier than average." } },
+      { "@type": "Question", "name": "What is the difference between standard and laser cataract surgery?", "acceptedAnswer": { "@type": "Answer", "text": "Standard cataract surgery uses handheld instruments to create the incision and remove the cataract. Laser cataract surgery uses a femtosecond laser to automate key steps for enhanced precision, and is especially beneficial for patients with astigmatism or those choosing advanced technology lenses." } },
+      { "@type": "Question", "name": "What is a Light Adjustable Lens?", "acceptedAnswer": { "@type": "Answer", "text": "The Light Adjustable Lens (LAL) is the only intraocular lens that can be customized after cataract surgery using non-invasive light treatments in the office. This allows your surgeon to fine-tune your prescription once your eye has healed, delivering the most precise visual outcome possible." } },
+      { "@type": "Question", "name": "Where is Soni Vision Institute located?", "acceptedAnswer": { "@type": "Answer", "text": "Soni Vision Institute is located at 27700 Northwest Freeway, Suite 390, Cypress, TX 77433 — right off Highway 290. We serve patients from Cypress, Katy, Tomball, Jersey Village, Copperfield, Spring, and the greater NW Houston area." } },
+      { "@type": "Question", "name": "Do I need a referral for a cataract evaluation?", "acceptedAnswer": { "@type": "Answer", "text": "No referral is needed. You can book a cataract evaluation directly by calling (346) 818-6780 or using our online booking form. If your optometrist has referred you, our team will coordinate all records and imaging before your visit." } }
     ]
   }
   </script>
@@ -409,16 +392,30 @@
 
 
   <!-- ========== 1. HERO ========== -->
-  <section class="py-20 md:py-28 bg-navy-deep relative grain">
-    <div class="max-w-[800px] mx-auto px-5 relative z-10 text-center sr">
-      <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Eye Condition</p>
-      <h1 class="font-display text-white text-balance leading-[1.08] mb-6" style="font-size: clamp(42px, 5vw, 72px); letter-spacing: -0.02em;">
-        Understanding<br>Cataracts.
-      </h1>
-      <p class="font-body text-white/60 text-[15px] leading-[1.75] max-w-[620px] mx-auto mb-10" style="font-weight: 300;">
-        Cataracts are the leading cause of treatable vision loss worldwide. Learn what they are, how they develop, and when it&rsquo;s time to explore surgical options &mdash; from the fellowship-trained surgeons at Soni Vision Institute in Cypress, Texas.
-      </p>
-      <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Schedule a Cataract Evaluation</a>
+  <section id="hero-section" class="relative overflow-hidden" style="min-height: clamp(500px, 70vh, 800px);">
+    <img id="hero-parallax-img" src="/brand_assets/ski.jpg" alt="Active lifestyle after cataract surgery at Soni Vision Institute" class="absolute inset-0 w-full h-full object-cover hero-img-parallax" style="object-position: center 40%; transform: scale(1.08);">
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(30,34,51,0.85) 0%, rgba(30,34,51,0.6) 50%, rgba(30,34,51,0.35) 100%);"></div>
+    <div class="absolute inset-0 grain"></div>
+    <div class="max-w-[1320px] mx-auto px-5 relative z-10 flex items-center" style="min-height: clamp(500px, 70vh, 800px);">
+      <div class="max-w-2xl">
+        <p class="sr font-body text-[18px] font-bold text-white uppercase tracking-[0.25em] mb-5" style="text-shadow: 0 2px 8px rgba(0,0,0,0.4);">Cataracts</p>
+        <h1 class="sr sr-d1 font-display text-white text-balance leading-[1.08] mb-6" style="font-size: clamp(40px, 5vw, 68px); letter-spacing: -0.02em; text-shadow: 0 2px 12px rgba(0,0,0,0.35);">
+          Don&rsquo;t Let Cloudy Vision Define Your Life.
+        </h1>
+        <p class="sr sr-d2 font-body text-white/70 font-light leading-[1.7] text-lg max-w-xl mb-8" style="text-shadow: 0 1px 4px rgba(0,0,0,0.3);">
+          Cataracts affect more than 24 million Americans &mdash; and they&rsquo;re the leading cause of treatable vision loss worldwide. The good news? Modern cataract surgery is one of the safest, most effective procedures in medicine. Houston&rsquo;s top-rated eye surgeons are right here in Cypress, TX.
+        </p>
+        <div class="sr sr-d3 flex flex-wrap gap-3">
+          <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Schedule a Cataract Evaluation</a>
+          <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">(346) 818-6780</a>
+        </div>
+        <!-- Trust stats -->
+        <div class="sr sr-d4 mt-10 flex flex-wrap items-center gap-x-6 gap-y-2">
+          <span class="font-body text-white/50 text-[13px] font-light"><span class="text-teal font-medium">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Top-Rated on Google</span>
+          <span class="font-body text-white/50 text-[13px] font-light">2 Board-Certified Surgeons</span>
+          <span class="font-body text-white/50 text-[13px] font-light">Cypress &middot; Katy &middot; Tomball &middot; NW Houston</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -431,14 +428,26 @@
       <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px]">
         A cataract is a clouding of the eye&rsquo;s natural crystalline lens &mdash; the transparent structure behind the iris that focuses light onto the retina. Over time, proteins within the lens begin to clump together and break down, forming opaque clusters that scatter incoming light instead of allowing it to pass through clearly.
       </p>
-      <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px] mt-5">
+      <!-- Cataract vs clear lens diagram -->
+      <div class="my-8 sr sr-d1">
+        <div class="w-full max-w-[600px] mx-auto rounded-xl bg-white overflow-hidden" style="box-shadow: 0 2px 8px rgba(50,56,78,0.06), 0 8px 24px rgba(50,56,78,0.08);">
+          <img src="/brand_assets/cataract-diagram.png" alt="Diagram showing how light scatters through a cataract versus focusing clearly through a healthy lens" class="w-full" style="margin-top: -15%; margin-bottom: -15%; transform: scale(1);" loading="lazy">
+        </div>
+        <p class="font-body text-ink/40 text-[13px] text-center mt-3 italic">A clear lens focuses light sharply onto the retina. A cataract scatters light, causing blurry, hazy vision.</p>
+      </div>
+      <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px]">
         The result is a gradual, painless decline in vision quality. Colors may appear faded or yellowed. Fine details become harder to distinguish. Night driving grows increasingly difficult. Because the changes happen slowly &mdash; often over years &mdash; many people don&rsquo;t realize how much vision they&rsquo;ve lost until they are evaluated by an ophthalmologist.
       </p>
+      <!-- Vision with cataracts vs clear vision comparison -->
+      <div class="my-8 sr sr-d2">
+        <img src="/brand_assets/vision.png" alt="Side-by-side comparison of blurry vision with cataracts versus clear vision after surgery, shown in daytime and nighttime scenes" class="w-full max-w-[700px] mx-auto rounded-xl" style="box-shadow: 0 2px 8px rgba(50,56,78,0.06), 0 8px 24px rgba(50,56,78,0.08);" loading="lazy">
+        <p class="font-body text-ink/40 text-[13px] text-center mt-3 italic">Cataracts cause blurry, hazy vision in both daylight and low-light conditions. Cataract surgery restores clear, sharp sight.</p>
+      </div>
       <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px] mt-5">
-        Cataracts are extremely common. By age 75, approximately half of all Americans either have a cataract or have already undergone cataract surgery. While cataracts cannot be reversed with medication or eye drops, modern cataract surgery is one of the safest and most frequently performed procedures in medicine &mdash; with a success rate exceeding 98%.
+        Cataracts are extremely common. By age 75, approximately 70% of Americans either have a cataract or have already undergone cataract surgery. While cataracts cannot be reversed with medication or eye drops, modern cataract surgery is one of the safest and most frequently performed procedures in medicine &mdash; with a success rate exceeding 98%.
       </p>
       <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px] mt-5">
-        At Soni Vision Institute, our fellowship-trained surgeons <strong class="font-medium text-ink">Dr. Ruhi Soni</strong> and <strong class="font-medium text-ink">Dr. Nikitha Reddy</strong> specialize in advanced cataract surgery with premium lens technology. They work with patients across Cypress, Katy, Tomball, and the greater Houston area to restore clear, vibrant vision.
+        At Soni Vision Institute, our board-certified surgeons <a href="/physicians/dr-ruhi-soni.html" class="font-medium text-teal hover:underline">Dr. Ruhi Soni</a> and <a href="/physicians/dr-nikitha-reddy.html" class="font-medium text-teal hover:underline">Dr. Nikitha Reddy</a> specialize in advanced cataract surgery with premium lens technology. They work with patients across the greater Houston area to restore clear, vibrant vision.
       </p>
     </div>
   </section>
@@ -588,53 +597,6 @@
   </section>
 
 
-  <!-- ========== 6. PREVENTION ========== -->
-  <section class="py-14 md:py-20 bg-cream">
-    <div class="max-w-[800px] mx-auto px-5 sr-right">
-      <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Prevention</p>
-      <h2 class="font-display text-navy leading-[1.1] mb-6" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">Can You Prevent Cataracts?</h2>
-      <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px]">
-        While there is no guaranteed way to prevent cataracts entirely, research shows that several lifestyle habits may slow their progression:
-      </p>
-      <ul class="mt-5 space-y-3">
-        <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-teal-pale flex items-center justify-center mt-0.5">
-            <svg class="w-3 h-3 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          </span>
-          <span class="font-body text-ink/70 font-light leading-[1.7] text-[17px]"><strong class="font-medium text-ink">Wear UV-blocking sunglasses</strong> &mdash; Protect your eyes from ultraviolet radiation, especially in sun-heavy climates like Houston</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-teal-pale flex items-center justify-center mt-0.5">
-            <svg class="w-3 h-3 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          </span>
-          <span class="font-body text-ink/70 font-light leading-[1.7] text-[17px]"><strong class="font-medium text-ink">Don&rsquo;t smoke</strong> &mdash; Smoking roughly doubles the risk of developing nuclear cataracts</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-teal-pale flex items-center justify-center mt-0.5">
-            <svg class="w-3 h-3 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          </span>
-          <span class="font-body text-ink/70 font-light leading-[1.7] text-[17px]"><strong class="font-medium text-ink">Manage diabetes</strong> &mdash; Keeping blood sugar well-controlled reduces the risk of early cataract formation</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-teal-pale flex items-center justify-center mt-0.5">
-            <svg class="w-3 h-3 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          </span>
-          <span class="font-body text-ink/70 font-light leading-[1.7] text-[17px]"><strong class="font-medium text-ink">Eat a nutrient-rich diet</strong> &mdash; Leafy greens, colorful fruits, and foods high in vitamins C and E may support lens health</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-teal-pale flex items-center justify-center mt-0.5">
-            <svg class="w-3 h-3 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          </span>
-          <span class="font-body text-ink/70 font-light leading-[1.7] text-[17px]"><strong class="font-medium text-ink">Get regular eye exams</strong> &mdash; Early detection allows your ophthalmologist to monitor progression and plan surgery at the optimal time</span>
-        </li>
-      </ul>
-      <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px] mt-6">
-        Even with the best prevention, most people will eventually develop cataracts if they live long enough. The good news is that modern cataract surgery is remarkably safe and effective &mdash; and can even improve your vision beyond what it was before cataracts developed.
-      </p>
-    </div>
-  </section>
-
-
   <!-- ========== 7. WHEN TO SEE A DOCTOR ========== -->
   <section class="py-14 md:py-20 bg-cream">
     <div class="max-w-[800px] mx-auto px-5 sr-left">
@@ -679,13 +641,249 @@
         The good news: you don&rsquo;t have to wait until cataracts are &ldquo;ripe&rdquo; or severely advanced. Modern cataract surgery is safe, quick, and highly effective at any stage once your vision is impacting your quality of life. The procedure typically takes 10&ndash;15 minutes per eye, and most patients notice dramatically improved vision within 24&ndash;48 hours.
       </p>
       <p class="font-body text-ink/70 font-light leading-[1.7] text-[17px] mt-5">
-        At Soni Vision Institute, we also offer <strong class="font-medium text-ink">advanced technology lens options</strong> &mdash; including Toric lenses for astigmatism, multifocal and EDOF lenses for spectacle independence, and the <strong class="font-medium text-ink">Light Adjustable Lens</strong> that can be fine-tuned after surgery for truly customized vision. Your surgeon will help determine the best approach during your evaluation.
+        At Soni Vision Institute, we also offer <strong class="font-medium text-ink">advanced technology lens options</strong> &mdash; including <a href="/services/toric-iol.html" class="text-teal font-medium hover:underline">Toric lenses</a> for astigmatism, <a href="/services/multifocal-lens.html" class="text-teal font-medium hover:underline">multifocal</a> and <a href="/services/edof-lens.html" class="text-teal font-medium hover:underline">EDOF lenses</a> for spectacle independence, and the <a href="/services/light-adjustable-lens.html" class="text-teal font-medium hover:underline">Light Adjustable Lens</a> that can be fine-tuned after surgery for truly customized vision. Your surgeon will help determine the best approach during your evaluation.
       </p>
     </div>
   </section>
 
 
-  <!-- ========== 6. TREATMENT OPTIONS ========== -->
+  <!-- ========== THE SONI VISION DIFFERENCE ========== -->
+  <section class="py-14 md:py-20 bg-navy-deep relative grain">
+    <div class="max-w-[1320px] mx-auto px-5 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: content -->
+        <div class="sr-left">
+          <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Why Choose Us</p>
+          <h2 class="font-display text-white leading-[1.1] mb-6" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">The Soni Vision Difference</h2>
+          <p class="font-body text-white/60 font-light leading-[1.7] text-[17px] mb-8">
+            When it comes to your vision, you deserve surgeons who specialize in what they do best. Soni Vision Institute is a <strong class="text-white font-medium">primarily surgical practice</strong> &mdash; meaning cataract and lens-based surgery is not a sideline. It&rsquo;s our focus, every single day.
+          </p>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center mt-0.5">
+                <span class="font-display text-teal text-[18px] font-bold">01</span>
+              </span>
+              <div>
+                <h3 class="font-display text-white text-[18px] mb-1">Surgery-Focused Practice</h3>
+                <p class="font-body text-white/50 font-light leading-[1.7] text-[15px]">Unlike general optometry offices that offer surgery as one of many services, cataract and refractive surgery is our core expertise. That focus translates to better outcomes.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center mt-0.5">
+                <span class="font-display text-teal text-[18px] font-bold">02</span>
+              </span>
+              <div>
+                <h3 class="font-display text-white text-[18px] mb-1">Houston&rsquo;s Top-Rated Eye Surgeons</h3>
+                <p class="font-body text-white/50 font-light leading-[1.7] text-[15px]">Consistently rated among the top eye surgery practices in Houston, our patients rate their experience among the best in the Houston metro area.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center mt-0.5">
+                <span class="font-display text-teal text-[18px] font-bold">03</span>
+              </span>
+              <div>
+                <h3 class="font-display text-white text-[18px] mb-1">Advanced Lens Technology</h3>
+                <p class="font-body text-white/50 font-light leading-[1.7] text-[15px]">We offer every advanced technology lens available &mdash; including the <a href="/services/light-adjustable-lens.html" class="text-teal-300 hover:underline">Light Adjustable Lens</a>, <a href="/services/multifocal-lens.html" class="text-teal-300 hover:underline">multifocal</a>, <a href="/services/edof-lens.html" class="text-teal-300 hover:underline">EDOF</a>, and <a href="/services/toric-iol.html" class="text-teal-300 hover:underline">toric</a> options &mdash; so your surgery can be tailored to your exact lifestyle and visual goals.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center mt-0.5">
+                <span class="font-display text-teal text-[18px] font-bold">04</span>
+              </span>
+              <div>
+                <h3 class="font-display text-white text-[18px] mb-1">Boutique, Personalized Care</h3>
+                <p class="font-body text-white/50 font-light leading-[1.7] text-[15px]">We are not a high-volume surgery mill. Every patient receives an unhurried, one-on-one consultation to determine the best surgical plan and lens choice for their unique eyes and lifestyle.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="/about.html" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-full inline-block">Learn More About Us &rarr;</a>
+          </div>
+        </div>
+        <!-- Right: doctor photo -->
+        <div class="sr-right sr-d2 relative">
+          <div class="rounded-2xl overflow-hidden" style="box-shadow: 0 8px 40px rgba(0,0,0,0.3);">
+            <img src="/brand_assets/both-docs-studio.png" alt="Dr. Ruhi Soni and Dr. Nikitha Reddy, cataract surgeons at Soni Vision Institute in Cypress, Texas" class="w-full h-auto object-cover" loading="lazy">
+          </div>
+          <div class="mt-5 flex items-center gap-5 justify-center">
+            <a href="/physicians/dr-ruhi-soni.html" class="font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-3 rounded-full inline-block text-center text-white border-[1.5px] border-teal bg-teal/20 hover:bg-teal hover:border-teal transition-colors duration-200">Meet Dr. Soni &rarr;</a>
+            <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-3 rounded-full inline-block text-center text-white border-[1.5px] border-teal bg-teal/20 hover:bg-teal hover:border-teal transition-colors duration-200">Meet Dr. Reddy &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PATIENT TESTIMONIALS (HIGHLIGHT CARDS) ========== -->
+  <section class="py-14 md:py-20 bg-sand">
+    <div class="max-w-[1100px] mx-auto px-5">
+      <div class="text-center mb-12 sr">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Patient Stories</p>
+        <h2 class="font-display text-navy leading-[1.1] mb-4" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">What Our Cataract Patients Are Saying</h2>
+        <p class="font-body text-ink/60 font-light leading-[1.7] text-[17px] max-w-[640px] mx-auto">Real reviews from patients who trusted Soni Vision Institute with their cataract surgery.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Video Testimonial 1 -->
+        <div class="sr-scale sr-d1 rounded-xl overflow-hidden">
+          <div class="video-wrap rounded-xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(50,56,78,0.06), 0 8px 24px rgba(50,56,78,0.08);">
+            <div class="play-overlay">
+              <div class="play-btn">
+                <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <video controls playsinline preload="metadata" class="w-full aspect-video bg-navy-deep">
+              <source src="/brand_assets/doyle-testimonial.mov" type="video/quicktime">
+              <source src="/brand_assets/doyle-testimonial.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="pt-4">
+            <p class="font-body text-navy text-[15px] font-medium">Cataract Surgery Patient</p>
+            <p class="font-body text-ink/40 text-[13px]">Cataract Surgery</p>
+          </div>
+        </div>
+
+        <!-- Placeholder for future video 2 -->
+        <div class="sr-scale sr-d2 rounded-xl overflow-hidden">
+          <div class="aspect-video rounded-xl bg-sand border-2 border-dashed border-navy/10 flex items-center justify-center">
+            <p class="font-body text-navy/25 text-[14px] text-center px-4">More patient stories coming soon</p>
+          </div>
+        </div>
+
+        <!-- Placeholder for future video 3 -->
+        <div class="sr-scale sr-d3 rounded-xl overflow-hidden">
+          <div class="aspect-video rounded-xl bg-sand border-2 border-dashed border-navy/10 flex items-center justify-center">
+            <p class="font-body text-navy/25 text-[14px] text-center px-4">More patient stories coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SCROLLING REVIEWS CAROUSEL ========== -->
+  <section class="py-14 md:py-20 bg-navy-deep relative grain overflow-hidden">
+    <div class="max-w-[1320px] mx-auto px-5 relative z-10">
+      <div class="flex items-end justify-between mb-10 sr-left">
+        <div>
+          <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Reviews</p>
+          <h2 class="font-display text-white leading-[1.1]" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">
+            Top-rated. <span class="text-white/40">Hundreds of five-star reviews.</span>
+          </h2>
+        </div>
+        <div class="flex gap-3">
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="btn-ghost-light font-body text-[11px] font-semibold uppercase tracking-[0.1em] px-5 py-2.5 rounded-full hidden sm:inline-block">Leave a Review</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="relative z-10 group">
+      <button id="rev-left" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-navy-deep/80 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-teal/40 transition-colors opacity-0 group-hover:opacity-100" style="backdrop-filter:blur(8px);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button id="rev-right" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-navy-deep/80 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-teal/40 transition-colors opacity-0 group-hover:opacity-100" style="backdrop-filter:blur(8px);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <div id="reviews-scroll" class="overflow-x-auto flex gap-5 pb-2 px-5 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;">
+        <style>#reviews-scroll::-webkit-scrollbar { display: none; }</style>
+
+        <!-- 1 - Dr. Soni (Robert K.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Soni explained everything clearly, the surgery was quick and painless, and my vision is now better than it&rsquo;s been in decades. The whole experience from start to finish was excellent.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">R</span></div><div><p class="font-body text-white text-[13px] font-medium">Robert K.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 2 - Dr. Reddy (Jeanine R.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;I cannot say enough about Dr. Reddy. She is very compassionate towards her patients. She explains everything pre surgery, during &amp; post. I am very thankful for her restoring my eyesight back to 20/20. The entire staff at Soni Institute has been wonderful!&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">J</span></div><div><p class="font-body text-white text-[13px] font-medium">Jeanine R.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 3 - Dr. Soni (Karen O.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Soni actually sits in the exam room with you and patiently educates you on next steps and answers questions. We did not feel rushed or pressured in any way. If you are looking for a surgeon that really cares, this is the place for you!&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">K</span></div><div><p class="font-body text-white text-[13px] font-medium">Karen O.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 4 - Dr. Reddy (Wendy J.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Reddy took so much time going over everything. I had many concerns about my eyes and she addressed them all. The staff was so friendly and kind. I am so happy to have found a very competent ophthalmologist.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">W</span></div><div><p class="font-body text-white text-[13px] font-medium">Wendy J.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 5 - Dr. Soni (Darla S.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Starting at the front desk, I felt valued and cared for. The technicians were friendly, caring, and professional. Dr. Soni was extremely kind and thorough. At no point during my appointment did I feel rushed. Thank you all for your kindness.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">D</span></div><div><p class="font-body text-white text-[13px] font-medium">Darla S.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 6 - Dr. Reddy (Rosa C.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;She&rsquo;s an excellent doctor, very attentive to detail and she&rsquo;s personable. She&rsquo;s fantastic and great with the patient&rsquo;s care. I would follow her anywhere. If you want someone who really takes care of you, she&rsquo;s the perfect doctor.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">R</span></div><div><p class="font-body text-white text-[13px] font-medium">Rosa C.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 7 - Dr. Soni (Melissa R.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Soni truly takes her time with each patient and never makes you feel rushed. It&rsquo;s rare to find a doctor who combines expertise with genuine care, and she does it effortlessly. Highly recommend her to anyone looking for an eye doctor who really listens.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">M</span></div><div><p class="font-body text-white text-[13px] font-medium">Melissa R.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 8 - Dr. Reddy (Mark S.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Reddy is an excellent eye surgeon and can do it all. Soni Vision is lucky to have her in their practice. I would highly recommend her to anyone needing any kind of eye surgery. Thank you Dr. Reddy for being my surgeon.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">M</span></div><div><p class="font-body text-white text-[13px] font-medium">Mark S.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 9 - Dr. Soni (Maria R.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;The professionalism, expertise, and kindness was beyond my expectations. The staff was always welcoming and took the time to answer every question. I can see better now than I have in two decades.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">M</span></div><div><p class="font-body text-white text-[13px] font-medium">Maria R.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 10 - Dr. Reddy (James P.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;Dr. Reddy is an amazing surgeon and a wonderful, caring human being. Her attention to detail and genuine concern for my well-being made all the difference. I&rsquo;m seeing clearly for the first time in years.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">J</span></div><div><p class="font-body text-white text-[13px] font-medium">James P.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 11 - Dr. Soni (Treyce S.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;I am beyond grateful to Dr. Soni and the entire team. The results have been life-changing. My vision has improved dramatically, and I am now able to enjoy everyday activities with clarity I haven&rsquo;t had in years.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">T</span></div><div><p class="font-body text-white text-[13px] font-medium">Treyce S.</p><p class="font-body text-white/30 text-[11px]">Dr. Soni &middot; Cataract Surgery</p></div></div>
+        </div>
+
+        <!-- 12 - Dr. Reddy (Charley G.) -->
+        <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-6 w-[380px] flex-shrink-0">
+          <div class="flex items-center justify-between mb-3"><div class="flex text-teal text-[12px] gap-0.5">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <p class="font-body text-white/70 text-[13.5px] leading-[1.75] mb-5" style="font-weight: 300;">&ldquo;She looked me in the eye and told me her job was to make my eyes outlast me. She restored my ocular pressure to normal without drops. I don&rsquo;t even have to wear glasses anymore! I&rsquo;d give 10 stars.&rdquo;</p>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-teal/15 flex items-center justify-center"><span class="font-body text-teal text-xs font-semibold">C</span></div><div><p class="font-body text-white text-[13px] font-medium">Charley G.</p><p class="font-body text-white/30 text-[11px]">Dr. Reddy &middot; Cataract Surgery</p></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="max-w-[1320px] mx-auto px-5 relative z-10 text-center mt-8">
+      <a href="/reviews.html" class="font-body text-teal text-[14px] font-medium hover:underline">Read all reviews &rarr;</a>
+    </div>
+  </section>
+
+
+  <!-- ========== TREATMENT OPTIONS ========== -->
   <section class="py-14 md:py-20 bg-cream">
     <div class="max-w-[1100px] mx-auto px-5">
       <div class="text-center mb-12 sr-right">
@@ -729,9 +927,9 @@
             </div>
             <div>
               <h3 class="font-display text-navy text-[20px] mb-2" style="letter-spacing: -0.01em;">Advanced Technology Lenses</h3>
-              <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px] mb-4">During cataract surgery, the clouded natural lens is replaced with an artificial intraocular lens (IOL). Premium lens options can correct astigmatism, provide a full range of vision, and reduce or eliminate your need for glasses after surgery.</p>
+              <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px] mb-4">During cataract surgery, the clouded natural lens is replaced with an artificial intraocular lens (IOL). Advanced technology lens options can correct astigmatism, provide a full range of vision, and reduce or eliminate your need for glasses after surgery.</p>
               <div class="flex flex-wrap gap-2">
-                <a href="/services/toric-iol.html" class="inline-block font-body text-[13px] font-medium text-teal bg-teal-pale px-4 py-1.5 rounded-full hover:bg-teal hover:text-white transition-colors duration-200">Toric IOL</a>
+                <a href="/services/toric-iol.html" class="inline-block font-body text-[13px] font-medium text-teal bg-teal-pale px-4 py-1.5 rounded-full hover:bg-teal hover:text-white transition-colors duration-200">Toric Lens</a>
                 <a href="/services/edof-lens.html" class="inline-block font-body text-[13px] font-medium text-teal bg-teal-pale px-4 py-1.5 rounded-full hover:bg-teal hover:text-white transition-colors duration-200">EDOF Lens</a>
                 <a href="/services/multifocal-lens.html" class="inline-block font-body text-[13px] font-medium text-teal bg-teal-pale px-4 py-1.5 rounded-full hover:bg-teal hover:text-white transition-colors duration-200">Multifocal Lens</a>
                 <a href="/services/light-adjustable-lens.html" class="inline-block font-body text-[13px] font-medium text-teal bg-teal-pale px-4 py-1.5 rounded-full hover:bg-teal hover:text-white transition-colors duration-200">Light Adjustable Lens</a>
@@ -739,27 +937,46 @@
             </div>
           </div>
         </div>
+
+        <!-- Refractive Lens Exchange -->
+        <a href="/services/refractive-lens-exchange.html" class="card-surface rounded-xl p-7 block group md:col-span-2 sr-scale sr-d4 card-hover border-2 border-teal/20">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg bg-teal-pale flex items-center justify-center">
+                <svg class="w-6 h-6 text-teal-dark" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+              </div>
+              <span class="inline-block text-[9px] font-body font-bold uppercase tracking-[0.1em] bg-teal/10 text-teal px-2 py-1 rounded">Featured</span>
+            </div>
+            <svg class="w-5 h-5 text-navy/30 group-hover:text-teal transition-colors duration-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-[20px] mb-2" style="letter-spacing: -0.01em;">Not Ready for Cataracts? Consider Refractive Lens Exchange</h3>
+          <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">If you&rsquo;re over 45 and want to eliminate glasses but don&rsquo;t yet have cataracts, refractive lens exchange uses the same advanced lens technology to replace your natural lens before cataracts ever develop &mdash; giving you the benefits of cataract surgery years earlier.</p>
+          <span class="inline-block mt-4 font-body text-teal text-[13px] font-medium group-hover:underline">Learn about RLE &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ========== 7. FAQ ========== -->
+  <!-- ========== FAQ ========== -->
   <section class="py-14 md:py-20 bg-sand">
     <div class="max-w-[800px] mx-auto px-5">
-      <div class="mb-12 sr">
+      <div class="text-center mb-10 sr">
         <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Common Questions</p>
         <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">Cataracts FAQ</h2>
       </div>
 
       <div class="space-y-0 sr">
+
+        <!-- Category: Understanding Cataracts -->
+        <p class="font-body text-teal text-[13px] font-semibold uppercase tracking-[0.12em] pt-2 pb-2">Understanding Cataracts</p>
         <details class="border-b border-navy/[0.08] group">
           <summary class="flex items-center justify-between py-5 cursor-pointer">
             <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">At what age do cataracts usually develop?</span>
             <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
           </summary>
           <div class="pb-6">
-            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Most cataracts begin developing after age 40 as the proteins in the eye&rsquo;s natural lens start to break down. However, they may not noticeably affect vision until the 60s or 70s. By age 75, approximately half of Americans have cataracts or have had cataract surgery. In some cases, cataracts can develop earlier due to injury, certain medications (such as corticosteroids), or medical conditions like diabetes.</p>
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Most cataracts begin developing after age 40 as the proteins in the eye&rsquo;s natural lens start to break down. However, they may not noticeably affect vision until the 60s or 70s. By age 75, approximately 70% of Americans have cataracts or have had cataract surgery. In some cases, cataracts can develop earlier due to injury, certain medications (such as corticosteroids), or medical conditions like diabetes.</p>
           </div>
         </details>
 
@@ -793,15 +1010,8 @@
           </div>
         </details>
 
-        <details class="border-b border-navy/[0.08] group">
-          <summary class="flex items-center justify-between py-5 cursor-pointer">
-            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">Can you prevent cataracts?</span>
-            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
-          </summary>
-          <div class="pb-6">
-            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">There is no guaranteed way to prevent cataracts, but you can slow their progression. Wearing UV-blocking sunglasses, not smoking, managing diabetes, eating a diet rich in vitamins C and E, and getting regular eye exams can all help. Most people will eventually develop some degree of cataract with age.</p>
-          </div>
-        </details>
+        <!-- Category: Prevention & Risk -->
+        <p class="font-body text-teal text-[13px] font-semibold uppercase tracking-[0.12em] pt-6 pb-2">Prevention &amp; Risk</p>
 
         <details class="border-b border-navy/[0.08] group">
           <summary class="flex items-center justify-between py-5 cursor-pointer">
@@ -815,11 +1025,87 @@
 
         <details class="border-b border-navy/[0.08] group">
           <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">Does diabetes increase my risk of cataracts?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Yes. Diabetes is one of the strongest risk factors for early cataract development. High blood sugar causes biochemical changes in the lens that accelerate clouding. People with diabetes may develop cataracts 10 to 15 years earlier than average. Keeping your blood sugar well-controlled and seeing your ophthalmologist regularly can help monitor the progression.</p>
+          </div>
+        </details>
+
+        <!-- Category: Surgery & Lenses -->
+        <p class="font-body text-teal text-[13px] font-semibold uppercase tracking-[0.12em] pt-6 pb-2">Surgery &amp; Lens Options</p>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
             <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">Is cataract surgery covered by insurance?</span>
             <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
           </summary>
           <div class="pb-6">
-            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Yes &mdash; Medicare and most private insurance plans cover standard cataract surgery with a monofocal IOL when it is deemed medically necessary. Premium or advanced technology lens upgrades (multifocal, toric, EDOF, Light Adjustable Lens) typically involve an out-of-pocket cost. Our team at Soni Vision Institute will verify your benefits and provide transparent pricing before your procedure.</p>
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Yes &mdash; Medicare and most private insurance plans cover standard cataract surgery with a monofocal IOL when it is deemed medically necessary. Advanced technology lens upgrades (<a href="/services/multifocal-lens.html" class="text-teal font-medium hover:underline">multifocal</a>, <a href="/services/toric-iol.html" class="text-teal font-medium hover:underline">toric</a>, <a href="/services/edof-lens.html" class="text-teal font-medium hover:underline">EDOF</a>, <a href="/services/light-adjustable-lens.html" class="text-teal font-medium hover:underline">Light Adjustable Lens</a>) typically involve an out-of-pocket cost. Our team at Soni Vision Institute will verify your benefits and provide transparent pricing before your procedure.</p>
+          </div>
+        </details>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">What is the difference between standard and laser cataract surgery?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Standard cataract surgery (phacoemulsification) uses handheld instruments to create the incision and remove the cataract. Laser cataract surgery uses a femtosecond laser to automate several key steps &mdash; including the corneal incision, the capsulotomy, and softening of the lens &mdash; for enhanced precision. Laser-assisted surgery is especially beneficial for patients with astigmatism or those choosing advanced technology lenses. <a href="/services/laser-cataract-surgery.html" class="text-teal font-medium hover:underline">Learn more about laser cataract surgery &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">What is a Light Adjustable Lens?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">The Light Adjustable Lens (LAL) is the only intraocular lens that can be customized <em>after</em> cataract surgery using non-invasive light treatments in the office. This allows your surgeon to fine-tune your prescription once your eye has healed, delivering the most precise visual outcome possible. It is an excellent option for patients who want the absolute best vision without glasses. <a href="/services/light-adjustable-lens.html" class="text-teal font-medium hover:underline">Learn more about the LAL &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">How do I choose the right lens for cataract surgery?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Your surgeon will help you choose based on your lifestyle, visual priorities, and eye anatomy. If you want clear distance vision and don&rsquo;t mind reading glasses, a monofocal lens may be ideal. If you want to reduce dependence on glasses at all distances, a <a href="/services/multifocal-lens.html" class="text-teal font-medium hover:underline">multifocal</a>, <a href="/services/edof-lens.html" class="text-teal font-medium hover:underline">EDOF</a>, or <a href="/services/light-adjustable-lens.html" class="text-teal font-medium hover:underline">Light Adjustable Lens</a> may be a better fit. If you have astigmatism, a <a href="/services/toric-iol.html" class="text-teal font-medium hover:underline">toric lens</a> can correct it at the same time. The decision is always personalized during your cataract evaluation.</p>
+          </div>
+        </details>
+
+        <!-- Category: Finding a Cataract Surgeon -->
+        <p class="font-body text-teal text-[13px] font-semibold uppercase tracking-[0.12em] pt-6 pb-2">Finding a Cataract Surgeon in Houston</p>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">Where is Soni Vision Institute located?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Soni Vision Institute is located at 27700 Northwest Freeway, Suite 390, Cypress, TX 77433 &mdash; right off Highway 290. We serve patients from Cypress, Katy, Tomball, Jersey Village, Copperfield, Spring, and the greater NW Houston area. Our office is easily accessible from the 290 corridor, Highway 6, and the Grand Parkway (99).</p>
+          </div>
+        </details>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">Do I need a referral for a cataract evaluation?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">No referral is needed. You can book a cataract evaluation directly by calling our office at <a href="tel:3468186780" class="text-teal font-medium hover:underline">(346) 818-6780</a> or using our <a href="/book.html" class="text-teal font-medium hover:underline">online booking form</a>. If your optometrist has referred you, our team will coordinate all records and imaging before your visit.</p>
+          </div>
+        </details>
+
+        <details class="border-b border-navy/[0.08] group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-display text-navy text-[18px] pr-4" style="letter-spacing: -0.01em;">What should I expect at my cataract consultation?</span>
+            <span class="faq-icon font-body text-teal text-[22px] flex-shrink-0 w-6 text-center select-none"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-ink/70 font-light leading-[1.7] text-[15px]">Your consultation will include a comprehensive eye exam, advanced imaging and measurements of your eye, a detailed discussion of your lens options, and a one-on-one conversation with your surgeon about what to expect from surgery and recovery. Most consultations take about 60 to 90 minutes. You will leave with a clear understanding of your options and a personalized surgical plan.</p>
           </div>
         </details>
       </div>
@@ -827,15 +1113,49 @@
   </section>
 
 
-  <!-- ========== 8. FINAL CTA ========== -->
-  <section class="py-20 md:py-28 bg-navy relative grain text-center">
-    <div class="max-w-[640px] mx-auto px-5 relative z-10 sr-scale">
-      <h2 class="font-display text-white leading-[1.1] mb-5" style="font-size: clamp(34px, 3.5vw, 50px); letter-spacing: -0.02em;">
-        Don&rsquo;t Let Cataracts<br>Hold You Back.
+  <!-- ========== RELATED PAGES ========== -->
+  <section class="py-14 md:py-20 bg-cream">
+    <div class="max-w-[1100px] mx-auto px-5">
+      <div class="text-center mb-10 sr">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Explore More</p>
+        <h2 class="font-display text-navy leading-[1.1]" style="font-size: clamp(28px, 3vw, 38px); letter-spacing: -0.02em;">Related Pages You May Find Helpful</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sr sr-d1">
+        <a href="/conditions/astigmatism.html" class="card-surface rounded-xl p-5 block group card-hover">
+          <h3 class="font-display text-navy text-[16px] mb-1">Astigmatism</h3>
+          <p class="font-body text-ink/50 text-[13px] font-light leading-[1.6]">Learn how astigmatism is corrected during cataract surgery with toric lenses.</p>
+          <span class="inline-block mt-3 font-body text-teal text-[12px] font-medium group-hover:underline">Learn more &rarr;</span>
+        </a>
+        <a href="/conditions/presbyopia.html" class="card-surface rounded-xl p-5 block group card-hover">
+          <h3 class="font-display text-navy text-[16px] mb-1">Presbyopia</h3>
+          <p class="font-body text-ink/50 text-[13px] font-light leading-[1.6]">Age-related near vision loss often accompanies cataracts. Advanced lenses can address both.</p>
+          <span class="inline-block mt-3 font-body text-teal text-[12px] font-medium group-hover:underline">Learn more &rarr;</span>
+        </a>
+        <a href="/conditions/glaucoma.html" class="card-surface rounded-xl p-5 block group card-hover">
+          <h3 class="font-display text-navy text-[16px] mb-1">Glaucoma</h3>
+          <p class="font-body text-ink/50 text-[13px] font-light leading-[1.6]">Glaucoma and cataracts often coexist. MIGS can be performed alongside cataract surgery.</p>
+          <span class="inline-block mt-3 font-body text-teal text-[12px] font-medium group-hover:underline">Learn more &rarr;</span>
+        </a>
+        <a href="/conditions/dry-eye.html" class="card-surface rounded-xl p-5 block group card-hover">
+          <h3 class="font-display text-navy text-[16px] mb-1">Dry Eye</h3>
+          <p class="font-body text-ink/50 text-[13px] font-light leading-[1.6]">Dry eye can affect cataract surgery measurements. Treating it first ensures the best outcomes.</p>
+          <span class="inline-block mt-3 font-body text-teal text-[12px] font-medium group-hover:underline">Learn more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FINAL CTA ========== -->
+  <section class="py-20 md:py-28 bg-navy-deep relative grain text-center">
+    <div class="max-w-[700px] mx-auto px-5 relative z-10 sr-scale">
+      <h2 class="font-display text-white leading-[1.1] mb-5" style="font-size: clamp(34px, 4vw, 54px); letter-spacing: -0.02em;">
+        See the World Clearly Again.
       </h2>
-      <p class="font-body text-white/50 text-[15px] leading-[1.75] mb-8" style="font-weight: 300;">Schedule your cataract evaluation with the fellowship-trained surgeons at Soni Vision Institute in Cypress, TX.</p>
+      <p class="font-body text-white/50 text-[16px] leading-[1.75] mb-4" style="font-weight: 300;">Cataract surgery at Soni Vision Institute is quick, safe, and life-changing. Schedule your evaluation with Houston&rsquo;s top-rated cataract surgeons in Cypress, TX.</p>
+      <p class="font-body text-white/35 text-[13px] mb-8">Serving Cypress, Katy, Tomball, Jersey Village, Copperfield, and all of NW Houston along the 290 corridor.</p>
       <div class="flex flex-wrap justify-center gap-3">
-        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-4 rounded-full">Book a Consultation</a>
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-4 rounded-full">Schedule a Cataract Evaluation</a>
         <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-4 rounded-full">Call (346) 818-6780</a>
       </div>
     </div>
@@ -884,8 +1204,8 @@
         <div class="md:col-span-2">
           <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
           <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
-            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">4.9</span></div>
-            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni &middot; 750+ Reviews</p>
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni</p>
           </div>
         </div>
       </div>
@@ -958,6 +1278,64 @@
     window.addEventListener('scroll', () => {
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
     }, { passive: true });
+
+    // Reviews carousel: auto-scroll + buttons + drag/trackpad
+    (function() {
+      const el = document.getElementById('reviews-scroll');
+      if (!el) return;
+      const leftBtn = document.getElementById('rev-left');
+      const rightBtn = document.getElementById('rev-right');
+
+      let autoSpeed = 0.5;
+      let paused = false;
+      let pauseTimeout;
+      function autoScroll() {
+        if (!paused) {
+          el.scrollLeft += autoSpeed;
+          if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
+            el.scrollLeft = 0;
+          }
+        }
+        requestAnimationFrame(autoScroll);
+      }
+      requestAnimationFrame(autoScroll);
+
+      function pauseAuto() {
+        paused = true;
+        clearTimeout(pauseTimeout);
+        pauseTimeout = setTimeout(() => { paused = false; }, 3000);
+      }
+
+      leftBtn.addEventListener('click', () => { pauseAuto(); el.scrollBy({ left: -400, behavior: 'smooth' }); });
+      rightBtn.addEventListener('click', () => { pauseAuto(); el.scrollBy({ left: 400, behavior: 'smooth' }); });
+
+      el.addEventListener('mouseenter', () => { paused = true; });
+      el.addEventListener('mouseleave', () => { paused = false; });
+
+      el.addEventListener('wheel', e => {
+        if (Math.abs(e.deltaX) > 0) { pauseAuto(); }
+      }, { passive: true });
+
+      let isDown = false, startX, scrollLeft;
+      el.addEventListener('mousedown', e => { isDown = true; pauseAuto(); startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft; });
+      el.addEventListener('mouseleave', () => isDown = false);
+      el.addEventListener('mouseup', () => isDown = false);
+      el.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); const x = e.pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); });
+
+      el.addEventListener('touchstart', e => { pauseAuto(); startX = e.touches[0].pageX - el.offsetLeft; scrollLeft = el.scrollLeft; }, { passive: true });
+      el.addEventListener('touchmove', e => { const x = e.touches[0].pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); }, { passive: true });
+    })();
+
+    // Video play overlay
+    document.querySelectorAll('.video-wrap').forEach(wrap => {
+      const video = wrap.querySelector('video');
+      const overlay = wrap.querySelector('.play-overlay');
+      if (!video || !overlay) return;
+      overlay.addEventListener('click', () => { video.play(); });
+      video.addEventListener('play', () => { wrap.classList.add('playing'); });
+      video.addEventListener('pause', () => { wrap.classList.remove('playing'); });
+      video.addEventListener('ended', () => { wrap.classList.remove('playing'); });
+    });
   </script>
 
 </body>

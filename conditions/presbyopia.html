@@ -163,8 +163,9 @@
     details summary { cursor: pointer; list-style: none; }
     details summary::-webkit-details-marker { display: none; }
     details summary::marker { display: none; }
-    details[open] summary .faq-chevron { transform: rotate(180deg); }
-    .faq-chevron { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+    .faq-icon { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+    .faq-icon::after { content: '+'; }
+    details[open] summary .faq-icon::after { content: '\2212'; }
   </style>
 
   <!-- Schema: MedicalCondition -->
@@ -220,23 +221,63 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Can presbyopia be cured?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Presbyopia cannot be reversed because it is caused by the natural aging and hardening of the crystalline lens inside the eye. However, it can be effectively corrected. Surgical options such as multifocal IOL implantation, EDOF lens implantation, and refractive lens exchange can permanently restore near vision and dramatically reduce or eliminate the need for reading glasses. At Soni Vision Institute in Cypress, TX, our fellowship-trained surgeons help patients choose the best solution for their lifestyle and visual goals." }
+        "name": "What is presbyopia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Presbyopia is the gradual, age-related loss of the eye's ability to focus on nearby objects. It occurs because the crystalline lens inside the eye becomes harder and less flexible over time, making it difficult for the ciliary muscle to reshape the lens for close-up tasks like reading, using a phone, or working at a computer. Presbyopia is not a disease — it is a completely normal part of aging that affects virtually everyone." }
       },
       {
         "@type": "Question",
-        "name": "What age does presbyopia start?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Presbyopia typically becomes noticeable between the ages of 40 and 45, though the underlying loss of lens flexibility begins gradually in your 30s. Most people first notice difficulty reading small print, especially in dim lighting. The condition continues to progress through your 50s and 60s, with near vision becoming increasingly blurry. By your mid-60s, the crystalline lens has lost nearly all of its flexibility, and near focus without correction becomes essentially impossible." }
+        "name": "Why does presbyopia happen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Presbyopia is caused by the natural hardening of the crystalline lens inside the eye. Throughout life, new protein fiber layers are continuously added to the lens while the core compacts and stiffens — a process called nuclear sclerosis. At the same time, the zonular fibers connecting the ciliary muscle to the lens lose some tension. Together, these changes reduce the eye's ability to shift focus between far and near objects, a function known as accommodation." }
       },
       {
         "@type": "Question",
-        "name": "Can I have LASIK for presbyopia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Traditional LASIK corrects distance vision but does not directly address presbyopia. However, a technique called monovision LASIK can help: one eye is corrected for distance and the other for near vision, allowing the brain to blend the two images. Monovision works well for many patients but is not ideal for everyone. For patients over 50 or those with early cataracts, refractive lens exchange with a multifocal or EDOF lens often provides a more comprehensive and permanent solution for presbyopia." }
+        "name": "At what age does presbyopia typically begin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most people first notice presbyopia between the ages of 40 and 45, though the underlying loss of lens flexibility starts gradually in your 30s. Early signs often include needing brighter light to read and holding your phone farther away. The condition continues to progress through your 50s and 60s, which is why reading prescriptions typically get stronger every few years until plateauing around age 65." }
       },
       {
         "@type": "Question",
-        "name": "What is the best lens implant for presbyopia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The best lens implant depends on your individual anatomy, visual demands, and lifestyle. Multifocal IOLs provide the widest range of clear vision at near, intermediate, and distance but may produce some halos at night. EDOF (Extended Depth of Focus) lenses offer a continuous range of vision with fewer optical side effects. The Light Adjustable Lens allows your surgeon to fine-tune your prescription after surgery. During your consultation at Soni Vision Institute, we perform detailed diagnostic measurements and discuss your goals to recommend the lens technology best suited to you." }
+        "name": "Is presbyopia the same as farsightedness?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Farsightedness (hyperopia) is a refractive error caused by the shape of the eyeball or cornea, and it can occur at any age. Presbyopia is caused by the aging and stiffening of the crystalline lens inside the eye and develops in everyone with age. You can have both conditions simultaneously — and in fact, people with hyperopia often notice presbyopia symptoms earlier than those with normal or nearsighted vision." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the earliest signs of presbyopia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The earliest signs typically include holding reading material at arm's length, needing brighter lighting for close tasks, and experiencing eye strain or headaches after prolonged reading or screen time. Many people first notice the change when reading restaurant menus in dim lighting or when small print on medication labels becomes difficult to decipher." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does presbyopia continue to get worse over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Presbyopia is progressive and worsens steadily over approximately 20 to 25 years. In your early 40s, you may only need readers for fine print. By your late 40s, standard-sized text becomes blurry without correction. Through your 50s and into your 60s, the lens continues to harden until virtually all accommodative ability is lost." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a multifocal lens implant for presbyopia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A multifocal lens implant is an advanced technology intraocular lens (IOL) with diffractive rings that split incoming light into multiple focal points. This allows clear vision at near, intermediate, and far distances without glasses. Over 80% of patients who receive a multifocal IOL achieve complete spectacle independence. The lens is placed during cataract surgery or refractive lens exchange and is designed to last a lifetime." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does refractive lens exchange correct presbyopia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Refractive lens exchange (RLE) uses the same technique as modern cataract surgery but is performed before cataracts develop. The natural crystalline lens — which has become stiff and unable to focus — is replaced with an advanced technology IOL such as a multifocal or EDOF lens. RLE permanently corrects presbyopia and eliminates the future need for cataract surgery entirely, making it an increasingly popular option for patients in their 50s and beyond." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an EDOF lens and who is it best for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An Extended Depth of Focus (EDOF) lens creates a single elongated focal point rather than multiple discrete focal zones. This provides a continuous range of clear vision from distance through intermediate with functional near vision, and typically produces fewer halos and glare than traditional multifocal lenses. EDOF lenses are an excellent choice for patients who prioritize optical quality and spend significant time at computer distance." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can presbyopia be permanently fixed with surgery?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. While presbyopia itself cannot be reversed, it can be permanently corrected through surgical lens replacement. Procedures like refractive lens exchange and cataract surgery replace the stiffened natural lens with an advanced technology IOL that provides focusing ability the aging lens can no longer deliver. The artificial lens does not age or stiffen, so the correction is lifelong." }
+      },
+      {
+        "@type": "Question",
+        "name": "What lens options are available if I need cataract surgery and have presbyopia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When you have cataract surgery, you have the opportunity to correct presbyopia at the same time by choosing an advanced technology lens. Options include multifocal lenses for the widest range of glasses-free vision, EDOF lenses for a continuous focal range with fewer optical side effects, and the Light Adjustable Lens which can be fine-tuned after implantation using light treatments. Your surgeon will recommend the best option based on your eye anatomy, visual demands, and lifestyle." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does insurance cover presbyopia correction surgery?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most insurance plans, including Medicare, cover the basic cataract surgery procedure and a standard monofocal lens implant. Upgrading to an advanced technology lens — such as a multifocal, EDOF, or Light Adjustable Lens — involves an additional out-of-pocket cost. Refractive lens exchange, performed before cataracts develop, is typically considered an elective procedure and is not covered by insurance. Our team can walk you through costs, financing options, and what your specific plan covers during your consultation." }
       }
     ]
   }
@@ -393,7 +434,7 @@
         <h2 class="sr-left sr-d1 font-display text-navy text-balance leading-[1.12] mb-8" style="font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.02em;">What Is Presbyopia?</h2>
         <p class="sr-left sr-d2 font-body text-navy/70 leading-[1.7] text-[17px] font-light mb-6">Presbyopia is not a disease &mdash; it is a completely normal part of aging. Inside your eye, the crystalline lens sits behind the iris and changes shape to focus light from objects at different distances. When you&rsquo;re young, this lens is soft and flexible, allowing the ciliary muscle to easily reshape it for near focus. Over time, the lens gradually hardens and loses its elasticity, making it increasingly difficult to focus on close objects like books, phone screens, and restaurant menus.</p>
         <p class="sr-left sr-d3 font-body text-navy/70 leading-[1.7] text-[17px] font-light mb-6">This process begins in your 30s but typically becomes noticeable between the ages of 40 and 45. Presbyopia is progressive &mdash; it continues to worsen through your 50s and into your 60s as the lens loses more and more flexibility. By your mid-60s, the natural lens has virtually no remaining accommodative ability.</p>
-        <p class="sr-left sr-d4 font-body text-navy/70 leading-[1.7] text-[17px] font-light">While reading glasses and contact lenses can temporarily correct presbyopia, they don&rsquo;t address the underlying cause. At Soni Vision Institute in Cypress, TX, our fellowship-trained surgeons offer multiple surgical solutions &mdash; including multifocal IOLs, EDOF lenses, refractive lens exchange, and the Light Adjustable Lens &mdash; that can permanently restore near vision and free you from dependence on reading glasses.</p>
+        <p class="sr-left sr-d4 font-body text-navy/70 leading-[1.7] text-[17px] font-light">While reading glasses and contact lenses can temporarily correct presbyopia, they don&rsquo;t address the underlying cause. At Soni Vision Institute in Cypress, TX, our highly trained surgeons offer multiple surgical solutions &mdash; including <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal IOLs</a>, <a href="/services/edof-lens.html" class="text-teal hover:underline">EDOF lenses</a>, <a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">refractive lens exchange</a>, and the <a href="/services/light-adjustable-lens.html" class="text-teal hover:underline">Light Adjustable Lens</a> &mdash; that can permanently restore near vision and free you from dependence on reading glasses.</p>
       </div>
     </div>
   </section>
@@ -542,7 +583,7 @@
             <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
           </div>
           <h3 class="font-display text-navy text-[19px] mb-2">Refractive Lens Exchange</h3>
-          <p class="font-body text-navy/60 text-[15px] leading-relaxed font-light mb-4">The same procedure as cataract surgery, but performed before cataracts develop. Your natural lens is replaced with a premium IOL to correct presbyopia and eliminate the future need for cataract surgery entirely.</p>
+          <p class="font-body text-navy/60 text-[15px] leading-relaxed font-light mb-4">The same procedure as <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a>, but performed before cataracts develop. Your natural lens is replaced with an advanced technology IOL to correct presbyopia and eliminate the future need for cataract surgery entirely.</p>
           <a href="/services/refractive-lens-exchange.html" class="font-body text-teal text-[13px] font-semibold hover:text-teal-dark transition-colors">Learn About Refractive Lens Exchange &rarr;</a>
         </div>
         <!-- Light Adjustable Lens -->
@@ -567,53 +608,169 @@
     <div class="max-w-[1320px] mx-auto px-5 py-14 md:py-20">
       <div class="max-w-[760px] mx-auto">
         <p class="sr font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Common Questions</p>
-        <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.02em;">Frequently Asked Questions</h2>
+        <h2 class="sr sr-d1 font-display text-navy text-balance leading-[1.12] mb-10" style="font-size: clamp(30px, 3.5vw, 44px); letter-spacing: -0.02em;">Presbyopia FAQ</h2>
 
-        <div class="space-y-4">
-          <!-- FAQ 1 -->
-          <details class="sr sr-d2 bg-white border border-navy/[0.06] rounded-xl overflow-hidden" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-            <summary class="flex items-center justify-between px-7 py-5 font-display text-navy text-[17px] leading-snug">
-              Can presbyopia be cured?
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </summary>
-            <div class="px-7 pb-6">
-              <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Presbyopia cannot be reversed because it is caused by the natural aging and hardening of the crystalline lens inside the eye. However, it can be effectively corrected. Surgical options such as multifocal IOL implantation, EDOF lens implantation, and refractive lens exchange can permanently restore near vision and dramatically reduce or eliminate the need for reading glasses. At Soni Vision Institute in Cypress, TX, our fellowship-trained surgeons help patients choose the best solution for their lifestyle and visual goals.</p>
-            </div>
-          </details>
+        <!-- Category: Understanding Presbyopia -->
+        <p class="sr font-body text-[12px] font-bold uppercase tracking-[0.2em] text-teal mb-4 mt-8">Understanding Presbyopia</p>
 
-          <!-- FAQ 2 -->
-          <details class="sr sr-d3 bg-white border border-navy/[0.06] rounded-xl overflow-hidden" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-            <summary class="flex items-center justify-between px-7 py-5 font-display text-navy text-[17px] leading-snug">
-              What age does presbyopia start?
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </summary>
-            <div class="px-7 pb-6">
-              <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Presbyopia typically becomes noticeable between the ages of 40 and 45, though the underlying loss of lens flexibility begins gradually in your 30s. Most people first notice difficulty reading small print, especially in dim lighting. The condition continues to progress through your 50s and 60s, with near vision becoming increasingly blurry. By your mid-60s, the crystalline lens has lost nearly all of its flexibility, and near focus without correction becomes essentially impossible.</p>
-            </div>
-          </details>
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What is presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Presbyopia is the gradual, age-related loss of the eye&rsquo;s ability to focus on nearby objects. It occurs because the crystalline lens inside the eye becomes harder and less flexible over time, making it difficult for the ciliary muscle to reshape the lens for close-up tasks like reading, using a phone, or working at a computer. Presbyopia is not a disease &mdash; it is a completely normal part of aging that affects virtually everyone.</p>
+          </div>
+        </details>
 
-          <!-- FAQ 3 -->
-          <details class="sr sr-d4 bg-white border border-navy/[0.06] rounded-xl overflow-hidden" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-            <summary class="flex items-center justify-between px-7 py-5 font-display text-navy text-[17px] leading-snug">
-              Can I have LASIK for presbyopia?
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </summary>
-            <div class="px-7 pb-6">
-              <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Traditional LASIK corrects distance vision but does not directly address presbyopia. However, a technique called monovision LASIK can help: one eye is corrected for distance and the other for near vision, allowing the brain to blend the two images. Monovision works well for many patients but is not ideal for everyone. For patients over 50 or those with early cataracts, refractive lens exchange with a multifocal or EDOF lens often provides a more comprehensive and permanent solution for presbyopia.</p>
-            </div>
-          </details>
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Why does presbyopia happen?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Presbyopia is caused by the natural hardening of the crystalline lens inside the eye. Throughout life, new protein fiber layers are continuously added to the lens while the core compacts and stiffens &mdash; a process called nuclear sclerosis. At the same time, the zonular fibers connecting the ciliary muscle to the lens lose some tension. Together, these changes reduce the eye&rsquo;s ability to shift focus between far and near objects, a function known as accommodation.</p>
+          </div>
+        </details>
 
-          <!-- FAQ 4 -->
-          <details class="sr bg-white border border-navy/[0.06] rounded-xl overflow-hidden" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-            <summary class="flex items-center justify-between px-7 py-5 font-display text-navy text-[17px] leading-snug">
-              What is the best lens implant for presbyopia?
-              <svg class="faq-chevron w-5 h-5 text-navy/40 flex-shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-            </summary>
-            <div class="px-7 pb-6">
-              <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">The best lens implant depends on your individual anatomy, visual demands, and lifestyle. Multifocal IOLs provide the widest range of clear vision at near, intermediate, and distance but may produce some halos at night. EDOF (Extended Depth of Focus) lenses offer a continuous range of vision with fewer optical side effects. The Light Adjustable Lens allows your surgeon to fine-tune your prescription after surgery. During your consultation at Soni Vision Institute, we perform detailed diagnostic measurements and discuss your goals to recommend the lens technology best suited to you.</p>
-            </div>
-          </details>
-        </div>
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            At what age does presbyopia typically begin?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Most people first notice presbyopia between the ages of 40 and 45, though the underlying loss of lens flexibility starts gradually in your 30s. Early signs often include needing brighter light to read and holding your phone farther away. The condition continues to progress through your 50s and 60s, which is why reading prescriptions typically get stronger every few years until plateauing around age 65.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Is presbyopia the same as farsightedness?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">No. <a href="/conditions/hyperopia.html" class="text-teal hover:underline">Farsightedness (hyperopia)</a> is a refractive error caused by the shape of the eyeball or cornea, and it can occur at any age. Presbyopia, on the other hand, is caused by the aging and stiffening of the crystalline lens inside the eye and develops in everyone with age. You can have both conditions simultaneously &mdash; and in fact, people with hyperopia often notice presbyopia symptoms earlier than those with normal or nearsighted vision.</p>
+          </div>
+        </details>
+
+        <!-- Category: Symptoms & Progression -->
+        <p class="sr font-body text-[12px] font-bold uppercase tracking-[0.2em] text-teal mb-4 mt-10">Symptoms &amp; Progression</p>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What are the earliest signs of presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">The earliest signs typically include holding reading material at arm&rsquo;s length, needing brighter lighting for close tasks, and experiencing eye strain or headaches after prolonged reading or screen time. Many people first notice the change when reading restaurant menus in dim lighting or when small print on medication labels becomes difficult to decipher. These early symptoms usually appear in the early to mid-40s.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Does presbyopia continue to get worse over time?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Yes. Presbyopia is progressive and worsens steadily over approximately 20 to 25 years. In your early 40s, you may only need readers for fine print. By your late 40s, standard-sized text becomes blurry without correction. Through your 50s and into your 60s, the lens continues to harden until virtually all accommodative ability is lost. This is why many patients find themselves buying stronger reading glasses every few years &mdash; and why a permanent surgical solution becomes increasingly attractive.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Can you have presbyopia and nearsightedness at the same time?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Yes. <a href="/conditions/myopia.html" class="text-teal hover:underline">Myopia (nearsightedness)</a> and presbyopia are two separate conditions that can and often do coexist. Myopia is a refractive error that affects distance vision, while presbyopia affects near vision due to lens aging. People with myopia may notice that they can still read without glasses by removing their distance correction, but this does not mean presbyopia hasn&rsquo;t developed &mdash; it simply means the myopia is partially compensating for the near focus loss.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            When should I see an eye doctor about presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">You should schedule an eye exam if you notice any difficulty with near tasks &mdash; particularly if you&rsquo;re over 40 and finding yourself holding your phone farther away or turning up lights to read. An ophthalmologist can confirm the diagnosis, rule out other conditions, and discuss the full spectrum of correction options from reading glasses to surgical solutions like <a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">refractive lens exchange</a> or <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal lens</a> implantation.</p>
+          </div>
+        </details>
+
+        <!-- Category: Treatment Options -->
+        <p class="sr font-body text-[12px] font-bold uppercase tracking-[0.2em] text-teal mb-4 mt-10">Treatment Options</p>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What are monovision contact lenses and how do they work?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Monovision contacts correct one eye for distance and the other for near vision, allowing the brain to blend the two images for functional vision at all ranges. This approach can reduce dependence on reading glasses and works well for many patients, though some people find the difference in focus between the two eyes uncomfortable. A monovision trial with contact lenses is often recommended before considering monovision <a href="/services/lasik.html" class="text-teal hover:underline">LASIK</a> to ensure the brain adapts well to the arrangement.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What is a multifocal lens implant for presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">A <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal lens implant</a> is an advanced technology intraocular lens (IOL) with diffractive rings that split incoming light into multiple focal points. This allows clear vision at near, intermediate, and far distances without glasses. Over 80% of patients who receive a multifocal IOL achieve complete spectacle independence. The lens is placed during <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a> or <a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">refractive lens exchange</a> and is designed to last a lifetime.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            How does refractive lens exchange correct presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light"><a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">Refractive lens exchange</a> (RLE) uses the same technique as modern cataract surgery but is performed before cataracts develop. The natural crystalline lens &mdash; which has become stiff and unable to focus &mdash; is replaced with an advanced technology IOL such as a <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal</a> or <a href="/services/edof-lens.html" class="text-teal hover:underline">EDOF lens</a>. RLE permanently corrects presbyopia and eliminates the future need for cataract surgery entirely, making it an increasingly popular option for patients in their 50s and beyond.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What is an EDOF lens and who is it best for?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">An <a href="/services/edof-lens.html" class="text-teal hover:underline">Extended Depth of Focus (EDOF) lens</a> creates a single elongated focal point rather than multiple discrete focal zones. This provides a continuous range of clear vision from distance through intermediate with functional near vision, and typically produces fewer halos and glare than traditional multifocal lenses. The Clareon Vivity is the primary EDOF platform used at Soni Vision Institute. EDOF lenses are an excellent choice for patients who prioritize optical quality and spend significant time at computer distance.</p>
+          </div>
+        </details>
+
+        <!-- Category: Surgery & Results -->
+        <p class="sr font-body text-[12px] font-bold uppercase tracking-[0.2em] text-teal mb-4 mt-10">Surgery &amp; Results</p>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Can presbyopia be permanently fixed with surgery?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Yes. While presbyopia itself cannot be reversed, it can be permanently corrected through surgical lens replacement. Procedures like <a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">refractive lens exchange</a> and <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a> replace the stiffened natural lens with an advanced technology IOL that provides focusing ability the aging lens can no longer deliver. The artificial lens does not age or stiffen, so the correction is lifelong. At Soni Vision Institute, our highly trained surgeons help patients choose the lens technology that best matches their lifestyle and visual goals.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            What lens options are available if I need cataract surgery and have presbyopia?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">When you have <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a>, you have the opportunity to correct presbyopia at the same time by choosing an advanced technology lens. Options include <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal lenses</a> for the widest range of glasses-free vision, <a href="/services/edof-lens.html" class="text-teal hover:underline">EDOF lenses</a> for a continuous focal range with fewer optical side effects, and the <a href="/services/light-adjustable-lens.html" class="text-teal hover:underline">Light Adjustable Lens</a> which can be fine-tuned after implantation using light treatments. Your surgeon will recommend the best option based on your eye anatomy, visual demands, and lifestyle.</p>
+          </div>
+        </details>
+
+        <details class="sr border-b border-navy/[0.08]">
+          <summary class="flex items-center justify-between py-5 font-display text-navy text-[17px] leading-snug">
+            Does insurance cover presbyopia correction surgery?
+            <span class="faq-icon w-6 h-6 flex items-center justify-center text-navy/40 flex-shrink-0 ml-4 text-[20px] font-light"></span>
+          </summary>
+          <div class="pb-6">
+            <p class="font-body text-navy/60 text-[15px] leading-[1.7] font-light">Most insurance plans, including Medicare, cover the basic <a href="/services/cataracts.html" class="text-teal hover:underline">cataract surgery</a> procedure and a standard monofocal lens implant. Upgrading to an advanced technology lens &mdash; such as a <a href="/services/multifocal-lens.html" class="text-teal hover:underline">multifocal</a>, <a href="/services/edof-lens.html" class="text-teal hover:underline">EDOF</a>, or <a href="/services/light-adjustable-lens.html" class="text-teal hover:underline">Light Adjustable Lens</a> &mdash; involves an additional out-of-pocket cost. <a href="/services/refractive-lens-exchange.html" class="text-teal hover:underline">Refractive lens exchange</a>, performed before cataracts develop, is typically considered an elective procedure and is not covered by insurance. Our team can walk you through costs, financing options, and what your specific plan covers during your consultation.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -624,7 +781,7 @@
     <div class="max-w-[1320px] mx-auto px-5 py-20 md:py-28 text-center">
       <p class="sr-scale font-body text-[14px] font-bold uppercase tracking-[0.2em] text-teal mb-5">Take the Next Step</p>
       <h2 class="sr-scale sr-d1 font-display text-white text-balance leading-[1.08] mb-6" style="font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.02em;">Life Is Too Short for Reading Glasses.</h2>
-      <p class="sr-scale sr-d2 font-body text-white/60 text-balance max-w-[600px] mx-auto leading-relaxed font-light mb-10" style="font-size: clamp(16px, 1.6vw, 19px);">Our fellowship-trained surgeons will evaluate your eyes, discuss your lifestyle, and recommend the best path to clear near vision &mdash; so you can read, work, and live without reaching for readers.</p>
+      <p class="sr-scale sr-d2 font-body text-white/60 text-balance max-w-[600px] mx-auto leading-relaxed font-light mb-10" style="font-size: clamp(16px, 1.6vw, 19px);">Our highly trained surgeons will evaluate your eyes, discuss your lifestyle, and recommend the best path to clear near vision &mdash; so you can read, work, and live without reaching for readers.</p>
       <div class="sr-scale sr-d3 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-4 rounded-full">Book a Consultation</a>
         <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-8 py-4 rounded-full">(346) 818-6780</a>
@@ -675,8 +832,8 @@
         <div class="md:col-span-2">
           <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
           <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
-            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">4.9</span></div>
-            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni &middot; 750+ Reviews</p>
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni</p>
           </div>
         </div>
       </div>

@@ -223,6 +223,37 @@
       transform: scale(1.08);
       box-shadow: 0 8px 24px rgba(73,145,136,0.35);
     }
+    /* ---- Video overlay play button ---- */
+    .video-wrap {
+      position: relative;
+      cursor: pointer;
+    }
+    .video-wrap .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .video-wrap .play-overlay .play-btn {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(73,145,136,0.9);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      pointer-events: auto;
+    }
+    .video-wrap:hover .play-overlay .play-btn {
+      transform: scale(1.08);
+      box-shadow: 0 8px 24px rgba(73,145,136,0.35);
+    }
+    .video-wrap.playing .play-overlay {
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
 
   <!-- Schema -->
@@ -883,16 +914,23 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- Video placeholder 1 -->
+        <!-- Video Testimonial 1 -->
         <div class="sr-scale sr-d1 rounded-xl overflow-hidden">
-          <div class="video-placeholder aspect-video rounded-xl">
-            <div class="play-btn">
-              <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="video-wrap rounded-xl overflow-hidden">
+            <div class="play-overlay">
+              <div class="play-btn">
+                <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
             </div>
+            <video controls playsinline preload="metadata" class="w-full aspect-video bg-navy-deep">
+              <source src="/brand_assets/doyle-testimonial.mov" type="video/quicktime">
+              <source src="/brand_assets/doyle-testimonial.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="pt-4">
-            <p class="font-body text-navy text-[15px] font-medium">Cataract Surgery Patient</p>
-            <p class="font-body text-navy/40 text-[13px]">Dr. Soni · Light Adjustable Lens</p>
+            <p class="font-body text-navy text-[15px] font-medium">Cataract Surgery</p>
+            <p class="font-body text-navy/40 text-[13px]">Patient Testimonial</p>
           </div>
         </div>
 
@@ -1243,6 +1281,17 @@
       el.addEventListener('touchstart', e => { pauseAuto(); startX = e.touches[0].pageX - el.offsetLeft; scrollLeft = el.scrollLeft; }, { passive: true });
       el.addEventListener('touchmove', e => { const x = e.touches[0].pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); }, { passive: true });
     })();
+
+    // Video play overlay — click to play, hide overlay while playing
+    document.querySelectorAll('.video-wrap').forEach(wrap => {
+      const video = wrap.querySelector('video');
+      const overlay = wrap.querySelector('.play-overlay');
+      if (!video || !overlay) return;
+      overlay.addEventListener('click', () => { video.play(); });
+      video.addEventListener('play', () => { wrap.classList.add('playing'); });
+      video.addEventListener('pause', () => { wrap.classList.remove('playing'); });
+      video.addEventListener('ended', () => { wrap.classList.remove('playing'); });
+    });
   </script>
 </body>
 </html>
