@@ -317,7 +317,10 @@
   <main>
 
   <!-- ========== HERO ========== -->
-  <section class="relative bg-navy-deep grain overflow-hidden">
+  <section class="relative overflow-hidden">
+    <img src="/brand_assets/building.png" alt="" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-navy-deep/60"></div>
+    <div class="absolute inset-0 grain"></div>
     <div class="max-w-[660px] mx-auto px-5 pt-[120px] pb-16 md:pt-[140px] md:pb-20 relative z-10 text-center">
       <h1 class="sr-scale font-display text-white text-balance leading-[1.1] mb-4" style="font-size: clamp(34px, 4.5vw, 52px); letter-spacing: -0.02em;">
         Book Your <em class="italic text-teal">Consultation</em>
@@ -399,6 +402,17 @@
             </select>
           </div>
 
+          <!-- Surgeon Request -->
+          <div class="sr sr-d2 mb-5">
+            <label for="surgeon" class="form-label">Surgeon Request <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
+            <select id="surgeon" name="surgeon" class="form-input">
+              <option value="" disabled selected>Select a surgeon</option>
+              <option value="Dr. Ruhi Soni">Dr. Ruhi Soni</option>
+              <option value="Dr. Nikitha Reddy">Dr. Nikitha Reddy</option>
+              <option value="No Preference">No Preference</option>
+            </select>
+          </div>
+
           <!-- Insurance -->
           <div class="sr sr-d2 mb-5">
             <label for="insurance" class="form-label">Insurance Provider <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
@@ -457,7 +471,7 @@
         </div>
         <div class="sr-scale sr-d2">
           <p class="font-display text-navy text-[26px]">Houston, TX</p>
-          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">NW Freeway &amp; 290</p>
+          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">Northwest Freeway / 290</p>
         </div>
       </div>
     </div>
