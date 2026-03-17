@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation | Soni Vision Institute | Cypress TX</title>
+  <meta name="description" content="Schedule your consultation at Soni Vision Institute in Cypress, TX. Cataract surgery, advanced technology lenses, LASIK, glaucoma. Call (346) 818-6780 or book online.">
+  <meta name="keywords" content="book eye consultation Cypress TX, schedule cataract surgery Houston, eye surgeon appointment, Soni Vision appointment, ophthalmologist near me">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sonivisioninstitute.com/book.html">
+  <meta property="og:title" content="Book a Consultation | Soni Vision Institute | Cypress TX">
+  <meta property="og:description" content="Schedule your consultation at Soni Vision Institute. Cataract surgery, LASIK, advanced technology lenses. Cypress, TX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sonivisioninstitute.com/book.html">
+  <meta property="og:site_name" content="Soni Vision Institute">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#32384e', deep: '#1e2233', light: '#4a5170', muted: '#32384e0d' },
+            teal: { DEFAULT: '#499188', dark: '#357069', light: '#6ab0a6', pale: '#e8f4f2', wash: '#49918808' },
+            cream: '#FAF9F6',
+            sand: '#F3F1EC',
+            ink: '#1a1a2e',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Outfit"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Outfit', system-ui, sans-serif; color: #1a1a2e; background: #FAF9F6; overflow-x: hidden; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    .text-balance { text-wrap: balance; }
+
+    .grain::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px;
+    }
+
+    .sticky-cta { backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
+
+    .nav-item { position: relative; }
+    .nav-item::after {
+      content: ''; position: absolute; bottom: -3px; left: 50%; width: 0; height: 1.5px;
+      background: #499188; transition: width 0.3s ease, left 0.3s ease;
+    }
+    .nav-item:hover::after { width: 100%; left: 0; }
+
+    .dropdown-panel {
+      opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98);
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    .dropdown-wrap:hover .dropdown-panel,
+    .dropdown-wrap:focus-within .dropdown-panel {
+      opacity: 1; visibility: visible; transform: translateY(0) scale(1);
+    }
+
+    .btn-primary {
+      background: #499188; color: #fff; position: relative; overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(73,145,136,0.25); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #499188; outline-offset: 3px; }
+
+    .btn-ghost {
+      border: 1.5px solid currentColor; background: transparent;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    }
+    .btn-ghost:hover { background: #32384e; color: #fff; transform: translateY(-1px); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 2px solid #32384e; outline-offset: 3px; }
+
+    .mob-nav { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+    .mob-nav.is-open { transform: translateX(0); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid #499188; outline-offset: 2px; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #32384e20; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #32384e40; }
+
+    /* Scroll reveals */
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+
+    /* Form styles */
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1.5px solid rgba(50,56,78,0.12);
+      border-radius: 12px;
+      background: #fff;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #1a1a2e;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-input::placeholder { color: rgba(50,56,78,0.4); font-weight: 300; }
+    .form-input:focus {
+      outline: none;
+      border-color: #499188;
+      box-shadow: 0 0 0 3px rgba(73,145,136,0.1);
+    }
+    .form-label {
+      display: block;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #32384e;
+      margin-bottom: 7px;
+    }
+    .form-label .req { color: #499188; margin-left: 2px; }
+    select.form-input {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2332384e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+    }
+    textarea.form-input { resize: vertical; min-height: 80px; }
+
+    /* Pathway cards */
+    .pathway-card {
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    }
+    .pathway-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+    .pathway-card.selected {
+      background: rgba(73,145,136,0.12);
+      border-color: #499188;
+    }
+
+    /* Success */
+    .form-success { display: none; text-align: center; padding: 60px 20px; }
+    .form-success.show { display: block; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Soni Vision Institute",
+    "url": "https://sonivisioninstitute.com",
+    "telephone": "+13468186780",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27700 Northwest Freeway, Suite 390",
+      "addressLocality": "Cypress",
+      "addressRegion": "TX",
+      "postalCode": "77433",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 08:00-17:00"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sonivisioninstitute.com" },
+      { "@type": "ListItem", "position": 2, "name": "Book a Consultation", "item": "https://sonivisioninstitute.com/book.html" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 sticky-cta border-b border-navy/[0.04]" style="height: 80px;">
+    <div class="max-w-[1320px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/" aria-label="Home" class="flex-shrink-0">
+        <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-14 w-auto">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Main">
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">About</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/about.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">About the Practice</a>
+              <a href="/physicians/dr-ruhi-soni.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Ruhi Soni</a>
+              <a href="/physicians/dr-nikitha-reddy.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Nikitha Reddy</a>
+              <a href="/team.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Our Team</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Services</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[520px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] p-5 grid grid-cols-3 gap-x-6 gap-y-1">
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Cataracts</p>
+                <a href="/services/cataracts.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Cataract Surgery</a>
+                <a href="/services/laser-cataract-surgery.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Laser Cataract Surgery</a>
+                <a href="/services/light-adjustable-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Light Adjustable Lens</a>
+                <a href="/services/multifocal-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Multifocal Lens</a>
+                <a href="/services/edof-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EDOF Lens</a>
+                <a href="/services/toric-iol.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Toric Lens</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Vision Correction</p>
+                <a href="/services/refractive-lens-exchange.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Refractive Lens Exchange <span class="inline-block text-[9px] font-bold uppercase tracking-[0.1em] bg-teal/10 text-teal px-1.5 py-0.5 rounded ml-1">Featured</span></a>
+                <a href="/services/lasik.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">LASIK</a>
+                <a href="/services/prk.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">PRK</a>
+                <a href="/services/icl.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EVO ICL</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Glaucoma</p>
+                <a href="/services/glaucoma.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Surgery</a>
+                <a href="/services/glaucoma-laser.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Laser</a>
+                <a href="/services/migs.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Micro-Invasive Glaucoma Surgery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Conditions</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/conditions/cataracts.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Cataracts</a>
+              <a href="/conditions/astigmatism.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Astigmatism</a>
+              <a href="/conditions/myopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Myopia</a>
+              <a href="/conditions/hyperopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Hyperopia</a>
+              <a href="/conditions/presbyopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Presbyopia</a>
+              <a href="/conditions/glaucoma.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Glaucoma</a>
+              <a href="/conditions/macular-degeneration.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Macular Degeneration</a>
+              <a href="/conditions/dry-eye.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Dry Eye</a>
+              <a href="/conditions/eyelid-conditions.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Eyelid Conditions</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/reviews.html" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Reviews</a>
+        <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&client_id=ema&redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&state=8498c9a7-ac6a-4d54-9488-72bc12918879&login=true&login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&scope=openid" target="_blank" rel="noopener" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Patient Portal</a>
+        <a href="/blog/" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Blog</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:3468186780" class="font-body text-[12px] font-semibold text-navy hover:text-teal transition-colors duration-200">(346) 818-6780</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[9.5px] font-semibold uppercase tracking-[0.1em] px-3.5 py-2 rounded-full text-navy">For Referring Doctors</a>
+        <a href="/book.html" class="btn-primary font-body text-[9.5px] font-semibold uppercase tracking-[0.12em] px-5 py-2 rounded-full">Book a Consultation</a>
+      </div>
+
+      <button id="mob-toggle" class="lg:hidden p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+        <svg id="burger-icon" class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        <svg id="close-icon" class="w-6 h-6 text-navy hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div id="mob-nav" class="mob-nav fixed inset-0 z-[55] bg-cream pt-24 overflow-y-auto" aria-hidden="true">
+    <nav class="px-6 pb-10 flex flex-col gap-0.5">
+      <a href="/about.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">About</a>
+      <a href="/physicians/dr-ruhi-soni.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Ruhi Soni</a>
+      <a href="/physicians/dr-nikitha-reddy.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Nikitha Reddy</a>
+      <a href="/services/cataracts.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Cataract Surgery</a>
+      <a href="/services/lasik.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">LASIK</a>
+      <a href="/services/light-adjustable-lens.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Light Adjustable Lens</a>
+      <a href="/services/glaucoma.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Glaucoma</a>
+      <a href="/reviews.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Reviews</a>
+      <a href="/blog/" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Blog</a>
+      <div class="mt-8 flex flex-col gap-3">
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center">Book a Consultation</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">For Referring Doctors</a>
+        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 &mdash; Call Us Now</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+  <!-- ========== HERO ========== -->
+  <section class="relative bg-navy-deep grain overflow-hidden">
+    <div class="max-w-[660px] mx-auto px-5 pt-[120px] pb-16 md:pt-[140px] md:pb-20 relative z-10 text-center">
+      <h1 class="sr-scale font-display text-white text-balance leading-[1.1] mb-4" style="font-size: clamp(34px, 4.5vw, 52px); letter-spacing: -0.02em;">
+        Book Your <em class="italic text-teal">Consultation</em>
+      </h1>
+      <p class="sr-scale sr-d1 font-body text-white/60 text-[18px] leading-[1.7] max-w-[480px] mx-auto" style="font-weight: 300;">
+        Fill out the short form below and our team will call you to confirm your appointment.
+      </p>
+
+      <!-- Quick call option -->
+      <div class="sr-scale sr-d2 mt-6 inline-flex items-center gap-2.5 bg-white/[0.06] border border-white/[0.08] rounded-full px-5 py-2.5">
+        <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        <span class="font-body text-white/55 text-[15px]" style="font-weight: 300;">Prefer to call?</span>
+        <a href="tel:3468186780" class="font-body text-white text-[16px] font-semibold hover:text-teal transition-colors">(346) 818-6780</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM ========== -->
+  <section class="py-14 md:py-20">
+    <div class="max-w-[600px] mx-auto px-5">
+
+      <div id="booking-form-wrap">
+        <form id="booking-form" action="#" method="POST" novalidate>
+
+          <!-- Name row -->
+          <div class="sr grid grid-cols-2 gap-4 mb-5">
+            <div>
+              <label for="first-name" class="form-label">First Name <span class="req">*</span></label>
+              <input type="text" id="first-name" name="first_name" class="form-input" placeholder="First name" required autocomplete="given-name">
+            </div>
+            <div>
+              <label for="last-name" class="form-label">Last Name <span class="req">*</span></label>
+              <input type="text" id="last-name" name="last_name" class="form-input" placeholder="Last name" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <!-- Contact row -->
+          <div class="sr sr-d1 grid grid-cols-2 gap-4 mb-5">
+            <div>
+              <label for="phone" class="form-label">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(000) 000-0000" required autocomplete="tel">
+            </div>
+            <div>
+              <label for="email" class="form-label">Email <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="you@email.com" autocomplete="email">
+            </div>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="sr sr-d1 mb-5">
+            <label for="dob" class="form-label">Date of Birth <span class="req">*</span></label>
+            <input type="date" id="dob" name="dob" class="form-input" required>
+          </div>
+
+          <!-- Reason -->
+          <div class="sr sr-d2 mb-5">
+            <label for="reason" class="form-label">What brings you in? <span class="req">*</span></label>
+            <select id="reason" name="reason" class="form-input" required>
+              <option value="" disabled selected>Select a reason</option>
+              <option value="Cataract Evaluation">Cataract Evaluation</option>
+              <option value="Cataract Surgery Consultation">Cataract Surgery Consultation</option>
+              <option value="LASIK / Vision Correction">LASIK / Vision Correction</option>
+              <option value="Lens Options / Second Opinion">Lens Options / Second Opinion</option>
+              <option value="Glaucoma Evaluation">Glaucoma Evaluation</option>
+              <option value="General Eye Exam">General Eye Exam</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Preferred time -->
+          <div class="sr sr-d2 mb-5">
+            <label for="preferred-time" class="form-label">Preferred Appointment Time <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
+            <select id="preferred-time" name="preferred_time" class="form-input">
+              <option value="" disabled selected>Select a preference</option>
+              <option value="Morning (8am-12pm)">Morning (8am&ndash;12pm)</option>
+              <option value="Afternoon (12pm-3pm)">Afternoon (12pm&ndash;3pm)</option>
+              <option value="Late Afternoon (3pm-5pm)">Late Afternoon (3pm&ndash;5pm)</option>
+              <option value="No Preference">No Preference</option>
+            </select>
+          </div>
+
+          <!-- Insurance -->
+          <div class="sr sr-d2 mb-5">
+            <label for="insurance" class="form-label">Insurance Provider <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
+            <input type="text" id="insurance" name="insurance" class="form-input" placeholder="e.g. Aetna, Blue Cross, Medicare">
+          </div>
+
+          <!-- Message -->
+          <div class="sr sr-d3 mb-8">
+            <label for="message" class="form-label">Anything else we should know? <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" class="form-input" rows="3" placeholder="Current symptoms, referring doctor, questions..."></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="sr sr-d3">
+            <button type="submit" class="btn-primary w-full font-body text-[14px] font-semibold uppercase tracking-[0.1em] py-4.5 rounded-full" style="padding-top: 18px; padding-bottom: 18px;">
+              Request Appointment
+            </button>
+            <p class="font-body text-navy/50 text-[14px] text-center mt-4" style="font-weight: 300;">
+              We&rsquo;ll call you within one business day to confirm your appointment.
+            </p>
+          </div>
+
+        </form>
+
+        <!-- Success -->
+        <div id="form-success" class="form-success">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="28" fill="#e8f4f2"/>
+            <path d="M18 28.5L25 35.5L38 22.5" stroke="#499188" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="font-display text-navy text-[28px] mb-3">You&rsquo;re All Set</h3>
+          <p class="font-body text-ink/70 text-[17px] leading-[1.7] max-w-md mx-auto" style="font-weight: 300;">
+            We&rsquo;ve received your request. Our team will call you within one business day to confirm your appointment time.
+          </p>
+          <p class="font-body text-navy/50 text-[15px] mt-6">Questions? Call <a href="tel:3468186780" class="text-teal hover:underline">(346) 818-6780</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <section class="bg-sand border-y border-navy/[0.04]">
+    <div class="max-w-[700px] mx-auto px-5 py-10">
+      <div class="grid grid-cols-3 gap-6 text-center">
+        <div class="sr-scale">
+          <div class="flex items-center justify-center gap-1 mb-1">
+            <span class="text-teal text-[15px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p class="font-display text-navy text-[26px]">4.9</p>
+          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">750+ Google Reviews</p>
+        </div>
+        <div class="sr-scale sr-d1">
+          <p class="font-display text-navy text-[26px]">2</p>
+          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">Board-Certified Surgeons</p>
+        </div>
+        <div class="sr-scale sr-d2">
+          <p class="font-display text-navy text-[26px]">Houston, TX</p>
+          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">NW Freeway &amp; 290</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOCATION INFO ========== -->
+  <section class="py-14 md:py-20">
+    <div class="max-w-[700px] mx-auto px-5">
+      <div class="sr grid sm:grid-cols-2 gap-8">
+        <!-- Address card -->
+        <div class="bg-white rounded-xl p-8 border border-navy/[0.04]" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          <h3 class="font-body text-navy text-[18px] font-semibold mb-2">Our Location</h3>
+          <p class="font-body text-ink/65 text-[15px] leading-[1.7]" style="font-weight: 300;">
+            27700 Northwest Freeway<br>Suite 390<br>Houston, TX 77433
+          </p>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="inline-block mt-4 font-body text-teal text-[15px] font-medium hover:underline">Get Directions &rarr;</a>
+        </div>
+
+        <!-- Hours card -->
+        <div class="bg-white rounded-xl p-8 border border-navy/[0.04]" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-body text-navy text-[18px] font-semibold mb-2">Office Hours</h3>
+          <div class="font-body text-ink/65 text-[15px] leading-[1.9]" style="font-weight: 300;">
+            <div class="flex justify-between"><span>Monday &ndash; Friday</span><span class="text-navy font-medium">8:00am &ndash; 5:00pm</span></div>
+            <div class="flex justify-between"><span>Saturday</span><span class="text-navy/50">Closed</span></div>
+            <div class="flex justify-between"><span>Sunday</span><span class="text-navy/50">Closed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-ink text-white">
+    <div class="max-w-[1320px] mx-auto px-5 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-8 mb-14">
+        <div class="md:col-span-4">
+          <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-9 w-auto mb-5 brightness-0 invert opacity-70" loading="lazy">
+          <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
+          <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
+          <p class="font-body text-white/25 text-xs">Fax: 332-244-2205</p>
+        </div>
+
+        <div class="md:col-span-2 md:col-start-6">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Quick Links</p>
+          <nav class="flex flex-col gap-2" aria-label="Quick links">
+            <a href="/about.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">About Us</a>
+            <a href="/physicians/dr-ruhi-soni.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Ruhi Soni</a>
+            <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Nikitha Reddy</a>
+            <a href="/services/cataracts.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Cataract Surgery</a>
+            <a href="/services/lasik.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Vision Correction</a>
+            <a href="/services/glaucoma.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Glaucoma</a>
+          </nav>
+        </div>
+
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Patients</p>
+          <nav class="flex flex-col gap-2" aria-label="Patient resources">
+            <a href="/book.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Book A Consultation</a>
+            <a href="/reviews.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Patient Testimonials</a>
+            <a href="/faq.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">FAQs</a>
+            <a href="/blog/" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Blog</a>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="font-body text-teal text-sm hover:text-teal-light transition-colors">Leave a Review &rarr;</a>
+          </nav>
+        </div>
+
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
+          <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-6">
+          <p class="font-body text-white/20 text-xs">&copy; 2026 Soni Vision Institute</p>
+          <p class="font-body text-white/20 text-xs">Mon&ndash;Fri 8am&ndash;5pm</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/100089139506135" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/sonivisioninstitute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/company/soni-vision-institute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">LinkedIn</a>
+          <span class="font-body text-white/20 text-xs">Se habla Espa&ntilde;ol &middot; &#2361;&#2367;&#2306;&#2342;&#2368; &middot; &#3108;&#3142;&#3122;&#3137;&#3095;&#3137;</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JS ========== -->
+  <script>
+    // Mobile menu
+    const mobToggle = document.getElementById('mob-toggle');
+    const mobNav = document.getElementById('mob-nav');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isOpen = false;
+    mobToggle.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobNav.classList.toggle('is-open', isOpen);
+      mobNav.setAttribute('aria-hidden', !isOpen);
+      mobToggle.setAttribute('aria-expanded', isOpen);
+      burgerIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Scroll reveals
+    const srs = document.querySelectorAll('.sr, .sr-scale');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    srs.forEach(el => obs.observe(el));
+
+    // Header shadow
+    const hdr = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
+    }, { passive: true });
+
+    // Phone auto-format
+    document.querySelectorAll('input[type="tel"]').forEach(input => {
+      input.addEventListener('input', (e) => {
+        let val = e.target.value.replace(/\D/g, '');
+        if (val.length > 10) val = val.slice(0, 10);
+        if (val.length >= 6) {
+          e.target.value = '(' + val.slice(0,3) + ') ' + val.slice(3,6) + '-' + val.slice(6);
+        } else if (val.length >= 3) {
+          e.target.value = '(' + val.slice(0,3) + ') ' + val.slice(3);
+        } else if (val.length > 0) {
+          e.target.value = '(' + val;
+        }
+      });
+    });
+
+    // Form submission
+    const form = document.getElementById('booking-form');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#e74c3c';
+          valid = false;
+          field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+          field.addEventListener('change', () => { field.style.borderColor = ''; }, { once: true });
+        }
+      });
+
+      if (!valid) {
+        const first = form.querySelector('[style*="border-color: rgb(231, 76, 60)"]');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // TODO: Connect to form service (Formspree, Netlify Forms, or custom)
+      // form.action = 'https://formspree.io/f/YOUR_FORM_ID';
+      // form.submit();
+
+      form.style.display = 'none';
+      formSuccess.classList.add('show');
+      window.scrollTo({ top: document.getElementById('booking-form-wrap').offsetTop - 120, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
