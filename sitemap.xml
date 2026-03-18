@@ -30,6 +30,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Services -->
   <url>
     <loc>https://sonivisioninstitute.com/services/cataracts.html</loc>
