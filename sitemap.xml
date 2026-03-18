@@ -162,10 +162,121 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Physicians -->
+  <url>
+    <loc>https://sonivisioninstitute.com/physicians/dr-ruhi-soni.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/physicians/dr-nikitha-reddy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/team.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- Blog -->
   <url>
     <loc>https://sonivisioninstitute.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/early-signs-of-cataracts.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/cataract-surgery-recovery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/five-questions-before-cataract-surgery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/advanced-technology-lens-implants.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/what-is-laser-cataract-surgery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/what-is-the-light-adjustable-lens.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/choosing-best-cataract-surgeon-houston.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/what-causes-blurry-vision.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/presbyopia-after-40.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/lasik-vs-evo-icl.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/new-year-clear-vision.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/dry-eye-and-cataract-surgery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/cataract-surgery-and-astigmatism.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/refractive-lens-exchange.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/glaucoma-and-cataracts.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/what-to-expect-cataract-consultation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/multifocal-vs-edof-lens.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/glaucoma-treatment-options.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/can-you-get-lasik-after-40.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

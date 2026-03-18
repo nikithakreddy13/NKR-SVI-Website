@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multifocal vs. EDOF Lens: Which Is Right for You? | Soni Vision Institute</title>
+  <meta name="description" content="Compare multifocal and EDOF lenses for cataract surgery. Learn how Clareon Vivity and multifocal implants differ in vision quality, halos, and glasses independence. Soni Vision Institute, Cypress TX.">
+  <meta name="keywords" content="multifocal vs EDOF lens, multifocal lens cataract surgery, EDOF lens comparison, Clareon Vivity vs multifocal, best lens for cataract surgery">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta property="og:title" content="Multifocal vs. EDOF Lens: Which Is Right for You?">
+  <meta property="og:description" content="Compare multifocal and EDOF lenses for cataract surgery. Understand the trade-offs and find the right lens for your lifestyle.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sonivisioninstitute.com/blog/multifocal-vs-edof-lens.html">
+  <meta property="og:image" content="https://sonivisioninstitute.com/brand_assets/advanced-tech-lenses.png">
+  <meta property="og:site_name" content="Soni Vision Institute">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://sonivisioninstitute.com/blog/multifocal-vs-edof-lens.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#32384e', deep: '#1e2233', light: '#4a5170', muted: '#32384e0d' },
+            teal: { DEFAULT: '#499188', dark: '#357069', light: '#6ab0a6', pale: '#e8f4f2', wash: '#49918808' },
+            cream: '#FAF9F6',
+            sand: '#F3F1EC',
+            ink: '#1a1a2e',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Outfit"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Outfit', system-ui, sans-serif; color: #1a1a2e; background: #FAF9F6; overflow-x: hidden; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    .heading-accent em { font-style: italic; color: #499188; }
+    .text-balance { text-wrap: balance; }
+    .grain::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 256px; }
+    .sticky-cta { backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
+    .nav-item { position: relative; }
+    .nav-item::after { content: ''; position: absolute; bottom: -3px; left: 50%; width: 0; height: 1.5px; background: #499188; transition: width 0.3s ease, left 0.3s ease; }
+    .nav-item:hover::after { width: 100%; left: 0; }
+    .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98); transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s; }
+    .dropdown-wrap:hover .dropdown-panel, .dropdown-wrap:focus-within .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+    .btn-primary { background: #499188; color: #fff; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.3s ease; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(73,145,136,0.25); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #499188; outline-offset: 3px; }
+    .btn-ghost { border: 1.5px solid currentColor; background: transparent; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; }
+    .btn-ghost:hover { background: #32384e; color: #fff; transform: translateY(-1px); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 2px solid #32384e; outline-offset: 3px; }
+    .btn-ghost-light { border: 1.5px solid rgba(255,255,255,0.4); color: #fff; background: transparent; transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease; }
+    .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-ghost-light:active { transform: translateY(0); }
+    .btn-ghost-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .card-surface { background: #fff; box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease; }
+    .card-surface:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(50,56,78,0.04), 0 12px 32px rgba(50,56,78,0.08), 0 24px 56px rgba(50,56,78,0.04); }
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+    .sr-left { opacity: 0; transform: translateX(-120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-left.vis { opacity: 1; transform: translateX(0); }
+    .sr-right { opacity: 0; transform: translateX(120px); transition: opacity 1.3s cubic-bezier(0.16,1,0.3,1), transform 1.3s cubic-bezier(0.16,1,0.3,1); }
+    .sr-right.vis { opacity: 1; transform: translateX(0); }
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+    .sr-up { opacity: 0; transform: translateY(80px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-up.vis { opacity: 1; transform: translateY(0); }
+    .sr-d1 { transition-delay: 0.15s; } .sr-d2 { transition-delay: 0.3s; } .sr-d3 { transition-delay: 0.45s; } .sr-d4 { transition-delay: 0.6s; } .sr-d5 { transition-delay: 0.75s; } .sr-d6 { transition-delay: 0.9s; }
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
+    .mob-nav { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+    .mob-nav.is-open { transform: translateX(0); }
+    a:focus-visible, button:focus-visible { outline: 2px solid #499188; outline-offset: 2px; }
+    ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #32384e20; border-radius: 3px; } ::-webkit-scrollbar-thumb:hover { background: #32384e40; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary .faq-icon::after { content: '+'; }
+    details[open] summary .faq-icon::after { content: '\2212'; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Multifocal vs. EDOF Lens: Which Is Right for You?",
+    "description": "Compare multifocal and EDOF lenses for cataract surgery. Understand how they differ in vision quality, halos, and glasses independence to find the right fit for your lifestyle.",
+    "image": "https://sonivisioninstitute.com/brand_assets/advanced-tech-lenses.png",
+    "datePublished": "2026-03-18",
+    "dateModified": "2026-03-18",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Nikitha Reddy, MD",
+      "jobTitle": "Board-Certified Ophthalmologist",
+      "worksFor": { "@type": "MedicalClinic", "name": "Soni Vision Institute" }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Soni Vision Institute",
+      "logo": { "@type": "ImageObject", "url": "https://sonivisioninstitute.com/brand_assets/soni-logo.svg" }
+    },
+    "mainEntityOfPage": "https://sonivisioninstitute.com/blog/multifocal-vs-edof-lens.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sonivisioninstitute.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sonivisioninstitute.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Multifocal vs. EDOF Lens" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 sticky-cta border-b border-navy/[0.04]" style="height: 80px;">
+    <div class="max-w-[1320px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/" aria-label="Home" class="flex-shrink-0"><img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-14 w-auto"></a>
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Main">
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">About</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/about.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">About the Practice</a>
+              <a href="/physicians/dr-ruhi-soni.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Ruhi Soni</a>
+              <a href="/physicians/dr-nikitha-reddy.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Nikitha Reddy</a>
+              <a href="/team.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Our Team</a>
+              <a href="/technology.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Our Technology</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Services</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[520px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] p-5 grid grid-cols-3 gap-x-6 gap-y-1">
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Cataracts</p>
+                <a href="/services/cataracts.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Cataract Surgery</a>
+                <a href="/services/laser-cataract-surgery.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Laser Cataract Surgery</a>
+                <a href="/services/advanced-technology-lenses.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Advanced Technology Lenses</a>
+                <a href="/services/light-adjustable-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Light Adjustable Lens</a>
+                <a href="/services/multifocal-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Multifocal Lens</a>
+                <a href="/services/edof-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EDOF Lens</a>
+                <a href="/services/toric-iol.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Toric Lens</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Vision Correction</p>
+                <a href="/services/refractive-lens-exchange.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Refractive Lens Exchange <span class="inline-block text-[9px] font-bold uppercase tracking-[0.1em] bg-teal/10 text-teal px-1.5 py-0.5 rounded ml-1">Featured</span></a>
+                <a href="/services/lasik.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">LASIK</a>
+                <a href="/services/prk.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">PRK</a>
+                <a href="/services/icl.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EVO ICL</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Glaucoma</p>
+                <a href="/services/glaucoma.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Surgery</a>
+                <a href="/services/glaucoma-laser.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Laser</a>
+                <a href="/services/migs.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Micro-Invasive Glaucoma Surgery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Conditions</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/conditions/cataracts.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Cataracts</a>
+              <a href="/conditions/astigmatism.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Astigmatism</a>
+              <a href="/conditions/myopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Myopia</a>
+              <a href="/conditions/hyperopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Hyperopia</a>
+              <a href="/conditions/presbyopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Presbyopia</a>
+              <a href="/conditions/glaucoma.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Glaucoma</a>
+              <a href="/conditions/macular-degeneration.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Macular Degeneration</a>
+              <a href="/conditions/dry-eye.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Dry Eye</a>
+              <a href="/conditions/eyelid-conditions.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Eyelid Conditions</a>
+            </div>
+          </div>
+        </div>
+        <a href="/reviews.html" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Reviews</a>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">For Patients</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&client_id=ema&redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&state=8498c9a7-ac6a-4d54-9488-72bc12918879&login=true&login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&scope=openid" target="_blank" rel="noopener" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Patient Portal</a>
+              <a href="/cost.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Cost &amp; Financing</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Blog</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:3468186780" class="font-body text-[12px] font-semibold text-navy hover:text-teal transition-colors duration-200">(346) 818-6780</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[9.5px] font-semibold uppercase tracking-[0.1em] px-3.5 py-2 rounded-full text-navy">For Referring Doctors</a>
+        <a href="/book.html" class="btn-primary font-body text-[9.5px] font-semibold uppercase tracking-[0.12em] px-5 py-2 rounded-full">Book a Consultation</a>
+      </div>
+      <button id="mob-toggle" class="lg:hidden p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+        <svg id="burger-icon" class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        <svg id="close-icon" class="w-6 h-6 text-navy hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mob-nav" class="mob-nav fixed inset-0 z-[55] bg-cream pt-24 overflow-y-auto" aria-hidden="true">
+    <nav class="px-6 pb-10 flex flex-col gap-0.5">
+      <a href="/about.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">About</a>
+      <a href="/physicians/dr-ruhi-soni.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Ruhi Soni</a>
+      <a href="/physicians/dr-nikitha-reddy.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Nikitha Reddy</a>
+      <a href="/services/cataracts.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Cataract Surgery</a>
+      <a href="/services/lasik.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">LASIK</a>
+      <a href="/services/light-adjustable-lens.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Light Adjustable Lens</a>
+      <a href="/services/glaucoma.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Glaucoma</a>
+      <a href="/reviews.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Reviews</a>
+      <a href="/blog/" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Blog</a>
+      <div class="mt-8 flex flex-col gap-3">
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center">Book a Consultation</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">For Referring Doctors</a>
+        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 — Call Us Now</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+  <!-- Hero Banner -->
+  <section class="relative pt-[80px]">
+    <div class="relative w-full overflow-hidden" style="max-height: 400px; min-height: 320px;">
+      <img src="/brand_assets/advanced-tech-lenses.png" alt="Advanced technology lens implants at Soni Vision Institute" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-navy-deep/55"></div>
+      <div class="absolute inset-0 grain"></div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-sand border-b border-navy/[0.04]">
+    <div class="max-w-[800px] mx-auto px-5 py-3">
+      <nav class="flex items-center gap-2 text-[13px] font-body text-navy/50" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-teal transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-teal transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-navy/80">Multifocal vs. EDOF Lens</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Article -->
+  <article class="py-14 md:py-20">
+    <div class="max-w-[800px] mx-auto px-5">
+
+      <header class="mb-12 sr">
+        <p class="text-[14px] font-body font-semibold uppercase tracking-[0.15em] text-teal mb-4">Lens Technology</p>
+        <h1 class="font-display text-navy text-balance" style="font-size: clamp(32px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.02em;">Multifocal vs. EDOF Lens: Which Is Right for You?</h1>
+        <div class="mt-6 flex items-center gap-3">
+          <div>
+            <p class="font-body text-navy text-[15px] font-medium">Dr. Nikitha Reddy, MD</p>
+            <p class="font-body text-navy/40 text-[13px]">March 18, 2026</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="sr sr-d1" style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; font-size: 16px; line-height: 1.85; color: rgba(26,26,46,0.75);">
+
+        <p>One of the most common questions we hear from cataract patients is whether a multifocal or an EDOF (extended depth of focus) lens is the better choice. It is a great question, and the honest answer is that it depends on you. Both are advanced technology lenses designed to reduce your dependence on glasses after surgery, but they achieve that goal in fundamentally different ways. Understanding how each one works will help you have a more informed conversation with your surgeon.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">How Multifocal Lenses Work</h2>
+
+        <p>A multifocal lens uses multiple optical zones built into the lens itself, similar in concept to progressive glasses. These zones split incoming light to create distinct focal points for distance, intermediate, and near vision. The result is a wide range of clear vision at multiple distances, which gives many patients significant independence from glasses for most daily activities, including reading.</p>
+
+        <p class="mt-6">The trade-off is that splitting light across multiple zones can produce visual phenomena such as halos or rings around lights, particularly at night. Most patients adapt to these effects over a period of weeks, and the majority find them manageable. However, patients who do a great deal of nighttime driving or who are very sensitive to visual disturbances should discuss this trade-off carefully with their surgeon.</p>
+
+        <p class="mt-6"><strong>Best for:</strong> Patients who want maximum independence from reading glasses and are comfortable with the possibility of some nighttime halos or glare during the adaptation period.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">How EDOF Lenses Work</h2>
+
+        <p>An EDOF lens takes a different approach. Rather than creating multiple distinct focal points, it stretches a single focal point into an elongated range of focus. This gives you a smooth, continuous zone of clear vision from distance through intermediate (computer distance), with good functional near vision as well. The Clareon Vivity is the primary EDOF platform we use at Soni Vision Institute, and it is designed to deliver excellent visual quality with significantly fewer halos and glare than traditional multifocal designs.</p>
+
+        <p class="mt-6">The trade-off is on the near end. While most EDOF patients can see their phone, read a menu, and work at a computer comfortably, some may find that very fine print or prolonged reading in dim lighting is easier with a pair of light reading glasses. For many patients, this is a worthwhile trade-off for the crisp, high-contrast vision and excellent nighttime performance the EDOF design provides.</p>
+
+        <p class="mt-6"><strong>Best for:</strong> Patients who prioritize visual quality, crisp contrast, and comfortable nighttime driving, and who do not mind occasionally reaching for readers for very fine print.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">Side-by-Side Comparison</h2>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse text-[15px]" style="font-weight: 400;">
+            <thead>
+              <tr class="border-b-2 border-teal/20">
+                <th class="text-left py-3 pr-4 font-body font-semibold text-navy" style="min-width: 160px;"></th>
+                <th class="text-left py-3 px-4 font-body font-semibold text-navy">Multifocal Lens</th>
+                <th class="text-left py-3 pl-4 font-body font-semibold text-navy">EDOF Lens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-navy/[0.06]">
+                <td class="py-3 pr-4 font-body font-medium text-navy">Distance Vision</td>
+                <td class="py-3 px-4">Excellent</td>
+                <td class="py-3 pl-4">Excellent</td>
+              </tr>
+              <tr class="border-b border-navy/[0.06]">
+                <td class="py-3 pr-4 font-body font-medium text-navy">Intermediate (Computer)</td>
+                <td class="py-3 px-4">Excellent</td>
+                <td class="py-3 pl-4">Excellent</td>
+              </tr>
+              <tr class="border-b border-navy/[0.06]">
+                <td class="py-3 pr-4 font-body font-medium text-navy">Near / Reading</td>
+                <td class="py-3 px-4">Strong — designed for up-close reading</td>
+                <td class="py-3 pl-4">Good — may need readers for very fine print</td>
+              </tr>
+              <tr class="border-b border-navy/[0.06]">
+                <td class="py-3 pr-4 font-body font-medium text-navy">Night Vision</td>
+                <td class="py-3 px-4">Good — some halos or glare possible</td>
+                <td class="py-3 pl-4">Excellent — significantly fewer halos/glare</td>
+              </tr>
+              <tr class="border-b border-navy/[0.06]">
+                <td class="py-3 pr-4 font-body font-medium text-navy">Glasses Independence</td>
+                <td class="py-3 px-4">High across all distances</td>
+                <td class="py-3 pl-4">High for distance and intermediate</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-body font-medium text-navy">Ideal Candidate</td>
+                <td class="py-3 px-4">Patients prioritizing reading without glasses</td>
+                <td class="py-3 pl-4">Patients prioritizing visual quality and nighttime driving</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Neither lens is objectively "better." Each one excels in different areas, and the right choice depends entirely on what matters most to you in your daily life.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">What About Astigmatism?</h2>
+
+        <p>If you have astigmatism, both multifocal and EDOF lenses are available in <a href="/services/toric-iol.html" class="text-teal hover:underline">toric versions</a> that correct astigmatism at the same time as your cataract. Correcting astigmatism during cataract surgery sharpens your overall visual result and reduces your dependence on glasses even further. Your surgeon will measure your astigmatism precisely during your preoperative evaluation and recommend whether a toric version is right for you.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">Other Options to Consider</h2>
+
+        <p>Multifocal and EDOF lenses are not the only advanced technology options available. The <a href="/services/light-adjustable-lens.html" class="text-teal hover:underline">Light Adjustable Lens</a> is a unique implant that can be customized after surgery using light treatments, allowing your surgeon to fine-tune your prescription once your eye has healed. It is an excellent option for patients who want the most precise result possible or who have complex prescriptions.</p>
+
+        <p class="mt-6">Monofocal lenses remain a reliable choice for patients who are comfortable wearing glasses for some tasks and prefer the simplest optical design. You can learn more about all available options on our <a href="/services/advanced-technology-lenses.html" class="text-teal hover:underline">advanced technology lenses</a> page.</p>
+
+        <h2 class="font-display text-navy mt-12 mb-4" style="font-size: clamp(24px, 3vw, 32px); line-height: 1.25;">How Your Surgeon Helps You Decide</h2>
+
+        <p>Choosing a lens is not something you do alone. Your surgeon will review detailed diagnostic imaging of your eye, discuss your lifestyle and visual priorities, and walk you through what each lens can realistically deliver for your specific anatomy. Factors like the health of your retina, the amount of astigmatism you have, your pupil size, and how you use your eyes every day all play a role in the recommendation.</p>
+
+        <p class="mt-6">At Soni Vision Institute, we take this conversation seriously. We want you to feel confident in your choice, and that starts with giving you clear, honest information about what to expect.</p>
+
+        <div class="bg-sand border-l-4 border-teal p-6 my-10 rounded-r-lg">
+          <p class="italic text-navy/70" style="font-size: 15px; line-height: 1.8;"><strong>The bottom line:</strong> There is no single "best" lens for everyone. The best lens is the one that matches your lifestyle, your visual priorities, and your eye anatomy. That is why a personalized consultation matters.</p>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-navy/[0.06]">
+          <p class="font-body text-navy/40 text-[13px]">Related resources:</p>
+          <div class="flex flex-wrap gap-3 mt-3">
+            <a href="/services/edof-lens.html" class="inline-block text-[13px] font-body font-medium text-teal bg-teal/5 px-4 py-2 rounded-full hover:bg-teal/10 transition-colors">EDOF Lens</a>
+            <a href="/services/multifocal-lens.html" class="inline-block text-[13px] font-body font-medium text-teal bg-teal/5 px-4 py-2 rounded-full hover:bg-teal/10 transition-colors">Multifocal Lens</a>
+            <a href="/services/advanced-technology-lenses.html" class="inline-block text-[13px] font-body font-medium text-teal bg-teal/5 px-4 py-2 rounded-full hover:bg-teal/10 transition-colors">Advanced Technology Lenses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Articles -->
+  <section class="bg-sand py-14 md:py-20">
+    <div class="max-w-[1100px] mx-auto px-5">
+      <p class="text-[14px] font-body font-semibold uppercase tracking-[0.15em] text-teal mb-3 text-center">Keep Reading</p>
+      <h2 class="font-display text-navy text-center mb-10" style="font-size: clamp(24px, 3vw, 32px);">Related Articles</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/blog/advanced-technology-lens-implants.html" class="card-surface rounded-xl overflow-hidden group">
+          <div class="overflow-hidden" style="height: 180px;">
+            <img src="/brand_assets/advanced-tech-lenses.png" alt="Advanced technology lens implants" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-5">
+            <p class="font-body text-navy/40 text-[12px] mb-2">September 3, 2025</p>
+            <h3 class="font-display text-navy text-[18px] leading-snug">Your Guide to Advanced Technology Lens Implants</h3>
+          </div>
+        </a>
+        <a href="/blog/what-is-the-light-adjustable-lens.html" class="card-surface rounded-xl overflow-hidden group">
+          <div class="overflow-hidden" style="height: 180px;">
+            <img src="/brand_assets/lasik-photo.jpg" alt="What is the Light Adjustable Lens" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-5">
+            <p class="font-body text-navy/40 text-[12px] mb-2">November 19, 2025</p>
+            <h3 class="font-display text-navy text-[18px] leading-snug">What Is the Light Adjustable Lens?</h3>
+          </div>
+        </a>
+        <a href="/blog/cataract-surgery-and-astigmatism.html" class="card-surface rounded-xl overflow-hidden group">
+          <div class="overflow-hidden" style="height: 180px;">
+            <img src="/brand_assets/cataract-surgery.jpeg" alt="Cataract surgery and astigmatism" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-5">
+            <p class="font-body text-navy/40 text-[12px] mb-2">December 5, 2025</p>
+            <h3 class="font-display text-navy text-[18px] leading-snug">Cataract Surgery and Astigmatism</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative bg-navy-deep py-20 md:py-28 grain">
+    <div class="max-w-[700px] mx-auto px-5 text-center relative z-10">
+      <h2 class="font-display text-white mb-4" style="font-size: clamp(28px, 4vw, 40px); line-height: 1.2;">Not Sure Which Lens Is Right for You?</h2>
+      <p class="font-body text-white/60 text-[16px] leading-relaxed mb-8" style="font-weight: 300;">Schedule a consultation with Dr. Soni or Dr. Reddy. We'll review your diagnostic results and help you choose the lens that fits your lifestyle.</p>
+      <a href="/book.html" class="btn-primary inline-block font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-full">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white">
+    <div class="max-w-[1320px] mx-auto px-5 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-8 mb-14">
+        <div class="md:col-span-4">
+          <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-9 w-auto mb-5 brightness-0 invert opacity-70" loading="lazy">
+          <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
+          <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
+          <p class="font-body text-white/25 text-xs">Fax: 332-244-2205</p>
+            <div class="mt-4 rounded-lg overflow-hidden border border-white/[0.06]" style="height: 150px;">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+            </div>
+        </div>
+        <div class="md:col-span-2 md:col-start-6">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Quick Links</p>
+          <nav class="flex flex-col gap-2" aria-label="Quick links">
+            <a href="/about.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">About Us</a>
+            <a href="/physicians/dr-ruhi-soni.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Ruhi Soni</a>
+            <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Nikitha Reddy</a>
+            <a href="/services/cataracts.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Cataract Surgery</a>
+            <a href="/services/lasik.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Vision Correction</a>
+            <a href="/services/glaucoma.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Glaucoma</a>
+          </nav>
+        </div>
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Patients</p>
+          <nav class="flex flex-col gap-2" aria-label="Patient resources">
+            <a href="/book.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Book A Consultation</a>
+            <a href="/reviews.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Patient Reviews</a>
+            <a href="/blog/" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Blog</a>
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A&v=2" target="_blank" rel="noopener" class="font-body text-teal text-sm hover:text-teal-light transition-colors">Leave a Review &rarr;</a>
+          </nav>
+        </div>
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
+          <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">4.9</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni &middot; 750+ Reviews</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-6">
+          <p class="font-body text-white/20 text-xs">&copy; 2026 Soni Vision Institute</p>
+          <p class="font-body text-white/20 text-xs">Mon&ndash;Fri 8am&ndash;5pm</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/100089139506135" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/sonivisioninstitute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/company/soni-vision-institute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">LinkedIn</a>
+          <span class="font-body text-white/20 text-xs">Se habla Espa&ntilde;ol &middot; &#2361;&#2367;&#2306;&#2342;&#2368; &middot; &#3108;&#3142;&#3122;&#3137;&#3095;&#3137;</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobToggle = document.getElementById('mob-toggle');
+    const mobNav = document.getElementById('mob-nav');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isOpen = false;
+    mobToggle.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobNav.classList.toggle('is-open', isOpen);
+      mobNav.setAttribute('aria-hidden', !isOpen);
+      mobToggle.setAttribute('aria-expanded', isOpen);
+      burgerIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    const srs = document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    srs.forEach(el => obs.observe(el));
+    const hdr = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
