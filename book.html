@@ -487,33 +487,46 @@
     </div>
   </section>
 
-  <!-- ========== LOCATION INFO ========== -->
-  <section class="py-14 md:py-20">
-    <div class="max-w-[700px] mx-auto px-5">
-      <div class="sr grid sm:grid-cols-2 gap-8">
-        <!-- Address card -->
-        <div class="bg-white rounded-xl p-8 border border-navy/[0.04]" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-4">
+  <!-- ========== LOCATION MAP ========== -->
+  <section class="py-14 md:py-20 bg-cream">
+    <div class="max-w-[900px] mx-auto px-5">
+      <div class="text-center mb-10 sr">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">Find Us</p>
+        <h2 class="font-display text-navy leading-[1.1] mb-4" style="font-size: clamp(32px, 3.5vw, 48px); letter-spacing: -0.02em;">Visit Soni Vision Institute</h2>
+        <p class="font-body text-navy/50 text-[15px]" style="font-weight: 300;">27700 Northwest Freeway, Suite 390 &middot; Cypress, TX 77433</p>
+      </div>
+
+      <!-- Large map -->
+      <div class="sr rounded-xl overflow-hidden border border-navy/[0.06] mb-8" style="height: 380px; box-shadow: 0 4px 16px rgba(50,56,78,0.06);">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+      </div>
+
+      <!-- Info cards below map -->
+      <div class="sr grid sm:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-6 border border-navy/[0.04] text-center" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-3 mx-auto">
             <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
           </div>
-          <h3 class="font-body text-navy text-[18px] font-semibold mb-2">Our Location</h3>
-          <p class="font-body text-ink/65 text-[15px] leading-[1.7]" style="font-weight: 300;">
-            27700 Northwest Freeway<br>Suite 390<br>Houston, TX 77433
-          </p>
-          <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="inline-block mt-4 font-body text-teal text-[15px] font-medium hover:underline">Get Directions &rarr;</a>
+          <h3 class="font-body text-navy text-[16px] font-semibold mb-1">Address</h3>
+          <p class="font-body text-ink/55 text-[14px] leading-[1.6]" style="font-weight: 300;">27700 Northwest Fwy<br>Suite 390, Cypress TX</p>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="inline-block mt-3 font-body text-teal text-[13px] font-medium hover:underline">Get Directions &rarr;</a>
         </div>
 
-        <!-- Hours card -->
-        <div class="bg-white rounded-xl p-8 border border-navy/[0.04]" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
-          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-4">
+        <div class="bg-white rounded-xl p-6 border border-navy/[0.04] text-center" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-3 mx-auto">
             <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-body text-navy text-[18px] font-semibold mb-2">Office Hours</h3>
-          <div class="font-body text-ink/65 text-[15px] leading-[1.9]" style="font-weight: 300;">
-            <div class="flex justify-between"><span>Monday &ndash; Friday</span><span class="text-navy font-medium">8:00am &ndash; 5:00pm</span></div>
-            <div class="flex justify-between"><span>Saturday</span><span class="text-navy/50">Closed</span></div>
-            <div class="flex justify-between"><span>Sunday</span><span class="text-navy/50">Closed</span></div>
+          <h3 class="font-body text-navy text-[16px] font-semibold mb-1">Hours</h3>
+          <p class="font-body text-ink/55 text-[14px] leading-[1.6]" style="font-weight: 300;">Mon &ndash; Fri<br>8:00am &ndash; 5:00pm</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-navy/[0.04] text-center" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 12px rgba(50,56,78,0.04);">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center mb-3 mx-auto">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
           </div>
+          <h3 class="font-body text-navy text-[16px] font-semibold mb-1">Phone</h3>
+          <a href="tel:3468186780" class="font-body text-teal text-[14px] font-medium hover:underline">(346) 818-6780</a>
+          <p class="font-body text-ink/40 text-[12px] mt-1" style="font-weight: 300;">Fax: 332-244-2205</p>
         </div>
       </div>
     </div>
@@ -530,6 +543,9 @@
           <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
           <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
           <p class="font-body text-white/25 text-xs">Fax: 332-244-2205</p>
+            <div class="mt-4 rounded-lg overflow-hidden border border-white/[0.06]" style="height: 150px;">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+            </div>
         </div>
 
         <div class="md:col-span-2 md:col-start-6">
