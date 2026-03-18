@@ -3,3 +3,4 @@ temporary screenshots/
 .DS_Store
 *.log
 *.mp4
+!brand_assets/*.mp4
