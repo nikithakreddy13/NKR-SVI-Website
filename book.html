@@ -295,8 +295,8 @@
         <a href="/blog/" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Blog</a>
       </nav>
 
-      <div class="hidden lg:flex items-center gap-3">
-        <a href="tel:3468186780" class="font-body text-[12px] font-semibold text-navy hover:text-teal transition-colors duration-200">(346) 818-6780</a>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:3468186780" class="font-body text-[13.5px] font-semibold text-navy hover:text-teal transition-colors duration-200 flex items-center gap-1.5"><svg class="w-[14px] h-[14px] text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(346) 818-6780</a>
         <a href="/referrals.html" class="btn-ghost font-body text-[9.5px] font-semibold uppercase tracking-[0.1em] px-3.5 py-2 rounded-full text-navy">For Referring Doctors</a>
         <a href="/book.html" class="btn-primary font-body text-[9.5px] font-semibold uppercase tracking-[0.12em] px-5 py-2 rounded-full">Book a Consultation</a>
       </div>
@@ -340,7 +340,7 @@
         Book Your <em class="italic text-teal">Consultation</em>
       </h1>
       <p class="sr-scale sr-d1 font-body text-white/60 text-[18px] leading-[1.7] max-w-[480px] mx-auto" style="font-weight: 300;">
-        Fill out the short form below and our team will call you to confirm your appointment.
+        Select a time that works for you and book your appointment online.
       </p>
 
       <!-- Quick call option -->
@@ -352,144 +352,46 @@
     </div>
   </section>
 
-  <!-- ========== BOOKING FORM ========== -->
+  <!-- ========== PATIENT SELF-SCHEDULING ========== -->
   <section class="py-14 md:py-20">
-    <div class="max-w-[600px] mx-auto px-5">
+    <div class="max-w-[900px] mx-auto px-5">
 
-      <div id="booking-form-wrap">
-        <form id="booking-form" action="#" method="POST" novalidate>
+      <!-- Scheduler iframe -->
+      <div class="sr-scale rounded-xl overflow-hidden border border-navy/[0.06]" style="box-shadow: 0 1px 2px rgba(50,56,78,0.03), 0 4px 16px rgba(50,56,78,0.06);">
+        <iframe
+          src="https://self.schdl.com/patient/7999?location=10173"
+          width="100%"
+          height="800"
+          frameborder="0"
+          style="border: none; min-height: 800px;"
+          title="Schedule an appointment at Soni Vision Institute"
+          allow="clipboard-write"
+          loading="lazy"
+        ></iframe>
+      </div>
 
-          <!-- Name row -->
-          <div class="sr grid grid-cols-2 gap-4 mb-5">
-            <div>
-              <label for="first-name" class="form-label">First Name <span class="req">*</span></label>
-              <input type="text" id="first-name" name="first_name" class="form-input" placeholder="First name" required autocomplete="given-name">
-            </div>
-            <div>
-              <label for="last-name" class="form-label">Last Name <span class="req">*</span></label>
-              <input type="text" id="last-name" name="last_name" class="form-input" placeholder="Last name" required autocomplete="family-name">
-            </div>
+      <!-- HIPAA Notice & Trust Signals -->
+      <div class="max-w-[600px] mx-auto mt-10 pt-8 border-t border-navy/[0.06]">
+        <div class="flex items-start gap-3 mb-6">
+          <div class="flex-shrink-0 w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center mt-0.5">
+            <svg class="w-[18px] h-[18px] text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
           </div>
-
-          <!-- Contact row -->
-          <div class="sr sr-d1 grid grid-cols-2 gap-4 mb-5">
-            <div>
-              <label for="phone" class="form-label">Phone <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder="(000) 000-0000" required autocomplete="tel">
-            </div>
-            <div>
-              <label for="email" class="form-label">Email <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="you@email.com" autocomplete="email">
-            </div>
-          </div>
-
-          <!-- Date of birth -->
-          <div class="sr sr-d1 mb-5">
-            <label for="dob" class="form-label">Date of Birth <span class="req">*</span></label>
-            <input type="date" id="dob" name="dob" class="form-input" required>
-          </div>
-
-          <!-- Reason -->
-          <div class="sr sr-d2 mb-5">
-            <label for="reason" class="form-label">What brings you in? <span class="req">*</span></label>
-            <select id="reason" name="reason" class="form-input" required>
-              <option value="" disabled selected>Select a reason</option>
-              <option value="Cataract Evaluation">Cataract Evaluation</option>
-              <option value="Cataract Surgery Consultation">Cataract Surgery Consultation</option>
-              <option value="LASIK / Vision Correction">LASIK / Vision Correction</option>
-              <option value="Lens Options / Second Opinion">Lens Options / Second Opinion</option>
-              <option value="Glaucoma Evaluation">Glaucoma Evaluation</option>
-              <option value="General Eye Exam">General Eye Exam</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Preferred time -->
-          <div class="sr sr-d2 mb-5">
-            <label for="preferred-time" class="form-label">Preferred Appointment Time <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
-            <select id="preferred-time" name="preferred_time" class="form-input">
-              <option value="" disabled selected>Select a preference</option>
-              <option value="Morning (8am-12pm)">Morning (8am&ndash;12pm)</option>
-              <option value="Afternoon (12pm-3pm)">Afternoon (12pm&ndash;3pm)</option>
-              <option value="Late Afternoon (3pm-5pm)">Late Afternoon (3pm&ndash;5pm)</option>
-              <option value="No Preference">No Preference</option>
-            </select>
-          </div>
-
-          <!-- Surgeon Request -->
-          <div class="sr sr-d2 mb-5">
-            <label for="surgeon" class="form-label">Surgeon Request <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
-            <select id="surgeon" name="surgeon" class="form-input">
-              <option value="" disabled selected>Select a surgeon</option>
-              <option value="Dr. Ruhi Soni">Dr. Ruhi Soni</option>
-              <option value="Dr. Nikitha Reddy">Dr. Nikitha Reddy</option>
-              <option value="No Preference">No Preference</option>
-            </select>
-          </div>
-
-          <!-- Insurance -->
-          <div class="sr sr-d2 mb-5">
-            <label for="insurance" class="form-label">Insurance Provider <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
-            <input type="text" id="insurance" name="insurance" class="form-input" placeholder="e.g. Aetna, Blue Cross, Medicare">
-          </div>
-
-          <!-- Message -->
-          <div class="sr sr-d3 mb-8">
-            <label for="message" class="form-label">Anything else we should know? <span style="color:rgba(50,56,78,0.5); font-weight:400;">(optional)</span></label>
-            <textarea id="message" name="message" class="form-input" rows="3" placeholder="Current symptoms, referring doctor, questions..."></textarea>
-          </div>
-
-          <!-- Submit -->
-          <div class="sr sr-d3">
-            <button type="submit" class="btn-primary w-full font-body text-[14px] font-semibold uppercase tracking-[0.1em] py-4.5 rounded-full" style="padding-top: 18px; padding-bottom: 18px;">
-              Request Appointment
-            </button>
-            <p class="font-body text-navy/50 text-[14px] text-center mt-4" style="font-weight: 300;">
-              We&rsquo;ll call you within one business day to confirm your appointment.
+          <div>
+            <p class="font-body text-navy text-[14px] font-semibold mb-1">Your Privacy Is Protected</p>
+            <p class="font-body text-navy/50 text-[13px] leading-[1.65]" style="font-weight: 300;">
+              Your information is kept strictly confidential in accordance with HIPAA regulations. We will never share your personal or medical information with third parties.
             </p>
           </div>
-
-          <!-- HIPAA Notice & Trust Signals -->
-          <div class="mt-10 pt-8 border-t border-navy/[0.06]">
-            <!-- HIPAA Notice -->
-            <div class="flex items-start gap-3 mb-6">
-              <div class="flex-shrink-0 w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center mt-0.5">
-                <svg class="w-[18px] h-[18px] text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
-              </div>
-              <div>
-                <p class="font-body text-navy text-[14px] font-semibold mb-1">Your Privacy Is Protected</p>
-                <p class="font-body text-navy/50 text-[13px] leading-[1.65]" style="font-weight: 300;">
-                  Your information is kept strictly confidential in accordance with HIPAA regulations. We will never share your personal or medical information with third parties.
-                </p>
-              </div>
-            </div>
-
-            <!-- Trust signals -->
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex flex-col items-center text-center gap-1.5 py-3">
-                <svg class="w-5 h-5 text-teal/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-                <p class="font-body text-navy/60 text-[11px] font-medium uppercase tracking-[0.08em]">HIPAA Compliant</p>
-              </div>
-              <div class="flex flex-col items-center text-center gap-1.5 py-3">
-                <svg class="w-5 h-5 text-teal/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
-                <p class="font-body text-navy/60 text-[11px] font-medium uppercase tracking-[0.08em]">Secure &amp; Encrypted</p>
-              </div>
-            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex flex-col items-center text-center gap-1.5 py-3">
+            <svg class="w-5 h-5 text-teal/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            <p class="font-body text-navy/60 text-[11px] font-medium uppercase tracking-[0.08em]">HIPAA Compliant</p>
           </div>
-
-        </form>
-
-        <!-- Success -->
-        <div id="form-success" class="form-success">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-            <circle cx="28" cy="28" r="28" fill="#e8f4f2"/>
-            <path d="M18 28.5L25 35.5L38 22.5" stroke="#499188" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h3 class="font-display text-navy text-[28px] mb-3">You&rsquo;re All Set</h3>
-          <p class="font-body text-ink/70 text-[17px] leading-[1.7] max-w-md mx-auto" style="font-weight: 300;">
-            We&rsquo;ve received your request. Our team will call you within one business day to confirm your appointment time.
-          </p>
-          <p class="font-body text-navy/50 text-[15px] mt-6">Questions? Call <a href="tel:3468186780" class="text-teal hover:underline">(346) 818-6780</a></p>
+          <div class="flex flex-col items-center text-center gap-1.5 py-3">
+            <svg class="w-5 h-5 text-teal/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            <p class="font-body text-navy/60 text-[11px] font-medium uppercase tracking-[0.08em]">Secure &amp; Encrypted</p>
+          </div>
         </div>
       </div>
 
@@ -512,8 +414,8 @@
           <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">Board-Certified Surgeons</p>
         </div>
         <div class="sr-scale sr-d2">
-          <p class="font-display text-navy text-[26px]">Houston, TX</p>
-          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1">Northwest Freeway / 290</p>
+          <p class="font-display text-navy text-[26px]">Serving NW Houston &amp; Cypress</p>
+          <p class="font-body text-navy/50 text-[13px] uppercase tracking-[0.1em] mt-1"></p>
         </div>
       </div>
     </div>

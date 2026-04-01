@@ -1,0 +1,13 @@
+node_modules/
+temporary screenshots/
+Photos/
+*.mov
+*.log
+brand_assets/WebsiteBanner_Draft3.mp4
+brand_assets/website-banner.mp4
+Website Banner.mp4
+screenshot.mjs
+serve.mjs
+package.json
+package-lock.json
+.claude/

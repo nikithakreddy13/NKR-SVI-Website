@@ -4,3 +4,4 @@ temporary screenshots/
 *.log
 *.mp4
 !brand_assets/*.mp4
+.vercel
