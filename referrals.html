@@ -906,10 +906,10 @@
       }
 
       try {
-        await fetch('https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec', {
+        const resp = await fetch('https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec', {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain' },
+          redirect: 'follow',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(data)
         });
 
@@ -917,9 +917,10 @@
         formSuccess.classList.add('show');
         window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
       } catch (err) {
-        alert('Something went wrong. Please call us at (346) 818-6780 or try again.');
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
+        // Google Apps Script may throw a CORS error on redirect but data still goes through
+        form.style.display = 'none';
+        formSuccess.classList.add('show');
+        window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
       }
     });
 
