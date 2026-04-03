@@ -883,15 +883,14 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      // Collect form data
-      const data = {};
-      new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
+      // Send to Formspree
+      const formData = new FormData(form);
 
       try {
-        const resp = await fetch('/api/referral', {
+        const resp = await fetch('https://formspree.io/f/mdapwpvv', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          body: formData,
+          headers: { 'Accept': 'application/json' }
         });
 
         if (!resp.ok) throw new Error('Send failed');
