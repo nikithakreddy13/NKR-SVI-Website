@@ -888,23 +888,28 @@
       new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
 
       // Encode uploaded files as base64
-      const fileInput = document.getElementById('file-upload');
-      if (fileInput && fileInput.files.length > 0) {
-        const filePromises = Array.from(fileInput.files).map(file => {
-          return new Promise((resolve) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve({ name: file.name, type: file.type, content: reader.result.split(',')[1] });
-            reader.readAsDataURL(file);
+      try {
+        const fileInput = document.getElementById('file-upload');
+        if (fileInput && fileInput.files.length > 0) {
+          const filePromises = Array.from(fileInput.files).map(file => {
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve({ name: file.name, type: file.type, content: reader.result.split(',')[1] });
+              reader.onerror = () => resolve(null);
+              reader.readAsDataURL(file);
+            });
           });
-        });
-        data.files = await Promise.all(filePromises);
+          data.files = (await Promise.all(filePromises)).filter(f => f !== null);
+        }
+      } catch (fileErr) {
+        // Continue without files if encoding fails
       }
 
       try {
         await fetch('https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec', {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify(data)
         });
 
