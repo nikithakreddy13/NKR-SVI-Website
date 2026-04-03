@@ -883,17 +883,17 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      // Send to Formspree
-      const formData = new FormData(form);
+      // Send to Google Apps Script
+      const data = {};
+      new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
 
       try {
-        const resp = await fetch('https://formspree.io/f/mdapwpvv', {
+        await fetch('https://script.google.com/macros/s/AKfycbwZ4lx9oLxIEVmeHt_-U2rcEB-I4rhAFlMouQBi7NyjUVoxdZ8_PZ3bgEgJ_EBYEQaC0Q/exec', {
           method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
-
-        if (!resp.ok) throw new Error('Send failed');
 
         form.style.display = 'none';
         formSuccess.classList.add('show');
