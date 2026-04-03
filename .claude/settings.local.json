@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "WebFetch(domain:www.discovervision.com)",
+      "WebFetch(domain:maps.googleapis.com)"
     ]
   }
 }

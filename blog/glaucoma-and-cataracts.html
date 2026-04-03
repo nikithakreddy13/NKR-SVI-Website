@@ -232,20 +232,85 @@
 
   <!-- Mobile nav -->
   <div id="mob-nav" class="mob-nav fixed inset-0 z-[55] bg-cream pt-24 overflow-y-auto" aria-hidden="true">
-    <nav class="px-6 pb-10 flex flex-col gap-0.5">
-      <a href="/about.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">About</a>
-      <a href="/physicians/dr-ruhi-soni.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Ruhi Soni</a>
-      <a href="/physicians/dr-nikitha-reddy.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Dr. Nikitha Reddy</a>
-      <a href="/services/cataracts.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Cataract Surgery</a>
-      <a href="/services/lasik.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">LASIK</a>
-      <a href="/services/light-adjustable-lens.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Light Adjustable Lens</a>
-      <a href="/services/glaucoma.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Glaucoma</a>
+        <nav class="px-6 pb-10 flex flex-col gap-0.5">
+      <!-- About -->
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">About</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/about.html" class="font-body text-[16px] text-navy/70 py-1.5">About the Practice</a>
+          <a href="/physicians/dr-ruhi-soni.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Ruhi Soni</a>
+          <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Nikitha Reddy</a>
+          <a href="/team.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Our Team</a>
+          <a href="/technology.html" class="font-body text-[16px] text-navy/70 py-1.5">Our Technology</a>
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Services</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-2 mb-1">Cataracts</p>
+          <a href="/services/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataract Surgery</a>
+          <a href="/services/laser-cataract-surgery.html" class="font-body text-[16px] text-navy/70 py-1.5">Laser Cataract Surgery</a>
+          <a href="/services/advanced-technology-lenses.html" class="font-body text-[16px] text-teal font-medium py-1.5">Advanced Technology Lenses</a>
+          <a href="/services/light-adjustable-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Light Adjustable Lens</a>
+          <a href="/services/multifocal-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Multifocal Lens</a>
+          <a href="/services/edof-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">EDOF Lens</a>
+          <a href="/services/toric-iol.html" class="font-body text-[16px] text-navy/70 py-1.5">Toric Lens</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Vision Correction</p>
+          <a href="/services/refractive-lens-exchange.html" class="font-body text-[16px] text-teal font-medium py-1.5">Refractive Lens Exchange</a>
+          <a href="/services/lasik.html" class="font-body text-[16px] text-navy/70 py-1.5">LASIK</a>
+          <a href="/services/prk.html" class="font-body text-[16px] text-navy/70 py-1.5">PRK</a>
+          <a href="/services/icl.html" class="font-body text-[16px] text-navy/70 py-1.5">EVO ICL</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Glaucoma</p>
+          <a href="/services/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Surgery</a>
+          <a href="/services/glaucoma-laser.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Laser</a>
+          <a href="/services/migs.html" class="font-body text-[16px] text-navy/70 py-1.5">Micro-Invasive Glaucoma Surgery</a>
+        </div>
+      </div>
+      <!-- Conditions -->
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Conditions</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/conditions/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataracts</a>
+          <a href="/conditions/astigmatism.html" class="font-body text-[16px] text-navy/70 py-1.5">Astigmatism</a>
+          <a href="/conditions/myopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Myopia</a>
+          <a href="/conditions/hyperopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Hyperopia</a>
+          <a href="/conditions/presbyopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Presbyopia</a>
+          <a href="/conditions/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma</a>
+          <a href="/conditions/macular-degeneration.html" class="font-body text-[16px] text-navy/70 py-1.5">Macular Degeneration</a>
+          <a href="/conditions/dry-eye.html" class="font-body text-[16px] text-navy/70 py-1.5">Dry Eye</a>
+          <a href="/conditions/eyelid-conditions.html" class="font-body text-[16px] text-navy/70 py-1.5">Eyelid Conditions</a>
+        </div>
+      </div>
+      <!-- Reviews -->
       <a href="/reviews.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Reviews</a>
+      <!-- For Patients -->
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">For Patients</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&amp;client_id=ema&amp;redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&amp;state=8498c9a7-ac6a-4d54-9488-72bc12918879&amp;login=true&amp;login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&amp;scope=openid" target="_blank" rel="noopener" class="font-body text-[16px] text-navy/70 py-1.5">Patient Portal</a>
+          <a href="/cost.html" class="font-body text-[16px] text-navy/70 py-1.5">Cost &amp; Financing</a>
+        </div>
+      </div>
+      <!-- Blog -->
       <a href="/blog/" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Blog</a>
+      <!-- CTAs -->
       <div class="mt-8 flex flex-col gap-3">
         <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center">Book a Consultation</a>
         <a href="/referrals.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">For Referring Doctors</a>
-        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 — Call Us Now</a>
+        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 &mdash; Call Us Now</a>
       </div>
     </nav>
   </div>
@@ -388,7 +453,7 @@
           <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-9 w-auto mb-5 brightness-0 invert opacity-70" loading="lazy">
           <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
           <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
-          <p class="font-body text-white/25 text-xs">Fax: 332-244-2205</p>
+          <p class="font-body text-white/60 text-sm font-medium">Fax: (332) 244-2205</p>
             <div class="mt-4 rounded-lg overflow-hidden border border-white/[0.06]" style="height: 150px;">
               <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
             </div>
@@ -461,6 +526,17 @@
     window.addEventListener('scroll', () => {
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
     }, { passive: true });
+
+    // Mobile nav section toggles
+    document.querySelectorAll('.mob-section-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const links = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('hidden');
+        btn.querySelector('svg').style.transform = expanded ? '' : 'rotate(180deg)';
+      });
+    });
   </script>
 </body>
 </html>
