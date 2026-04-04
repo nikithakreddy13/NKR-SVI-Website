@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/soni-logo.svg">
+  <title>Editorial Policy | Soni Vision Institute</title>
+  <meta name="description" content="Learn about Soni Vision Institute's editorial standards. All medical content is written or reviewed by board-certified ophthalmologists.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Editorial Policy | Soni Vision Institute">
+  <meta property="og:description" content="Learn about Soni Vision Institute's editorial standards. All medical content is written or reviewed by board-certified ophthalmologists.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sonivisioninstitute.com/editorial-policy.html">
+  <meta property="og:image" content="https://sonivisioninstitute.com/brand_assets/soni-logo.svg">
+  <meta property="og:site_name" content="Soni Vision Institute">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://sonivisioninstitute.com/editorial-policy.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#32384e', deep: '#1e2233', light: '#4a5170', muted: '#32384e0d' },
+            teal: { DEFAULT: '#499188', dark: '#357069', light: '#6ab0a6', pale: '#e8f4f2', wash: '#49918808' },
+            cream: '#FAF9F6',
+            sand: '#F3F1EC',
+            ink: '#1a1a2e',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Outfit"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+    body { font-family: 'Outfit', system-ui, sans-serif; color: #1a1a2e; background: #FAF9F6; overflow-x: hidden; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    .heading-accent em { font-style: italic; color: #499188; }
+    .text-balance { text-wrap: balance; }
+    .grain::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px;
+    }
+    .sticky-cta { backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
+    .nav-item { position: relative; }
+    .nav-item::after { content: ''; position: absolute; bottom: -3px; left: 50%; width: 0; height: 1.5px; background: #499188; transition: width 0.3s ease, left 0.3s ease; }
+    .nav-item:hover::after { width: 100%; left: 0; }
+    .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98); transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s; }
+    .dropdown-wrap:hover .dropdown-panel, .dropdown-wrap:focus-within .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+    .btn-primary { background: #499188; color: #fff; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.3s ease; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(73,145,136,0.25); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #499188; outline-offset: 3px; }
+    .btn-ghost { border: 1.5px solid currentColor; background: transparent; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; }
+    .btn-ghost:hover { background: #32384e; color: #fff; transform: translateY(-1px); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 2px solid #32384e; outline-offset: 3px; }
+    .btn-ghost-light { border: 1.5px solid rgba(255,255,255,0.4); color: #fff; background: transparent; transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease; }
+    .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-ghost-light:active { transform: translateY(0); }
+    .btn-ghost-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+    .sr-scale { opacity: 0; transform: scale(0.82); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr-scale.vis { opacity: 1; transform: scale(1); }
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .mob-nav { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+    .mob-nav.is-open { transform: translateX(0); }
+    a:focus-visible, button:focus-visible { outline: 2px solid #499188; outline-offset: 2px; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #32384e20; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #32384e40; }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Editorial Policy",
+    "description": "Soni Vision Institute's editorial standards for medical content.",
+    "url": "https://sonivisioninstitute.com/editorial-policy.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Soni Vision Institute",
+      "logo": { "@type": "ImageObject", "url": "https://sonivisioninstitute.com/brand_assets/soni-logo.svg" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sonivisioninstitute.com" },
+      { "@type": "ListItem", "position": 2, "name": "Editorial Policy" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 sticky-cta border-b border-navy/[0.04]" style="height: 80px;">
+    <div class="max-w-[1320px] mx-auto px-5 h-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" aria-label="Home" class="flex-shrink-0">
+        <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-14 w-auto">
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Main">
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">About</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/about.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">About the Practice</a>
+              <a href="/physicians/dr-ruhi-soni.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Ruhi Soni</a>
+              <a href="/physicians/dr-nikitha-reddy.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Nikitha Reddy</a>
+              <a href="/team.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Our Team</a>
+              <a href="/technology.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Our Technology</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Services</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[520px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] p-5 grid grid-cols-3 gap-x-6 gap-y-1">
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Cataracts</p>
+                <a href="/services/cataracts.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Cataract Surgery</a>
+                <a href="/services/laser-cataract-surgery.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Laser Cataract Surgery</a>
+                <a href="/services/advanced-technology-lenses.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Advanced Technology Lenses</a>
+                <a href="/services/light-adjustable-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Light Adjustable Lens</a>
+                <a href="/services/multifocal-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Multifocal Lens</a>
+                <a href="/services/edof-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EDOF Lens</a>
+                <a href="/services/toric-iol.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Toric Lens</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Vision Correction</p>
+                <a href="/services/refractive-lens-exchange.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Refractive Lens Exchange <span class="inline-block text-[9px] font-bold uppercase tracking-[0.1em] bg-teal/10 text-teal px-1.5 py-0.5 rounded ml-1">Featured</span></a>
+                <a href="/services/lasik.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">LASIK</a>
+                <a href="/services/prk.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">PRK</a>
+                <a href="/services/icl.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EVO ICL</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Glaucoma</p>
+                <a href="/services/glaucoma.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Surgery</a>
+                <a href="/services/glaucoma-laser.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Laser</a>
+                <a href="/services/migs.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Micro-Invasive Glaucoma Surgery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Conditions</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/conditions/cataracts.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Cataracts</a>
+              <a href="/conditions/astigmatism.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Astigmatism</a>
+              <a href="/conditions/myopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Myopia</a>
+              <a href="/conditions/hyperopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Hyperopia</a>
+              <a href="/conditions/presbyopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Presbyopia</a>
+              <a href="/conditions/glaucoma.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Glaucoma</a>
+              <a href="/conditions/macular-degeneration.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Macular Degeneration</a>
+              <a href="/conditions/dry-eye.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Dry Eye</a>
+              <a href="/conditions/eyelid-conditions.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Eyelid Conditions</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/reviews.html" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Reviews</a>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">For Patients</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&client_id=ema&redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&state=8498c9a7-ac6a-4d54-9488-72bc12918879&login=true&login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&scope=openid" target="_blank" rel="noopener" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Patient Portal</a>
+              <a href="/cost.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Cost &amp; Financing</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Blog</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:3468186780" class="font-body text-[13.5px] font-semibold text-navy hover:text-teal transition-colors duration-200 flex items-center gap-1.5"><svg class="w-[14px] h-[14px] text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(346) 818-6780</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[9.5px] font-semibold uppercase tracking-[0.1em] px-3.5 py-2 rounded-full text-navy">For Referring Doctors</a>
+        <a href="/book.html" class="btn-primary font-body text-[9.5px] font-semibold uppercase tracking-[0.12em] px-5 py-2 rounded-full">Book a Consultation</a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="mob-toggle" class="lg:hidden p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+        <svg id="burger-icon" class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        <svg id="close-icon" class="w-6 h-6 text-navy hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div id="mob-nav" class="mob-nav fixed inset-0 z-[55] bg-cream pt-24 overflow-y-auto" aria-hidden="true">
+    <nav class="px-6 pb-10 flex flex-col gap-0.5">
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">About</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/about.html" class="font-body text-[16px] text-navy/70 py-1.5">About the Practice</a>
+          <a href="/physicians/dr-ruhi-soni.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Ruhi Soni</a>
+          <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Nikitha Reddy</a>
+          <a href="/team.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Our Team</a>
+          <a href="/technology.html" class="font-body text-[16px] text-navy/70 py-1.5">Our Technology</a>
+        </div>
+      </div>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Services</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-2 mb-1">Cataracts</p>
+          <a href="/services/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataract Surgery</a>
+          <a href="/services/laser-cataract-surgery.html" class="font-body text-[16px] text-navy/70 py-1.5">Laser Cataract Surgery</a>
+          <a href="/services/advanced-technology-lenses.html" class="font-body text-[16px] text-teal font-medium py-1.5">Advanced Technology Lenses</a>
+          <a href="/services/light-adjustable-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Light Adjustable Lens</a>
+          <a href="/services/multifocal-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Multifocal Lens</a>
+          <a href="/services/edof-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">EDOF Lens</a>
+          <a href="/services/toric-iol.html" class="font-body text-[16px] text-navy/70 py-1.5">Toric Lens</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Vision Correction</p>
+          <a href="/services/refractive-lens-exchange.html" class="font-body text-[16px] text-teal font-medium py-1.5">Refractive Lens Exchange</a>
+          <a href="/services/lasik.html" class="font-body text-[16px] text-navy/70 py-1.5">LASIK</a>
+          <a href="/services/prk.html" class="font-body text-[16px] text-navy/70 py-1.5">PRK</a>
+          <a href="/services/icl.html" class="font-body text-[16px] text-navy/70 py-1.5">EVO ICL</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Glaucoma</p>
+          <a href="/services/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Surgery</a>
+          <a href="/services/glaucoma-laser.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Laser</a>
+          <a href="/services/migs.html" class="font-body text-[16px] text-navy/70 py-1.5">Micro-Invasive Glaucoma Surgery</a>
+        </div>
+      </div>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Conditions</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/conditions/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataracts</a>
+          <a href="/conditions/astigmatism.html" class="font-body text-[16px] text-navy/70 py-1.5">Astigmatism</a>
+          <a href="/conditions/myopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Myopia</a>
+          <a href="/conditions/hyperopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Hyperopia</a>
+          <a href="/conditions/presbyopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Presbyopia</a>
+          <a href="/conditions/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma</a>
+          <a href="/conditions/macular-degeneration.html" class="font-body text-[16px] text-navy/70 py-1.5">Macular Degeneration</a>
+          <a href="/conditions/dry-eye.html" class="font-body text-[16px] text-navy/70 py-1.5">Dry Eye</a>
+          <a href="/conditions/eyelid-conditions.html" class="font-body text-[16px] text-navy/70 py-1.5">Eyelid Conditions</a>
+        </div>
+      </div>
+      <a href="/reviews.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Reviews</a>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">For Patients</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&amp;client_id=ema&amp;redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&amp;state=8498c9a7-ac6a-4d54-9488-72bc12918879&amp;login=true&amp;login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&amp;scope=openid" target="_blank" rel="noopener" class="font-body text-[16px] text-navy/70 py-1.5">Patient Portal</a>
+          <a href="/cost.html" class="font-body text-[16px] text-navy/70 py-1.5">Cost &amp; Financing</a>
+        </div>
+      </div>
+      <a href="/blog/" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Blog</a>
+      <div class="mt-8 flex flex-col gap-3">
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center">Book a Consultation</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">For Referring Doctors</a>
+        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 &mdash; Call Us Now</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+  <!-- ========== BREADCRUMB ========== -->
+  <div class="pt-[80px]">
+    <div class="bg-cream border-b border-navy/[0.04]">
+      <div class="max-w-[1320px] mx-auto px-5 py-3">
+        <nav aria-label="Breadcrumb" class="font-body text-[12px] text-navy/40">
+          <a href="/" class="hover:text-teal transition-colors">Home</a>
+          <span class="mx-1.5">/</span>
+          <span class="text-navy/70">Editorial Policy</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="py-14 md:py-20 bg-cream">
+    <div class="max-w-[800px] mx-auto px-5">
+
+      <div class="sr mb-10">
+        <h1 class="font-display text-navy text-balance leading-[1.1] mb-5" style="font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.02em;">Editorial Policy</h1>
+        <p class="font-body text-navy/50 text-[15px] leading-[1.7]">How we create and maintain trustworthy medical content.</p>
+      </div>
+
+      <div class="sr sr-d1 space-y-10" style="font-family: 'Outfit', system-ui, sans-serif; font-weight: 300; font-size: 16px; line-height: 1.85; color: rgba(26,26,46,0.75);">
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Physician-Reviewed Content</h2>
+          <p>All medical content published on the Soni Vision Institute website is written or reviewed by board-certified ophthalmologists. Our clinical content is authored and overseen by:</p>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3">
+              <img src="/brand_assets/soni-portrait.jpeg" alt="Dr. Ruhi Soni" class="w-10 h-10 rounded-full object-cover mt-0.5 flex-shrink-0">
+              <div>
+                <a href="/physicians/dr-ruhi-soni.html" class="font-body text-navy text-[15px] font-medium hover:text-teal transition-colors">Dr. Ruhi Soni, MD</a>
+                <p class="text-[13px] mt-0.5">Board-certified ophthalmologist and founder of Soni Vision Institute. Residency-trained at Baylor College of Medicine. Specializes in cataract and refractive surgery.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="/brand_assets/dr-reddy-full-body.png" alt="Dr. Nikitha Reddy" class="w-10 h-10 rounded-full object-cover mt-0.5 flex-shrink-0">
+              <div>
+                <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-navy text-[15px] font-medium hover:text-teal transition-colors">Dr. Nikitha Reddy, MD</a>
+                <p class="text-[13px] mt-0.5">Board-certified ophthalmologist and partner at Soni Vision Institute. Residency-trained at UT Southwestern Medical Center with fellowship training at the University of Toronto. Specializes in cataract, refractive, and glaucoma surgery.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Evidence-Based Approach</h2>
+          <p>Our content is grounded in current, peer-reviewed medical literature and established clinical guidelines. We reference trusted sources including the American Academy of Ophthalmology (AAO), the National Eye Institute (NEI), the American Society of Cataract and Refractive Surgery (ASCRS), and other recognized medical authorities. When medical consensus evolves, we update our content to reflect the latest evidence.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Regular Updates</h2>
+          <p>Medical knowledge advances continuously. We review and update our service pages, condition pages, and blog posts on a regular basis to ensure the information remains accurate, current, and aligned with the standard of care. Each page displays when it was last reviewed.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Editorial Independence</h2>
+          <p>Our content is created to educate and inform patients. While we describe the procedures and technologies offered at our practice, our editorial decisions are driven by what is medically accurate and genuinely helpful to patients &mdash; not by commercial considerations. We aim to present information in a balanced, transparent manner so patients can make well-informed decisions about their eye care.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Not a Substitute for Medical Advice</h2>
+          <p>The information on this website is intended for educational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment. Every patient&rsquo;s situation is unique. If you have questions about your eye health or a specific condition, we encourage you to <a href="/book.html" class="text-teal hover:underline">schedule a consultation</a> with one of our physicians for personalized guidance.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-navy mb-4" style="font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; font-weight: 500;">Questions or Feedback</h2>
+          <p>If you have questions about our content or notice information that may need updating, please contact our office at <a href="tel:3468186780" class="text-teal hover:underline">(346) 818-6780</a>. We value accuracy and welcome your feedback.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-ink text-white">
+    <div class="max-w-[1320px] mx-auto px-5 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-8 mb-14">
+        <!-- Logo & Address -->
+        <div class="md:col-span-4">
+          <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-9 w-auto mb-5 brightness-0 invert opacity-70" loading="lazy">
+          <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
+          <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
+          <p class="font-body text-white/60 text-sm font-medium">Fax: (332) 244-2205</p>
+            <div class="mt-4 rounded-lg overflow-hidden border border-white/[0.06]" style="height: 150px;">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-2 md:col-start-6">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Quick Links</p>
+          <nav class="flex flex-col gap-2" aria-label="Quick links">
+            <a href="/about.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">About Us</a>
+            <a href="/physicians/dr-ruhi-soni.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Ruhi Soni</a>
+            <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Nikitha Reddy</a>
+            <a href="/services/cataracts.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Cataract Surgery</a>
+            <a href="/services/lasik.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Vision Correction</a>
+            <a href="/services/glaucoma.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Glaucoma</a>
+          </nav>
+        </div>
+
+        <!-- Patients -->
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Patients</p>
+          <nav class="flex flex-col gap-2" aria-label="Patient resources">
+            <a href="/book.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Book A Consultation</a>
+            <a href="/reviews.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Patient Testimonials</a>
+            <a href="/faq.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">FAQs</a>
+            <a href="/blog/" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Blog</a>
+            <a href="/editorial-policy.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Editorial Policy</a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="font-body text-teal text-sm hover:text-teal-light transition-colors">Leave a Review &rarr;</a>
+          </nav>
+        </div>
+
+        <!-- Ratings -->
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
+          <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-6">
+          <p class="font-body text-white/20 text-xs">&copy; 2026 Soni Vision Institute</p>
+          <p class="font-body text-white/20 text-xs">Mon&ndash;Fri 8am&ndash;5pm</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/100089139506135" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/sonivisioninstitute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/company/soni-vision-institute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== JS ========== -->
+  <script>
+    // Mobile menu
+    const mobToggle = document.getElementById('mob-toggle');
+    const mobNav = document.getElementById('mob-nav');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    if (mobToggle && mobNav) {
+      mobToggle.addEventListener('click', () => {
+        const open = mobNav.classList.toggle('is-open');
+        mobNav.setAttribute('aria-hidden', !open);
+        mobToggle.setAttribute('aria-expanded', open);
+        burgerIcon.classList.toggle('hidden', open);
+        closeIcon.classList.toggle('hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    }
+
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up').forEach(el => obs.observe(el));
+
+    // Header shadow
+    const hdr = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
+    }, { passive: true });
+
+    // Mobile nav section toggles
+    document.querySelectorAll('.mob-section-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const links = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('hidden');
+        btn.querySelector('svg').style.transform = expanded ? '' : 'rotate(180deg)';
+      });
+    });
+  </script>
+</body>
+</html>
