@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/soni-logo.svg">
   <title>Refer a Patient | Soni Vision Institute | Cypress TX</title>
-  <meta name="description" content="Refer your patient to Soni Vision Institute for cataract surgery, advanced technology lenses, LASIK, glaucoma, and specialty ophthalmology. Simple online referral form. Cypress, TX.">
+  <meta name="description" content="Refer your patient to Soni Vision Institute for cataract surgery, advanced lenses, LASIK, and glaucoma. Simple online referral form. Cypress, TX.">
   <meta name="keywords" content="refer patient ophthalmologist Cypress TX, eye surgeon referral Houston, cataract surgery referral, optometrist referral form, Soni Vision Institute referral">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://sonivisioninstitute.com/referrals.html">
   <meta property="og:title" content="Refer a Patient | Soni Vision Institute | Cypress TX">
-  <meta property="og:description" content="Simple, fast referral form for referring doctors. Cataract surgery, advanced technology lenses, LASIK, glaucoma. Cypress, TX.">
+  <meta property="og:description" content="Refer your patient to Soni Vision Institute for cataract surgery, advanced lenses, LASIK, and glaucoma. Simple online referral form. Cypress, TX.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sonivisioninstitute.com/referrals.html">
   <meta property="og:site_name" content="Soni Vision Institute">
@@ -19,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://sonivisioninstitute.com/brand_assets/both-main.webp">
   <meta name="twitter:title" content="Refer a Patient | Soni Vision Institute | Cypress TX">
-  <meta name="twitter:description" content="Simple, fast referral form for referring doctors. Cypress, TX.">
+  <meta name="twitter:description" content="Refer your patient to Soni Vision Institute for cataract surgery, advanced lenses, LASIK, and glaucoma. Simple online referral form. Cypress, TX.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -495,7 +496,7 @@
                   <input type="text" id="patient-name" name="patient_name" class="form-input" placeholder="First and last name" required>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label for="patient-dob" class="form-label">Date of Birth <span class="required">*</span></label>
                     <input type="date" id="patient-dob" name="patient_dob" class="form-input" required>
@@ -554,7 +555,7 @@
                   <input type="text" id="practice-name" name="practice_name" class="form-input" placeholder="Practice or clinic name" required>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label for="contact-phone" class="form-label">Office Phone</label>
                     <input type="tel" id="contact-phone" name="contact_phone" class="form-input" placeholder="(000) 000-0000">
@@ -856,7 +857,7 @@
       hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
     }, { passive: true });
 
-    // Form submission (placeholder — swap action URL when backend is ready)
+    // Form submission — sends to Google Apps Script
     const form = document.getElementById('referral-form');
     const formWrap = document.getElementById('referral-form-wrap');
     const formSuccess = document.getElementById('form-success');
