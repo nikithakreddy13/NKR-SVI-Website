@@ -895,17 +895,17 @@
       try {
         const fileInput = document.getElementById('file-upload');
         if (fileInput && fileInput.files.length > 0) {
-          const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB per file
-          const MAX_TOTAL_SIZE = 10 * 1024 * 1024; // 10MB total
+          const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB per file
+          const MAX_TOTAL_SIZE = 50 * 1024 * 1024; // 50MB total
           let totalSize = 0;
           const validFiles = Array.from(fileInput.files).filter(file => {
             if (file.size > MAX_FILE_SIZE) {
-              alert('File "' + file.name + '" exceeds the 5MB limit. Please fax larger files to (332) 244-2205.');
+              alert('File "' + file.name + '" exceeds the 25MB limit. Please fax larger files to (332) 244-2205.');
               return false;
             }
             totalSize += file.size;
             if (totalSize > MAX_TOTAL_SIZE) {
-              alert('Total file size exceeds 10MB. Some files may not be uploaded. Please fax remaining files to (332) 244-2205.');
+              alert('Total file size exceeds 50MB. Some files may not be uploaded. Please fax remaining files to (332) 244-2205.');
               return false;
             }
             return true;
