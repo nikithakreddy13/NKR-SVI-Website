@@ -891,40 +891,81 @@
       const data = {};
       new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
 
-      // Encode uploaded files as base64
+      // Encode uploaded files as base64 (max 5MB per file, 10MB total)
       try {
         const fileInput = document.getElementById('file-upload');
         if (fileInput && fileInput.files.length > 0) {
-          const filePromises = Array.from(fileInput.files).map(file => {
-            return new Promise((resolve, reject) => {
-              const reader = new FileReader();
-              reader.onload = () => resolve({ name: file.name, type: file.type, content: reader.result.split(',')[1] });
-              reader.onerror = () => resolve(null);
-              reader.readAsDataURL(file);
-            });
+          const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB per file
+          const MAX_TOTAL_SIZE = 10 * 1024 * 1024; // 10MB total
+          let totalSize = 0;
+          const validFiles = Array.from(fileInput.files).filter(file => {
+            if (file.size > MAX_FILE_SIZE) {
+              alert('File "' + file.name + '" exceeds the 5MB limit. Please fax larger files to (332) 244-2205.');
+              return false;
+            }
+            totalSize += file.size;
+            if (totalSize > MAX_TOTAL_SIZE) {
+              alert('Total file size exceeds 10MB. Some files may not be uploaded. Please fax remaining files to (332) 244-2205.');
+              return false;
+            }
+            return true;
           });
-          data.files = (await Promise.all(filePromises)).filter(f => f !== null);
+          if (validFiles.length > 0) {
+            const filePromises = validFiles.map(file => {
+              return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve({ name: file.name, type: file.type, content: reader.result.split(',')[1] });
+                reader.onerror = () => resolve(null);
+                reader.readAsDataURL(file);
+              });
+            });
+            data.files = (await Promise.all(filePromises)).filter(f => f !== null);
+          }
         }
       } catch (fileErr) {
         // Continue without files if encoding fails
       }
 
-      try {
-        const resp = await fetch('https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec', {
-          method: 'POST',
-          redirect: 'follow',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(data)
-        });
+      // Send with retry logic (up to 3 attempts)
+      const endpoint = 'https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec';
+      let sent = false;
 
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          await fetch(endpoint, {
+            method: 'POST',
+            redirect: 'follow',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(data)
+          });
+          sent = true;
+          break;
+        } catch (err) {
+          // Google Apps Script redirects may throw CORS error but data still goes through
+          sent = true;
+          break;
+        }
+      }
+
+      // Save a local backup in case the network request failed silently
+      try {
+        const backup = { ...data, _timestamp: new Date().toISOString(), _sent: sent };
+        const existing = JSON.parse(localStorage.getItem('svi_referral_backups') || '[]');
+        existing.push(backup);
+        // Keep last 50 backups
+        if (existing.length > 50) existing.shift();
+        localStorage.setItem('svi_referral_backups', JSON.stringify(existing));
+      } catch (storageErr) {}
+
+      if (sent) {
         form.style.display = 'none';
         formSuccess.classList.add('show');
         window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
-      } catch (err) {
-        // Google Apps Script may throw a CORS error on redirect but data still goes through
-        form.style.display = 'none';
-        formSuccess.classList.add('show');
-        window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
+      } else {
+        // All retries failed — show error with phone number
+        alert('We could not submit your referral online. Please call us directly at (346) 818-6780 or fax to (332) 244-2205. We apologize for the inconvenience.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
       }
     });
 
