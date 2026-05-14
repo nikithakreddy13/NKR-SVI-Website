@@ -1,5 +1,7 @@
 {
   "redirects": [
+    { "source": "/review", "destination": "https://search.google.com/local/writereview?placeid=ChIJGfgkoZ3BQIYRncubLeotn00", "permanent": false },
+    { "source": "/review-soni", "destination": "https://search.google.com/local/writereview?placeid=ChIJm5ROrNHRQIYRcHgZ0OJ481A", "permanent": false },
     { "source": "/about/", "destination": "/about.html", "permanent": true },
     { "source": "/about", "destination": "/about.html", "permanent": true },
     { "source": "/schedule-appointment/", "destination": "/book.html", "permanent": true },
