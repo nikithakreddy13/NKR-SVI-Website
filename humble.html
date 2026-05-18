@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="geo.region" content="US-TX">
+  <meta name="geo.placename" content="Cypress, Texas">
+  <meta name="geo.position" content="29.9417;-95.6675">
+  <meta name="ICBM" content="29.9417, -95.6675">
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/soni-logo.svg">
+  <title>Humble Eye Doctor & Cataract Surgeon | Soni Vision</title>
+  <meta name="description" content="Humble area eye doctor for cataract surgery, LASIK, and advanced lens implants. Board-certified surgeons serving Humble, Atascocita, and Kingwood patients.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="Humble Eye Doctor & Cataract Surgeon | Soni Vision Institute">
+  <meta property="og:description" content="Humble's trusted eye doctor for cataract surgery, LASIK, and advanced lens implants. Board-certified surgeons serving the Humble and Kingwood area.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sonivisioninstitute.com/humble.html">
+  <meta property="og:image" content="https://sonivisioninstitute.com/brand_assets/both-main.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Soni Vision Institute">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Humble Eye Doctor & Cataract Surgeon | Soni Vision Institute">
+  <meta name="twitter:description" content="Humble's trusted eye doctor for cataract surgery, LASIK, and advanced lens implants. Board-certified surgeons serving the Humble and Kingwood area.">
+  <meta name="twitter:image" content="https://sonivisioninstitute.com/brand_assets/both-main.webp">
+  <link rel="canonical" href="https://sonivisioninstitute.com/humble.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+    body { font-family: 'Outfit', system-ui, sans-serif; color: #1a1a2e; background: #FAF9F6; overflow-x: hidden; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    .heading-accent em { font-style: italic; color: #499188; }
+    .text-balance { text-wrap: balance; }
+    .grain::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px;
+    }
+    .sticky-cta { backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); }
+    .nav-item { position: relative; }
+    .nav-item::after { content: ''; position: absolute; bottom: -3px; left: 50%; width: 0; height: 1.5px; background: #499188; transition: width 0.3s ease, left 0.3s ease; }
+    .nav-item:hover::after { width: 100%; left: 0; }
+    .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.98); transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s; }
+    .dropdown-wrap:hover .dropdown-panel, .dropdown-wrap:focus-within .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+    .btn-primary { background: #499188; color: #fff; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.3s ease; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(73,145,136,0.25); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #499188; outline-offset: 3px; }
+    .btn-ghost { border: 1.5px solid currentColor; background: transparent; transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease; }
+    .btn-ghost:hover { background: #32384e; color: #fff; transform: translateY(-1px); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 2px solid #32384e; outline-offset: 3px; }
+    .btn-ghost-light { border: 1.5px solid rgba(255,255,255,0.4); color: #fff; background: transparent; transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease; }
+    .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+    .btn-ghost-light:active { transform: translateY(0); }
+    .btn-ghost-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .sr { opacity: 0; transform: translateY(50px); transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+    .sr.vis { opacity: 1; transform: translate(0) scale(1); }
+    .sr-d1 { transition-delay: 0.15s; }
+    .sr-d2 { transition-delay: 0.3s; }
+    .sr-d3 { transition-delay: 0.45s; }
+    .sr-d4 { transition-delay: 0.6s; }
+    .card-hover { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease; }
+    .card-hover:hover { transform: translateY(-6px) scale(1.01); }
+    .mob-nav { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+    .mob-nav.is-open { transform: translateX(0); }
+    a:focus-visible, button:focus-visible { outline: 2px solid #499188; outline-offset: 2px; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #32384e20; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #32384e40; }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Soni Vision Institute",
+    "description": "Top-rated eye surgery practice serving Humble, TX. Board-certified ophthalmologists specializing in cataract surgery, LASIK, advanced technology lenses, and glaucoma treatment.",
+    "url": "https://sonivisioninstitute.com/humble.html",
+    "telephone": "+13468186780",
+    "address": { "@type": "PostalAddress", "streetAddress": "27700 Northwest Freeway, Suite 390", "addressLocality": "Cypress", "addressRegion": "TX", "postalCode": "77433", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 29.9417, "longitude": -95.6675 },
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "750", "bestRating": "5" },
+    "areaServed": { "@type": "City", "name": "Humble", "containedInPlace": { "@type": "State", "name": "Texas" } },
+    "image": "https://sonivisioninstitute.com/brand_assets/both-main.webp",
+    "priceRange": "$$"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sonivisioninstitute.com" },
+      { "@type": "ListItem", "position": 2, "name": "Areas We Serve", "item": "https://sonivisioninstitute.com" },
+      { "@type": "ListItem", "position": 3, "name": "Humble", "item": "https://sonivisioninstitute.com/humble.html" }
+    ]
+  }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPVMQQVSD0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GPVMQQVSD0');
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 sticky-cta border-b border-navy/[0.04]" style="height: 80px;">
+    <div class="max-w-[1320px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/" aria-label="Home" class="flex-shrink-0">
+        <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-14 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Main">
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">About</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/about.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">About the Practice</a>
+              <a href="/physicians/dr-ruhi-soni.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Ruhi Soni</a>
+              <a href="/physicians/dr-nikitha-reddy.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Dr. Nikitha Reddy</a>
+              <a href="/team.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Meet Our Team</a>
+              <a href="/technology.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Our Technology</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Services</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[520px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] p-5 grid grid-cols-3 gap-x-6 gap-y-1">
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Cataracts</p>
+                <a href="/services/cataracts.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Cataract Surgery</a>
+                <a href="/services/laser-cataract-surgery.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Laser Cataract Surgery</a>
+                <a href="/services/advanced-technology-lenses.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Advanced Technology Lenses</a>
+                <a href="/services/light-adjustable-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Light Adjustable Lens</a>
+                <a href="/services/multifocal-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Multifocal Lens</a>
+                <a href="/services/edof-lens.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EDOF Lens</a>
+                <a href="/services/toric-iol.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Toric Lens</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Vision Correction</p>
+                <a href="/services/refractive-lens-exchange.html" class="block py-1.5 text-[13px] font-body text-teal font-medium hover:text-teal-dark transition-colors">Refractive Lens Exchange <span class="inline-block text-[9px] font-bold uppercase tracking-[0.1em] bg-teal/10 text-teal px-1.5 py-0.5 rounded ml-1">Featured</span></a>
+                <a href="/services/lasik.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">LASIK</a>
+                <a href="/services/prk.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">PRK</a>
+                <a href="/services/icl.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">EVO ICL</a>
+              </div>
+              <div>
+                <p class="text-[9px] font-body font-bold uppercase tracking-[0.18em] text-teal mb-2">Glaucoma</p>
+                <a href="/services/glaucoma.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Surgery</a>
+                <a href="/services/glaucoma-laser.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Glaucoma Laser</a>
+                <a href="/services/migs.html" class="block py-1.5 text-[13px] font-body text-navy hover:text-teal transition-colors">Micro-Invasive Glaucoma Surgery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">Conditions</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="/conditions/cataracts.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Cataracts</a>
+              <a href="/conditions/astigmatism.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Astigmatism</a>
+              <a href="/conditions/myopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Myopia</a>
+              <a href="/conditions/hyperopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Hyperopia</a>
+              <a href="/conditions/presbyopia.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Presbyopia</a>
+              <a href="/conditions/glaucoma.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Glaucoma</a>
+              <a href="/conditions/macular-degeneration.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Macular Degeneration</a>
+              <a href="/conditions/dry-eye.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Dry Eye</a>
+              <a href="/conditions/eyelid-conditions.html" class="block px-5 py-1.5 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors">Eyelid Conditions</a>
+            </div>
+          </div>
+        </div>
+        <a href="/reviews.html" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Reviews</a>
+        <div class="dropdown-wrap relative">
+          <button class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2 bg-transparent border-none cursor-pointer" aria-haspopup="true" aria-expanded="false">For Patients</button>
+          <div class="dropdown-panel absolute top-full left-0 pt-3 min-w-[200px]">
+            <div class="bg-white rounded-lg shadow-lg shadow-navy/[0.06] border border-navy/[0.04] py-2">
+              <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&client_id=ema&redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&state=8498c9a7-ac6a-4d54-9488-72bc12918879&login=true&login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&scope=openid" target="_blank" rel="noopener" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Patient Portal</a>
+              <a href="/cost.html" class="block px-5 py-2 text-[13px] font-body text-navy hover:bg-teal-pale hover:text-teal-dark transition-colors duration-150">Cost &amp; Financing</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/" class="nav-item font-body text-[11px] font-medium uppercase tracking-[0.1em] text-navy py-2">Blog</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:3468186780" class="font-body text-[13.5px] font-semibold text-navy hover:text-teal transition-colors duration-200 flex items-center gap-1.5"><svg class="w-[14px] h-[14px] text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>(346) 818-6780</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[9.5px] font-semibold uppercase tracking-[0.1em] px-3.5 py-2 rounded-full text-navy">For Referring Doctors</a>
+        <a href="/book.html" class="btn-primary font-body text-[9.5px] font-semibold uppercase tracking-[0.12em] px-5 py-2 rounded-full">Book a Consultation</a>
+      </div>
+      <button id="mob-toggle" class="lg:hidden p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+        <svg id="burger-icon" class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        <svg id="close-icon" class="w-6 h-6 text-navy hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div id="mob-nav" class="mob-nav fixed inset-0 z-[55] bg-cream pt-24 overflow-y-auto" aria-hidden="true">
+    <nav class="px-6 pb-10 flex flex-col gap-0.5">
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">About</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/about.html" class="font-body text-[16px] text-navy/70 py-1.5">About the Practice</a>
+          <a href="/physicians/dr-ruhi-soni.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Ruhi Soni</a>
+          <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Dr. Nikitha Reddy</a>
+          <a href="/team.html" class="font-body text-[16px] text-navy/70 py-1.5">Meet Our Team</a>
+          <a href="/technology.html" class="font-body text-[16px] text-navy/70 py-1.5">Our Technology</a>
+        </div>
+      </div>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Services</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-2 mb-1">Cataracts</p>
+          <a href="/services/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataract Surgery</a>
+          <a href="/services/laser-cataract-surgery.html" class="font-body text-[16px] text-navy/70 py-1.5">Laser Cataract Surgery</a>
+          <a href="/services/advanced-technology-lenses.html" class="font-body text-[16px] text-teal font-medium py-1.5">Advanced Technology Lenses</a>
+          <a href="/services/light-adjustable-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Light Adjustable Lens</a>
+          <a href="/services/multifocal-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">Multifocal Lens</a>
+          <a href="/services/edof-lens.html" class="font-body text-[16px] text-navy/70 py-1.5">EDOF Lens</a>
+          <a href="/services/toric-iol.html" class="font-body text-[16px] text-navy/70 py-1.5">Toric Lens</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Vision Correction</p>
+          <a href="/services/refractive-lens-exchange.html" class="font-body text-[16px] text-teal font-medium py-1.5">Refractive Lens Exchange</a>
+          <a href="/services/lasik.html" class="font-body text-[16px] text-navy/70 py-1.5">LASIK</a>
+          <a href="/services/prk.html" class="font-body text-[16px] text-navy/70 py-1.5">PRK</a>
+          <a href="/services/icl.html" class="font-body text-[16px] text-navy/70 py-1.5">EVO ICL</a>
+          <p class="font-body text-[11px] font-bold uppercase tracking-[0.18em] text-teal mt-3 mb-1">Glaucoma</p>
+          <a href="/services/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Surgery</a>
+          <a href="/services/glaucoma-laser.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma Laser</a>
+          <a href="/services/migs.html" class="font-body text-[16px] text-navy/70 py-1.5">Micro-Invasive Glaucoma Surgery</a>
+        </div>
+      </div>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">Conditions</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="/conditions/cataracts.html" class="font-body text-[16px] text-navy/70 py-1.5">Cataracts</a>
+          <a href="/conditions/astigmatism.html" class="font-body text-[16px] text-navy/70 py-1.5">Astigmatism</a>
+          <a href="/conditions/myopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Myopia</a>
+          <a href="/conditions/hyperopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Hyperopia</a>
+          <a href="/conditions/presbyopia.html" class="font-body text-[16px] text-navy/70 py-1.5">Presbyopia</a>
+          <a href="/conditions/glaucoma.html" class="font-body text-[16px] text-navy/70 py-1.5">Glaucoma</a>
+          <a href="/conditions/macular-degeneration.html" class="font-body text-[16px] text-navy/70 py-1.5">Macular Degeneration</a>
+          <a href="/conditions/dry-eye.html" class="font-body text-[16px] text-navy/70 py-1.5">Dry Eye</a>
+          <a href="/conditions/eyelid-conditions.html" class="font-body text-[16px] text-navy/70 py-1.5">Eyelid Conditions</a>
+        </div>
+      </div>
+      <a href="/reviews.html" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Reviews</a>
+      <div class="border-b border-navy/5">
+        <button class="mob-section-toggle w-full flex items-center justify-between py-3" aria-expanded="false">
+          <span class="font-display text-[28px] text-navy">For Patients</span>
+          <svg class="w-5 h-5 text-navy/30 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="mob-section-links hidden pb-3 pl-2 flex flex-col gap-1">
+          <a href="https://sso.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&amp;client_id=ema&amp;redirect_uri=https%3A%2F%2Fsonivision.ema.md%2Fema%2Fsso%2Flogin&amp;state=8498c9a7-ac6a-4d54-9488-72bc12918879&amp;login=true&amp;login_hint=R0RQUl9DT09LSUU9O1JFVklTSU9OPTZiNzI1ZTBjYTA7RE9NQUlOPXNvbml2aXNpb24uZW1hLm1kO09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247RklSTV9MT0dPPW51bGw7TUFSS0VUSU5HX0JBTk5FUj1UUlVFO0ZJUk1fTkFNRT1Tb25pIFZpc2lvbiBJbnN0aXR1dGU7T0ZGTElORV9BQ0NFU1M9RkFMU0U7TUVESUNBTF9ET01BSU49b3BodGhhbG1vbG9neTtWRVJTSU9OPTcuMC40LjE7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&amp;scope=openid" target="_blank" rel="noopener" class="font-body text-[16px] text-navy/70 py-1.5">Patient Portal</a>
+          <a href="/cost.html" class="font-body text-[16px] text-navy/70 py-1.5">Cost &amp; Financing</a>
+        </div>
+      </div>
+      <a href="/blog/" class="font-display text-[28px] text-navy py-3 border-b border-navy/5">Blog</a>
+      <div class="mt-8 flex flex-col gap-3">
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center">Book a Consultation</a>
+        <a href="/referrals.html" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">For Referring Doctors</a>
+        <a href="tel:3468186780" class="btn-ghost font-body text-[12px] font-semibold uppercase tracking-[0.1em] px-6 py-4 rounded-full text-center text-navy">(346) 818-6780 &mdash; Call Us Now</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+  <!-- ========== BREADCRUMB ========== -->
+  <div class="pt-[80px]">
+    <div class="bg-cream border-b border-navy/[0.04]">
+      <div class="max-w-[1320px] mx-auto px-5 py-3">
+        <nav aria-label="Breadcrumb" class="font-body text-[12px] text-navy/40">
+          <a href="/" class="hover:text-teal transition-colors">Home</a>
+          <span class="mx-1.5">/</span>
+          <span class="text-navy/30">Areas We Serve</span>
+          <span class="mx-1.5">/</span>
+          <span class="text-navy/70">Humble</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="relative bg-navy-deep grain overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy to-navy-deep/90"></div>
+    <div class="relative z-10 max-w-[1320px] mx-auto px-5 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.2em] text-teal mb-4 sr">Serving Humble</p>
+        <h1 class="font-display text-white text-[clamp(36px,5vw,56px)] leading-[1.1] tracking-[-0.02em] mb-6 sr sr-d1">Your Humble Eye Surgeon.</h1>
+        <p class="font-body text-white/70 text-lg leading-relaxed mb-8 max-w-xl sr sr-d2">Families in Humble, Atascocita, and Kingwood choose Soni Vision Institute for expert cataract surgery, LASIK, and advanced eye care. Our Cypress office is an easy drive from northeast Houston via US-59 (I-69) and the Grand Parkway. Whether you live near Deerbrook Mall, along the shores of Lake Houston, or in the tree-lined streets of Kingwood, we provide the kind of personalized surgical care that makes the trip worthwhile.</p>
+        <a href="/book.html" class="btn-primary inline-block font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-full sr sr-d3">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY PATIENTS CHOOSE US ========== -->
+  <section class="bg-cream py-14 md:py-20">
+    <div class="max-w-[1320px] mx-auto px-5">
+      <div class="text-center mb-12">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.2em] text-teal mb-3 sr">Why Humble Patients Choose Us</p>
+        <h2 class="font-display text-navy text-[clamp(28px,4vw,42px)] leading-[1.15] tracking-[-0.02em] sr sr-d1">The Soni Vision <em class="text-teal italic">Difference</em></h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-7 border border-navy/[0.04] shadow-sm shadow-navy/[0.03] card-hover sr sr-d1">
+          <div class="w-11 h-11 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0l-4.725 2.885a.562.562 0 01-.84-.61l1.285-5.385a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-lg mb-2">Top-Rated</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">With 750+ Google reviews and a 4.9-star rating, patients from across the greater Houston area trust us with their vision.</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-navy/[0.04] shadow-sm shadow-navy/[0.03] card-hover sr sr-d2">
+          <div class="w-11 h-11 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-lg mb-2">Two Board-Certified Surgeons</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Dr. Ruhi Soni and Dr. Nikitha Reddy trained at Baylor College of Medicine, UT Southwestern, and the University of Toronto.</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-navy/[0.04] shadow-sm shadow-navy/[0.03] card-hover sr sr-d3">
+          <div class="w-11 h-11 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-lg mb-2">Advanced Technology</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Femtosecond laser cataract surgery, the Light Adjustable Lens, and a complete selection of advanced technology lens implants.</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-navy/[0.04] shadow-sm shadow-navy/[0.03] card-hover sr sr-d4">
+          <div class="w-11 h-11 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          </div>
+          <h3 class="font-display text-navy text-lg mb-2">Boutique Experience</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">We never rush through appointments. Every patient gets a thorough evaluation and a surgical plan tailored to their specific visual needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-[1320px] mx-auto px-5">
+      <div class="text-center mb-12">
+        <p class="font-body text-[14px] font-semibold uppercase tracking-[0.2em] text-teal mb-3 sr">Our Services</p>
+        <h2 class="font-display text-navy text-[clamp(28px,4vw,42px)] leading-[1.15] tracking-[-0.02em] sr sr-d1">Eye Care for <em class="text-teal italic">Humble</em> Patients</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <a href="/services/cataracts.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d1">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">Cataract Surgery</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Blade-free, laser-assisted cataract removal with advanced technology lens implants to help you see clearly at every distance.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+        <a href="/services/advanced-technology-lenses.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d2">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">Advanced Technology Lenses</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Multifocal, EDOF, toric, and Light Adjustable Lens options to reduce or eliminate your need for glasses after cataract surgery.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+        <a href="/services/lasik.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d3">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">LASIK</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Proven laser vision correction for nearsightedness, farsightedness, and astigmatism with quick recovery and lasting results.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+        <a href="/services/refractive-lens-exchange.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d1">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">Refractive Lens Exchange</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">For patients over 40 who want to leave bifocals and progressive lenses behind, RLE provides lasting freedom from reading glasses.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+        <a href="/services/glaucoma.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d2">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">Glaucoma Care</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">Comprehensive glaucoma management from monitoring and medication to laser treatments and micro-invasive surgical procedures.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+        <a href="/services/icl.html" class="group bg-cream rounded-xl p-7 border border-navy/[0.04] card-hover sr sr-d3">
+          <h3 class="font-display text-navy text-lg mb-2 group-hover:text-teal transition-colors">EVO ICL</h3>
+          <p class="font-body text-navy/60 text-sm leading-relaxed">A reversible implantable lens ideal for patients with high prescriptions or thin corneas who may not qualify for LASIK.</p>
+          <span class="inline-block mt-3 font-body text-teal text-sm font-medium">Learn more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIRECTIONS ========== -->
+  <section class="bg-sand py-14 md:py-20">
+    <div class="max-w-[1320px] mx-auto px-5">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="sr">
+          <p class="font-body text-[14px] font-semibold uppercase tracking-[0.2em] text-teal mb-3">Directions</p>
+          <h2 class="font-display text-navy text-[clamp(28px,4vw,42px)] leading-[1.15] tracking-[-0.02em] mb-6">Getting Here from Humble</h2>
+          <p class="font-body text-navy/70 text-base leading-relaxed mb-4">From Humble, take US-59 South (I-69) toward downtown Houston. Merge onto I-610 West and then continue onto US-290 West (Northwest Freeway). Exit at Jarvis Road and our office at 27700 Northwest Freeway, Suite 390 is right off the highway. The drive takes approximately 40 to 45 minutes depending on traffic conditions.</p>
+          <p class="font-body text-navy/70 text-base leading-relaxed mb-6">Patients coming from Atascocita, Kingwood, and the Deerbrook Mall area can also take the Grand Parkway (SH-99) west to US-290 for a more direct route. Free parking is available at the building entrance.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=27700+Northwest+Freeway+Suite+390+Cypress+TX+77433" target="_blank" rel="noopener" class="btn-primary inline-block font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-full text-center">Get Directions</a>
+            <a href="tel:3468186780" class="btn-ghost inline-block font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-6 py-3 rounded-full text-center text-navy">(346) 818-6780</a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-navy/[0.06] shadow-sm shadow-navy/[0.04] sr sr-d2" style="height: 380px;">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="relative bg-navy-deep grain overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy to-navy-deep/90"></div>
+    <div class="relative z-10 max-w-[1320px] mx-auto px-5 py-14 md:py-20 text-center">
+      <h2 class="font-display text-white text-[clamp(28px,4vw,42px)] leading-[1.15] tracking-[-0.02em] mb-4 sr">Schedule Your Consultation</h2>
+      <p class="font-body text-white/60 text-lg mb-8 max-w-xl mx-auto sr sr-d1">Humble-area patients travel to Soni Vision Institute for the kind of surgical expertise and personal attention that stands apart. Book your visit today.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sr sr-d2">
+        <a href="/book.html" class="btn-primary font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-full">Book a Consultation</a>
+        <a href="tel:3468186780" class="btn-ghost-light font-body text-[12px] font-semibold uppercase tracking-[0.12em] px-8 py-4 rounded-full">(346) 818-6780</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-ink text-white">
+    <div class="max-w-[1320px] mx-auto px-5 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-8 mb-14">
+        <div class="md:col-span-4">
+          <img src="/brand_assets/soni-logo.svg" alt="Soni Vision Institute" class="h-9 w-auto mb-5 brightness-0 invert opacity-70" loading="lazy">
+          <p class="font-body text-white/40 text-sm leading-relaxed mb-3">27700 Northwest Freeway, Suite 390<br>Cypress, TX 77433</p>
+          <a href="tel:3468186780" class="font-body text-white text-sm font-medium hover:text-teal transition-colors block mb-1">(346) 818-6780</a>
+          <p class="font-body text-white/60 text-sm font-medium">Fax: (346) 573-8162</p>
+          <div class="mt-4 rounded-lg overflow-hidden border border-white/[0.06]" style="height: 150px;">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPVc7fmKUj3dzDlmza5PbsfWQKzMX2hMM&q=place_id:ChIJm5ROrNHRQIYRcHgZ0OJ481A" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soni Vision Institute location"></iframe>
+          </div>
+        </div>
+        <div class="md:col-span-2 md:col-start-6">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Quick Links</p>
+          <nav class="flex flex-col gap-2" aria-label="Quick links">
+            <a href="/about.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">About Us</a>
+            <a href="/physicians/dr-ruhi-soni.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Ruhi Soni</a>
+            <a href="/physicians/dr-nikitha-reddy.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Dr. Nikitha Reddy</a>
+            <a href="/services/cataracts.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Cataract Surgery</a>
+            <a href="/services/lasik.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Vision Correction</a>
+            <a href="/services/glaucoma.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Glaucoma</a>
+          </nav>
+        </div>
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Patients</p>
+          <nav class="flex flex-col gap-2" aria-label="Patient resources">
+            <a href="/book.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Book A Consultation</a>
+            <a href="/reviews.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Patient Testimonials</a>
+            <a href="/faq.html" class="font-body text-white/50 text-sm hover:text-teal transition-colors">FAQs</a>
+            <a href="/blog/" class="font-body text-white/50 text-sm hover:text-teal transition-colors">Blog</a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJm5ROrNHRQIYRcHgZ0OJ481A" target="_blank" rel="noopener" class="font-body text-teal text-sm hover:text-teal-light transition-colors">Leave a Review &rarr;</a>
+          </nav>
+        </div>
+        <div class="md:col-span-2">
+          <p class="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-white/25 mb-4">Our Ratings</p>
+          <div class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-4 py-3">
+            <div class="flex items-center gap-1.5 mb-0.5"><span class="text-teal text-[11px]">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="font-body text-white text-xs font-semibold">Top-Rated</span></div>
+            <p class="font-body text-white/30 text-[10px]">Dr. Reddy &amp; Dr. Soni</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-6">
+          <p class="font-body text-white/20 text-xs">&copy; 2026 Soni Vision Institute</p>
+          <p class="font-body text-white/20 text-xs">Mon&ndash;Fri 8am&ndash;5pm</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/100089139506135" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/sonivisioninstitute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">Instagram</a>
+          <a href="https://www.linkedin.com/company/soni-vision-institute/" target="_blank" rel="noopener" class="font-body text-white/20 text-xs hover:text-white/50 transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobToggle = document.getElementById('mob-toggle');
+    const mobNav = document.getElementById('mob-nav');
+    const burgerIcon = document.getElementById('burger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    if (mobToggle && mobNav) {
+      mobToggle.addEventListener('click', () => {
+        const open = mobNav.classList.toggle('is-open');
+        mobNav.setAttribute('aria-hidden', !open);
+        mobToggle.setAttribute('aria-expanded', open);
+        burgerIcon.classList.toggle('hidden', open);
+        closeIcon.classList.toggle('hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .sr-up').forEach(el => obs.observe(el));
+    const hdr = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      hdr.style.borderBottomColor = window.scrollY > 20 ? 'rgba(50,56,78,0.06)' : 'rgba(50,56,78,0.02)';
+    }, { passive: true });
+    document.querySelectorAll('.mob-section-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const links = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        links.classList.toggle('hidden');
+        btn.querySelector('svg').style.transform = expanded ? '' : 'rotate(180deg)';
+      });
+    });
+  </script>
+</body>
+</html>
