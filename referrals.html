@@ -891,13 +891,22 @@
       const data = {};
       new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
 
-      // Collect files separately
+      // Collect files from BOTH file input and drag-and-drop (uploadedFiles array)
       let filesToSend = [];
       try {
-        const fileInput = document.getElementById('file-upload');
-        if (fileInput && fileInput.files.length > 0) {
-          const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB per file
-          const validFiles = Array.from(fileInput.files).filter(file => {
+        // Combine files from input click AND drag-and-drop
+        let allFiles = [];
+        if (typeof uploadedFiles !== 'undefined' && uploadedFiles.length > 0) {
+          allFiles = [...uploadedFiles];
+        } else {
+          const fi = document.getElementById('file-upload');
+          if (fi && fi.files.length > 0) {
+            allFiles = Array.from(fi.files);
+          }
+        }
+        if (allFiles.length > 0) {
+          const MAX_FILE_SIZE = 10 * 1024 * 1024;
+          const validFiles = allFiles.filter(file => {
             if (file.size > MAX_FILE_SIZE) {
               alert('File "' + file.name + '" is too large (' + Math.round(file.size/1024/1024) + 'MB). Maximum is 10MB per file. Please fax larger files to (346) 573-8162.');
               return false;
