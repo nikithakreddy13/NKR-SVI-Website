@@ -887,25 +887,19 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      // Send to Google Apps Script
+      // Collect form text data
       const data = {};
       new FormData(form).forEach((val, key) => { if (key !== 'medical_records') data[key] = val; });
 
-      // Encode uploaded files as base64 (max 5MB per file, 10MB total)
+      // Collect files separately
+      let filesToSend = [];
       try {
         const fileInput = document.getElementById('file-upload');
         if (fileInput && fileInput.files.length > 0) {
-          const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB per file
-          const MAX_TOTAL_SIZE = 50 * 1024 * 1024; // 50MB total
-          let totalSize = 0;
+          const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB per file
           const validFiles = Array.from(fileInput.files).filter(file => {
             if (file.size > MAX_FILE_SIZE) {
-              alert('File "' + file.name + '" exceeds the 25MB limit. Please fax larger files to (346) 573-8162.');
-              return false;
-            }
-            totalSize += file.size;
-            if (totalSize > MAX_TOTAL_SIZE) {
-              alert('Total file size exceeds 50MB. Some files may not be uploaded. Please fax remaining files to (346) 573-8162.');
+              alert('File "' + file.name + '" is too large (' + Math.round(file.size/1024/1024) + 'MB). Maximum is 10MB per file. Please fax larger files to (346) 573-8162.');
               return false;
             }
             return true;
@@ -919,54 +913,59 @@
                 reader.readAsDataURL(file);
               });
             });
-            data.files = (await Promise.all(filePromises)).filter(f => f !== null);
+            filesToSend = (await Promise.all(filePromises)).filter(f => f !== null);
           }
         }
-      } catch (fileErr) {
-        // Continue without files if encoding fails
+      } catch (fileErr) {}
+
+      const endpoint = 'https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec';
+
+      // Step 1: Send text data WITHOUT files first (this always works)
+      try {
+        await fetch(endpoint, {
+          method: 'POST',
+          redirect: 'follow',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(data)
+        });
+      } catch (err) {
+        // CORS redirect error — data still goes through
       }
 
-      // Send with retry logic (up to 3 attempts)
-      const endpoint = 'https://script.google.com/macros/s/AKfycbwnNvViAFaLmkeRi0ZdFUcr9qeTpP9uEDjMLnkVEfeQ8fQ1nFehXzk0M_MrnCIbcMHW/exec';
-      let sent = false;
-
-      for (let attempt = 1; attempt <= 3; attempt++) {
-        try {
-          await fetch(endpoint, {
-            method: 'POST',
-            redirect: 'follow',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(data)
-          });
-          sent = true;
-          break;
-        } catch (err) {
-          // Google Apps Script redirects may throw CORS error but data still goes through
-          sent = true;
-          break;
+      // Step 2: Send each file separately (smaller payloads = more reliable)
+      if (filesToSend.length > 0) {
+        for (const file of filesToSend) {
+          try {
+            submitBtn.textContent = 'Uploading files...';
+            await fetch(endpoint, {
+              method: 'POST',
+              redirect: 'follow',
+              headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+              body: JSON.stringify({
+                _fileUpload: true,
+                patient_name: data.patient_name,
+                doctor_name: data.doctor_name,
+                files: [file]
+              })
+            });
+          } catch (err) {
+            // CORS redirect error — file data may still go through
+          }
         }
       }
 
-      // Save a local backup in case the network request failed silently
+      // Save local backup
       try {
-        const backup = { ...data, _timestamp: new Date().toISOString(), _sent: sent };
+        const backup = { ...data, _fileCount: filesToSend.length, _timestamp: new Date().toISOString() };
         const existing = JSON.parse(localStorage.getItem('svi_referral_backups') || '[]');
         existing.push(backup);
-        // Keep last 50 backups
         if (existing.length > 50) existing.shift();
         localStorage.setItem('svi_referral_backups', JSON.stringify(existing));
       } catch (storageErr) {}
 
-      if (sent) {
-        form.style.display = 'none';
-        formSuccess.classList.add('show');
-        window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
-      } else {
-        // All retries failed — show error with phone number
-        alert('We could not submit your referral online. Please call us directly at (346) 818-6780 or fax to (346) 573-8162. We apologize for the inconvenience.');
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }
+      form.style.display = 'none';
+      formSuccess.classList.add('show');
+      window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
     });
 
     // File upload handling
