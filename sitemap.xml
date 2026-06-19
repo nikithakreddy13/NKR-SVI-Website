@@ -7,6 +7,12 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/editorial-policy.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- Main Pages -->
   <url>
     <loc>https://sonivisioninstitute.com/about.html</loc>
@@ -478,6 +484,30 @@
   <url>
     <loc>https://sonivisioninstitute.com/blog/diabetic-eye-exam-houston.html</loc>
     <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/what-happens-during-cataract-surgery.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/how-to-choose-lens-implant.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/is-lasik-worth-it.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sonivisioninstitute.com/blog/questions-to-ask-cataract-surgeon.html</loc>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
